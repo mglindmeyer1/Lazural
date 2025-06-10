@@ -49,7 +49,7 @@ function user_job_setup()
 	send_command('bind !Numpad2 input /ma "Battery Charge"<me>')
 	send_command('bind !Numpad3 input /ma "Nat. Meditation"<me>')
 	send_command('bind !Numpad6 input /ma "Barrier Tusk"<me>')
-	send_command('bind !Numpad4 input /ma "Magic Fruit"<me>')
+	send_command('bind !Numpad4 input /ma "Magic Fruit"<stpc>')
 
     send_command('bind !m input /ja "Spectral Chair" <me>')
 
@@ -146,8 +146,8 @@ function init_gear_sets()
 				  back=gear.wsd_jse_backk,waist="Fotia Belt",legs="Samnuha Tights",feet=gear.herc_feet_TA}
 
 	-- Specific weaponskill sets.  Uses the base set if an appropriate WSMod version isn't found.
-	sets.precast.WS['Requiescat'] = set_combine(sets.precast.WS, {head="Jhakri Coronal +2",ear1="Odr Earring",body="Jhakri Robe +2",ring2="Rufescent Ring",legs="Jhakri Slops +1",feet="Jhakri Pigaches +1"})
-	sets.precast.WS['Requiescat'].Acc = set_combine(sets.precast.WS.Acc, {head="Jhakri Coronal +2",ear1="Odr Earring",ear2="Telos Earring",ring1="Rufescent Ring",legs="Jhakri Slops +1",feet="Jhakri Pigaches +1"})
+	sets.precast.WS['Requiescat'] = set_combine(sets.precast.WS, {ammo="Floestone",head="Jhakri Coronal +2",ear1="Odr Earring",body="Jhakri Robe +2",ring2="Rufescent Ring",legs="Jhakri Slops +1",feet="Jhakri Pigaches +1"})
+	sets.precast.WS['Requiescat'].Acc = set_combine(sets.precast.WS.Acc, {ammo="Floestone",head="Jhakri Coronal +2",ear1="Odr Earring",ear2="Telos Earring",ring1="Rufescent Ring",legs="Jhakri Slops +1",feet="Jhakri Pigaches +1"})
 	sets.precast.WS['Requiescat'].FullAcc = set_combine(sets.precast.WS.FullAcc, {})
 	sets.precast.WS['Requiescat'].DT = set_combine(sets.precast.WS.DT, {})
 	sets.precast.WS['Requiescat'].Fodder = set_combine(sets.precast.WS['Requiescat'], {})
@@ -406,7 +406,7 @@ function init_gear_sets()
 		back="Moonbeam Cape",waist="Carrier's Sash",legs="Gyve Trousers",feet="Medium's Sabots"}
 
 	sets.midcast['Blue Magic'].Healing = {main="Bunzi's Rod",sub="Sakpata's Sword",ammo="Staunch Tathlum",
-		head="Carmine Mask",neck="Loricate Torque +1",ear1="Tuisto Earring",ear2="Odnowa Earring",
+		head="Carmine Mask",neck="Loricate Torque +1",ear1="Tuisto Earring",ear2="Odnowa Earring +1",
 		body="Vrikodara Jupon",hands="Telchine Gloves",ring1="Lebeche Ring",ring2="Gelatinous Ring +1",
 		back="Solemnity Cape",waist="Eschan Stone",legs="Gyve Trousers",feet="Medium's Sabots"}
 		
@@ -417,12 +417,12 @@ function init_gear_sets()
 
 	sets.midcast['Blue Magic'].SkillBasedBuff = {main="Iris",sub="Iris",ammo="Mavi Tathlum",
 		head="Luh. Keffiyeh +1",neck="Mirage Stole +1",ear1="Gifted Earring",ear2="Njordr Earring",
-		body="Assim. Jubbah +1",hands="Rawhide Gloves",ring1="Stikini Ring",ring2="Stikini Ring",
+		body="Assim. Jubbah +2",hands="Rawhide Gloves",ring1="Stikini Ring",ring2="Stikini Ring",
 		back="Cornflower Cape",waist="Witful Belt",legs="Hashishin Tayt +1",feet="Luhlaza Charuqs"}
 
 	sets.midcast['Blue Magic'].Buff = {main="Vampirism",sub="Vampirism",ammo="Mavi Tathlum",
 		head="Luh. Keffiyeh +3",neck="Incanter's Torque",ear1="Gifted Earring",ear2="Loquac. Earring",
-		body="Assim. Jubbah +1",hands="Hashi. Bazu. +1",ring1="Kishar Ring",ring2="Dark Ring",
+		body="Assim. Jubbah +2",hands="Hashi. Bazu. +1",ring1="Kishar Ring",ring2="Dark Ring",
 		back="Aurist's Cape +1",waist="Witful Belt",legs="Lengo Pants",feet="Carmine Greaves"}
 
 	sets.midcast['Blue Magic']['Battery Charge'] = set_combine(sets.midcast['Blue Magic'].Buff, {head="Amalric Coif",back="Grapevine Cape",waist="Gishdubar Sash"})
@@ -441,22 +441,22 @@ function init_gear_sets()
 
 	-- Resting sets
 	sets.resting = {main="Bolelabunga",sub="Genmei Shield",ammo="Falcon Eye",
-			      head="Rawhide Mask",neck="Loricate Torque +1",ear1="Etiolation Earring", ear2="Ethereal Earring",
-			      body="Jhakri Robe +2",hands=gear.herc_hands_DT,ring1="Defending Ring",ring2="Sheltered Ring",
-			      back="Moonbeam Cape",waist="Flume Belt",legs="Lengo Pants",feet=gear.herc_feet_Ref}
+			      head=gear.herc_head_Ref,neck="Loricate Torque +1",ear1="Etiolation Earring", ear2="Ethereal Earring",
+			      body="Jhakri Robe +2",hands=gear.herc_hands_Ref,ring1="Defending Ring",ring2="Sheltered Ring",
+			      back="Moonbeam Cape",waist="Flume Belt",legs="Rawhide Trousers",feet=gear.herc_feet_Ref}
 
 	-- Idle sets
 	sets.idle = {main="Bolelabunga",sub="Genmei Shield",ammo="Staunch Tathlum",
-			      head="Rawhide Mask",neck="Loricate Torque +1",ear1="Etiolation Earring", ear2="Ethereal Earring",
-			      body="Jhakri Robe +2",hands=gear.herc_hands_DT,ring1="Defending Ring",ring2="Paguroidea ring",
+			      head=gear.herc_head_Ref,neck="Loricate Torque +1",ear1="Etiolation Earring", ear2="Ethereal Earring",
+			      body="Jhakri Robe +2",hands=gear.herc_hands_Ref,ring1="Defending Ring",ring2="Gelatinous Ring +1",
 			      back="Moonbeam Cape",waist="Flume Belt",legs="Carmine Cuisses +1",feet=gear.herc_feet_Ref}
 
 	sets.idle.Sphere = set_combine(sets.idle, {body="Mekosu. Harness"})
 
 	sets.idle.PDT = {main="Sakpata's Sword",sub="Genmei Shield",ammo="Staunch Tathlum",
-				head="Ayanmo Zucchetto +1",neck="Loricate Torque +1",ear1="Etiolation Earring", ear2="Tuisto Earring",
-		        body="Ayanmo Corazza +2",hands=gear.herc_hands_DT,ring1="Defending Ring",ring2="Gelatinous Ring +1",
-				back="Moonbeam Cape",waist="Flume Belt",legs="Carmine Cuisses +1",feet=gear.herc_feet_Ref}
+				head="Nyame Helm",neck="Loricate Torque +1",ear1="Etiolation Earring", ear2="Tuisto Earring",
+		        body="Nyame Mail",hands="Nyame Gauntlets",ring1="Defending Ring",ring2="Gelatinous Ring +1",
+				back="Moonbeam Cape",waist="Flume Belt",legs="Nyame Flanchard",feet=gear.herc_feet_Ref}
 
 	sets.idle.DTHippo = set_combine(sets.idle.PDT, {legs="Carmine Cuisses +1",feet="Hippo. Socks +1"})
 
@@ -490,7 +490,7 @@ function init_gear_sets()
 	sets.TreasureHunter = set_combine(sets.TreasureHunter, {})
 	
 	-- Weapons sets
-	sets.weapons.Naegska = {main="Naegling",sub="Skapata's Sword"}
+	sets.weapons.Naegska = {main="Naegling",sub="Sakpata's Sword"}
 	sets.weapons.Tizbron = {main="Tizona",sub="Thibron"}
 	sets.weapons.Naegada = {main="Naegling",sub=gear.Colada_1}
 	sets.weapons.MagicClubs = {main="Nibiru Cudgel",sub="Nibiru Cudgel"}
@@ -606,33 +606,7 @@ function select_default_macro_book()
 	end
 end
 
-function user_job_lockstyle()
-	if player.equipment.main == nil or player.equipment.main == 'empty' then
-		windower.chat.input('/lockstyleset 001')
-	elseif res.items[item_name_to_id(player.equipment.main)].skill == 3 then --Sword in main hand.
-		if player.equipment.sub == nil or player.equipment.sub == 'empty' then --Sword/Nothing.
-				windower.chat.input('/lockstyleset 001')
-		elseif res.items[item_name_to_id(player.equipment.sub)].shield_size then --Sword/Shield
-				windower.chat.input('/lockstyleset 001')
-		elseif res.items[item_name_to_id(player.equipment.sub)].skill == 3 then --Sword/Sword.
-			windower.chat.input('/lockstyleset 001')
-		elseif res.items[item_name_to_id(player.equipment.sub)].skill == 2 then --Sword/Dagger.
-			windower.chat.input('/lockstyleset 001')
-		else
-			windower.chat.input('/lockstyleset 001') --Catchall just in case something's weird.
-		end
-	elseif res.items[item_name_to_id(player.equipment.main)].skill == 2 then --Dagger in main hand.
-		if player.equipment.sub == nil or player.equipment.sub == 'empty' then --Dagger/Nothing.
-			windower.chat.input('/lockstyleset 001')
-		elseif res.items[item_name_to_id(player.equipment.sub)].shield_size then --Dagger/Shield
-				windower.chat.input('/lockstyleset 001')
-		elseif res.items[item_name_to_id(player.equipment.sub)].skill == 2 then --Dagger/Dagger.
-			windower.chat.input('/lockstyleset 001')
-		else
-			windower.chat.input('/lockstyleset 001') --Catchall just in case something's weird.
-		end
-	end
-end
+
 
 autows_list = {['Tizbron']='Expiacion',['Tizalmace']='Expiacion',['Almace']='Chant Du Cygne',['MeleeClubs']='Realmrazer',
      ['HybridWeapons']='Sanguine Blade',['Naegbron']='Savage Blade',['Naegmace']='Savage Blade',['Naegada']='Savage Blade'}

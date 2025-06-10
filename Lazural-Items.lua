@@ -8,16 +8,16 @@ sets.TreasureHunter = {waist="Chaac Belt"}
 
 
 --Augmented items that you'll use among multiple jobs.
-gear.herc_head_MAB = {name="Herculean Helm", augments={'"Mag.Atk.Bns."+24','Crit.hit rate+1','INT+7','Mag. Acc.+13',}}
+gear.herc_head_MAB = {name="Herculean Helm", augments={'"Mag.Atk.Bns."+19','MND+7','Quadruple Attack +2','Mag. Acc.+17 "Mag.Atk.Bns."+17',}}
 gear.herc_head_ACC = {name="Herculean Helm", augments={'Accuracy+23 Attack+23','Crit. hit damage +4%','STR+8','Accuracy+6',}}
-gear.herc_head_PET = {name="Herculean Helm", augments={'Pet: "Mag.Atk.Bns."+24','AGI+5','Quadruple Attack +2','Accuracy+11 Attack+11',}}
+gear.herc_head_Ref = {name="Herculean Helm", augments={'Mag. Acc.+1','Accuracy+6','"Refresh"+2','Mag. Acc.+8 "Mag.Atk.Bns."+8',}}
 gear.herc_body_PHA = {name="Herculean Vest", augments={'Attack+10','Accuracy+1','Phalanx +4',}}
 gear.herc_body_WSD = {name="Herculean Vest", augments={'Accuracy+21 Attack+21','Weapon skill damage +2%','DEX+9','Accuracy+10','Attack+1',}}
 gear.herc_feet_TA = {name="Herculean Boots", augments={'Accuracy+15','"Triple Atk."+3','STR+9','Attack+14',}}
 gear.herc_feet_Ref = {name="Herculean Boots", augments={'Pet: INT+13','Pet: Mag. Acc.+13','"Refresh"+2',}}
 gear.herc_feet_MAB = {name="Herculean Boots", augments={'Mag. Acc.+19 "Mag.Atk.Bns."+19','"Store TP"+5','STR+8','Mag. Acc.+11','"Mag.Atk.Bns."+8',}}
 gear.herc_hands_AA = {name="Herculean Gloves", augments={'Accuracy+20 Attack+20','Crit. hit damage +1%','STR+8','Accuracy+15','Attack+10',}}
-gear.herc_hands_DT = {name="Herculean Gloves", augments={'AGI+14','Accuracy+28','Damage taken-5%','Accuracy+19 Attack+19','Mag. Acc.+2 "Mag.Atk.Bns."+2',}}
+gear.herc_hands_Ref = {name="Herculean Gloves", augments={'Weapon skill damage +1%','STR+13','"Refresh"+1',}}
 gear.herc_legs_MAB = {name="Herculean Trousers", augments={'Mag. Acc.+18 "Mag.Atk.Bns."+18','Crit.hit rate+1','INT+8','Mag. Acc.+8','"Mag.Atk.Bns."+13',}}
 gear.herc_legs_TA = {name="Herculean Trousers", augments={'Accuracy+22 Attack+22','"Triple Atk."+2','VIT+6','Accuracy+13','Attack+1',}}
 

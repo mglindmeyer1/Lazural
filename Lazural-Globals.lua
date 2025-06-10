@@ -1,3 +1,4 @@
+
 --Place for settings and custom functions to work across one characters, all jobs.
 latency = .75
 
@@ -81,7 +82,18 @@ send_command('bind !s input /con tt si')
 send_command('bind PageDown input /con send Aneybug c4 Lazural')
 send_command('bind PageUp input /con send Aneybug curaga 3 Lazural')
 send_command('bind !PageDown input /con stna')
-send_command('bind !End input /con send Aneybug follow Lazural')
+send_command('bind !End input /con fm')
+send_command('bind ^End input /con dfm')
+send_command('bind ^!End input /con send Aneybug exec Pro & Shell')
+send_command('bind @!End input /con send Aneybug exec Bars')
+send_command('bind @^End input /con send Aneybug exec Reraise')
+send_command('bind ~End input /con send @all warp')
+send_command('bind @End input /con send Aneybug gs c buffup')
+send_command('bind @Delete input /con hbs')
+send_command('bind !Delete input /con hbo')
+send_command('bind ^Delete input /con send @others hb as Lazural')
+send_command('bind ~Delete input /con send @others hb as attack')
+
 
 
 NotifyBuffs = S{'doom','petrification'}

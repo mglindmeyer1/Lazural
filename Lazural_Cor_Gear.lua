@@ -17,24 +17,24 @@ function user_job_setup()
     options.ammo_warning_limit = 15
     --Ikenga_vest_bonus = 190  -- It is 190 at R20. Uncomment if you need to manually adjust because you are using below R20
 
-	gear.tp_ranger_jse_back = {name="Camulus's Mantle",augments={'AGI+20','Mag. Acc+20 Rng.Atk.+20','Weapon skill damage +10%',}}
+	gear.tp_ranger_jse_back = {name="Camulus's Mantle",augments={'AGI+20','Rng.Acc.+20 Rng.Atk.+20','Weapon skill damage +10%',}}
 	gear.snapshot_jse_back = { name="Camulus's Mantle", augments={'INT+2','Eva.+19 /Mag. Eva.+19','"Snapshot"+10',}}
-	gear.tp_jse_back = {name="Camulus's Mantle",augments={'DEX+20','Accuracy+20 Attack+20','"Double Attack"+10',}}
+	gear.tp_jse_back = { name="Camulus's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','"Dbl.Atk."+10',}}
 	gear.ranger_wsd_jse_back = {name="Camulus's Mantle",augments={'AGI+20','Rng.Acc.+20 Rng.Atk.+20','Weapon skill damage +10%',}}
-	gear.magic_wsd_jse_back = {name="Camulus's Mantle",augments={'AGI+20','Mag. Acc+20 Rng.Atk.+20','Weapon skill damage +10%',}}
+	gear.magic_wsd_jse_back = {name="Camulus's Mantle",augments={'AGI+20','Rng.Acc.+20 Rng.Atk.+20','Weapon skill damage +10%',}}
 	gear.str_wsd_jse_back = {name="Camulus's Mantle",augments={'STR+20','Accuracy+20 Attack+20','Weapon skill damage +10%',}}
 
     -- Additional local binds
 	send_command('bind ^` gs c cycle ElementalMode')
 	send_command('bind !` gs c elemental quickdraw')
 	
-	send_command('bind ^backspace input /ja "Double-up" <me>')
+	send_command('bind !backspace input /ja "Double-up" <me>')
 	send_command('bind @backspace input /ja "Snake Eye" <me>')
-	send_command('bind !backspace input /ja "Fold" <me>')
+	send_command('bind ^backspace input /ja "Fold" <me>')
 	send_command('bind ^@!backspace input /ja "Crooked Cards" <me>')
 	
 	send_command('bind ^\\\\ input /ja "Random Deal" <me>')
-    send_command('bind !Numpad6 input /ja "Bolter\'s Roll" <me>')
+    send_command('bind !\\\\ input /ja "Bolter\'s Roll" <me>')
 	send_command('bind ^@!\\\\ gs c toggle LuzafRing')
 	send_command('bind @f7 gs c toggle RngHelper')
     send_command('bind ^h gs c useitem ring2 Warp Ring')
@@ -86,9 +86,9 @@ function init_gear_sets()
     sets.precast.CorsairRoll["Allies' Roll"] = set_combine(sets.precast.CorsairRoll, {hands="Chasseur's Gants +1"})
     
     sets.precast.CorsairShot = {ammo=gear.QDbullet,
-        head=gear.herc_head_MAB,neck="Iskur Gorget",ear1="Dedition Earring",ear2="Telos Earring",
-        body="Oshosi Vest",hands="Adhemar Wristbands",ring1="Apate Ring",ring2="Petrov Ring",
-        back=gear.tp_ranger_jse_back,waist="Goading Belt",legs="Adhemar Kecks",feet="Carmine Greaves"}
+        head="Ikenga's Hat",neck="Iskur Gorget",ear1="Dedition Earring",ear2="Telos Earring",
+        body="Ikenga's Vest",hands="Ikenga's Gloves",ring1="Apate Ring",ring2="Petrov Ring",
+        back=gear.tp_ranger_jse_back,waist="Yemaya Belt",legs="Ikenga's Trousers",feet="Ikenga's Clogs"}
 		
 	sets.precast.CorsairShot.Damage = {ammo=gear.QDbullet,
         head=gear.herc_head_MAB,neck="Sanctity Necklace",ear1="Friomisi Earring",ear2="Crematio Earring",
@@ -130,7 +130,7 @@ function init_gear_sets()
 	sets.precast.FC.Cure = set_combine(sets.precast.FC, {ear2="Mendi. Earring"})
 
     sets.precast.RA = {ammo=gear.RAbullet,
-        head="Taeon Chapeau",neck="Comm. Charm +2",
+        head="Ikenga's Hat",neck="Comm. Charm +1",
         body="Laksa. Frac +2",hands="Carmine Fin. Ga.",ring1="Crepuscular Ring",
         back=gear.snapshot_jse_back,waist="Impulse Belt",legs="Adhemar Kecks",feet="Adhemar Gamashes"}
 		
@@ -180,12 +180,12 @@ function init_gear_sets()
         back=gear.str_wsd_jse_back,waist="Grunfeld Rope",legs="Carmine Cuisses +1",feet="Lanun Bottes +3"}
 	
     sets.precast.WS['Last Stand'] = {ammo=gear.WSbullet,
-        head="Lanun Tricorn +2",neck="Ocachi Gorget",ear1="Moonshade Earring",ear2="Telos Earring",
+        head="Lanun Tricorne +2",neck="Ocachi Gorget",ear1="Moonshade Earring",ear2="Ishvara Earring",
         body="Laksa. Frac +2",hands="Meg. Gloves +2",ring1="Apate Ring",ring2="Rufescent Ring",
         back=gear.ranger_wsd_jse_back,waist="Fotia Belt",legs="Meg. Chausses +2",feet="Lanun Bottes +3"}
 
     sets.precast.WS['Last Stand'].Acc = {ammo=gear.WSbullet,
-        head="Meghanada Visor +2",neck="Iskur Gorget",ear1="Moonshade Earring",ear2="Telos Earring",
+        head="Meghanada Visor +2",neck="Comm. Charm +1",ear1="Moonshade Earring",ear2="Telos Earring",
         body="Laksa. Frac +2",hands="Meg. Gloves +2",ring1="Regal Ring",ring2="Dingir Ring",
         back=gear.ranger_wsd_jse_back,waist="Fotia Belt",legs="Meg. Chausses +2",feet="Lanun Bottes +3"}
 		
@@ -202,12 +202,12 @@ function init_gear_sets()
 	
     sets.precast.WS['Leaden Salute'] = {ammo=gear.MAbullet,
         head="Pixie Hairpin +1",neck="Comm. Charm +2",ear1="Moonshade Earring",ear2="Friomisi Earring",
-        body="Lanun Frac +3",hands="Carmine Fin. Ga. +1",ring1="Archon Ring",ring2="Arvina Ringlet +1",
+        body="Lanun Frac +3",hands="Carmine Fin. Ga.",ring1="Archon Ring",ring2="Arvina Ringlet +1",
         back=gear.magic_wsd_jse_back,waist="Eschan Stone",legs=gear.herc_legs_MAB,feet="Lanun Bottes +3"}
 		
     sets.precast.WS['Leaden Salute'].Acc = {ammo=gear.MAbullet,
         head="Pixie Hairpin +1",neck="Comm. Charm +2",ear1="Moonshade Earring",ear2="Friomisi Earring",
-        body="Lanun Frac +3",hands="Carmine Fin. Ga. +1",ring1="Archon Ring",ring2="Dingir Ring",
+        body="Lanun Frac +3",hands="Carmine Fin. Ga.",ring1="Archon Ring",ring2="Dingir Ring",
         back=gear.magic_wsd_jse_back,waist="Eschan Stone",legs="Nyame Flanchard",feet="Lanun Bottes +3"}
 
     sets.precast.WS['Aeolian Edge'] = {ammo="Animikii Bullet",
@@ -259,14 +259,14 @@ function init_gear_sets()
 
     -- Ranged gear
     sets.midcast.RA = {ammo=gear.RAbullet,
-        head="Oshosi Mask",neck="Ocachi Gorget",ear1="Enervating Earring",ear2="Telos Earring",
-        body="Oshosi Vest",hands="Oshosi Gloves",ring1="Petrov Ring",ring2="Apate Ring",
-        back=gear.tp_ranger_jse_back,waist="Yemaya Belt",legs="Adhemar Kecks",feet="Adhemar Gamashes"}
+        head="Ikenga's Hat",neck="Ocachi Gorget",ear1="Enervating Earring",ear2="Telos Earring",
+        body="Ikenga's Vest",hands="Ikenga's Gloves",ring1="Petrov Ring",ring2="Apate Ring",
+        back=gear.tp_ranger_jse_back,waist="Yemaya Belt",legs="Ikenga's Trousers",feet="Ikenga's Clogs"}
 
     sets.midcast.RA.Acc = {ammo=gear.RAbullet,
-         head="Oshosi Mask",neck="Sanctity Necklace",ear1="Enervating Earring",ear2="Telos Earring",
-        body="Oshosi Vest",hands="Oshosi Gloves",ring1="Longshot Ring",ring2="Paqichikaji Ring",
-        back=gear.tp_ranger_jse_back,waist="Yemaya Belt",legs="Adhemar Kecks",feet="Adhemar Gamashes"}
+        head="Ikenga's Hat",neck="Comm. Charm +1",ear1="Enervating Earring",ear2="Telos Earring",
+        body="Ikenga's Vest",hands="Ikenga's Gloves",ring1="Longshot Ring",ring2="Paqichikaji Ring",
+        back=gear.tp_ranger_jse_back,waist="Yemaya Belt",legs="Ikenga's Trousers",feet="Ikenga's Clogs"}
 		
 	sets.buff['Triple Shot'] = {body="Oshosi Vest"}
     
@@ -284,7 +284,7 @@ function init_gear_sets()
     -- Idle sets
     sets.idle = {ammo=gear.RAbullet,
         head="Lanun Tricorne +2",neck="Loricate Torque +1",ear1="Etiolation Earring",ear2="Ethereal Earring",
-        body="Lanun frac +3",hands=gear.herc_hands_DT,ring1="Defending Ring",ring2="Shadow Ring",
+        body="Lanun frac +3",hands="Nyame Gauntlets",ring1="Defending Ring",ring2="Shadow Ring",
         back="Moonbeam Cape",waist="Carrier's Sash",legs="Carmine Cuisses +1",feet="Lanun bottes +3"}
 		
     sets.idle.PDT = {ammo=gear.RAbullet,
@@ -293,8 +293,8 @@ function init_gear_sets()
         back="Shadow Mantle",waist="Flume Belt +1",legs="Nyame Flanchard",feet="Malignance Boots"}
 		
     sets.idle.Refresh = {ammo=gear.RAbullet,
-        head="Rawhide Mask",neck="Loricate Torque +1",ear1="Etiolation Earring",ear2="Ethereal Earring",
-        body="Lanun frac +3",hands=gear.herc_hands_DT,ring1="Defending Ring",ring2="Gelatinous Ring +1",
+        head=gear.herc_head_Ref,neck="Loricate Torque +1",ear1="Etiolation Earring",ear2="Ethereal Earring",
+        body="Lanun frac +3",hands=gear.herc_hands_Ref,ring1="Defending Ring",ring2="Gelatinous Ring +1",
         back="Moonbeam Cape",waist="Flume Belt",legs="Rawhide Trousers",feet=gear.herc_feet_Ref}
     
     -- Defense sets
@@ -319,7 +319,7 @@ function init_gear_sets()
 
 	-- Weapons sets
 	sets.weapons.Default = {main="Naegling",sub="Nusku Shield",range="Fomalhaut"}
-	sets.weapons.Ranged = {main="Rostam",sub="Nusku Shield",range="Fomalhaut"}
+	sets.weapons.Ranged = {main="Kustawi +1",sub="Nusku Shield",range="Fomalhaut"}
 	sets.weapons.Evisceration = {main="Tauret",sub="Nusku Shield",range="Ataktos"}
 	sets.weapons.DualWeapons = {main="Naegling",sub="Blurred Knife +1",range="Fomalhaut"}
 	sets.weapons.DualSavageWeapons = {main="Naegling",sub="Blurred Knife +1",range="Ataktos"}
@@ -395,32 +395,6 @@ function select_default_macro_book()
     end
 end
 
-function user_job_lockstyle()
-	if player.equipment.main == nil or player.equipment.main == 'empty' then
-		windower.chat.input('/lockstyleset 002')
-	elseif res.items[item_name_to_id(player.equipment.main)].skill == 3 then --Sword in main hand.
-		if player.equipment.sub == nil or player.equipment.sub == 'empty' then --Sword/Nothing.
-				windower.chat.input('/lockstyleset 002')
-		elseif res.items[item_name_to_id(player.equipment.sub)].shield_size then --Sword/Shield
-				windower.chat.input('/lockstyleset 002')
-		elseif res.items[item_name_to_id(player.equipment.sub)].skill == 3 then --Sword/Sword.
-			windower.chat.input('/lockstyleset 002')
-		elseif res.items[item_name_to_id(player.equipment.sub)].skill == 2 then --Sword/Dagger.
-			windower.chat.input('/lockstyleset 002')
-		else
-			windower.chat.input('/lockstyleset 002') --Catchall just in case something's weird.
-		end
-	elseif res.items[item_name_to_id(player.equipment.main)].skill == 2 then --Dagger in main hand.
-		if player.equipment.sub == nil or player.equipment.sub == 'empty' then --Dagger/Nothing.
-			windower.chat.input('/lockstyleset 002')
-		elseif res.items[item_name_to_id(player.equipment.sub)].shield_size then --Dagger/Shield
-				windower.chat.input('/lockstyleset 002')
-		elseif res.items[item_name_to_id(player.equipment.sub)].skill == 2 then --Dagger/Dagger.
-			windower.chat.input('/lockstyleset 002')
-		else
-			windower.chat.input('/lockstyleset 002') --Catchall just in case something's weird.
-		end
-	end
-end
+
 
 autows_list = {['Default']='Savage Blade',['Evisceration']='Evisceration',['Savage']='Savage Blade',['Ranged']='Last Stand',['DualWeapons']='Savage Blade',['DualSavageWeapons']='Savage Blade',['DualEvisceration']='Evisceration',['DualLeadenRanged']='Leaden Salute',['DualLeadenMelee']='Leaden Salute',['DualAeolian']='Aeolian Edge',['DualRanged']='Last Stand'}
