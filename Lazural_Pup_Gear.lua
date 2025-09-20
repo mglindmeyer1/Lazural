@@ -235,9 +235,9 @@ function init_gear_sets()
     -- Idle sets
 
     sets.idle = {
-        head="Nyame Helm",neck="Loricate Torque +1",ear1="Etiolation Earring",ear2="Sanare Earring",
+        head="Nyame Helm",neck="Loricate Torque +1",ear1="Etiolation Earring",ear2="Odnowa Earring +1",
         body="Hiza. Haramaki +2",hands="Nyame Gauntlets",ring1="Defending Ring",ring2="Dark Ring",
-        back="Moonlight Cape",waist="Carrier Sash",legs="Nyame Flanchard",feet="Hippo. Socks +1"}
+        back="Moonlight Cape",waist="Carrier's Sash",legs="Nyame Flanchard",feet="Hippo. Socks +1"}
 		
 	sets.idle.Refresh = {
         head="Rawhide Mask",neck="Loricate Torque +1",ear1="Etiolation Earring",ear2="Sanare Earring",
@@ -246,15 +246,15 @@ function init_gear_sets()
 		
     -- Set for idle while pet is out (eg: pet regen gear)
     sets.idle.Pet = {
-        head="Anwig Salade",neck="Loricate Torque +1",ear1="Enmerkar Earring",ear2="Handler's Earring +1",
-        body=gear.taeon_pet_body,hands="Taeon Gloves",ring1="Defending Ring",ring2="Dark Ring",
-        back="Moonlight Cape",waist="Isa Belt",legs="Tali'ah Sera. +2",feet="Taeon Boots"}
+        head="Rao Kabuto",neck="Loricate Torque +1",ear1="Enmerkar Earring",ear2="Handler's Earring +1",
+        body="Hiza. Haramaki +2",hands="Rao Kote",ring1="Defending Ring",ring2="Dark Ring",
+        back="Moonlight Cape",waist="Isa Belt",legs="Rao Haidate",feet="Rao Sune-ate"}
 
     -- Idle sets to wear while pet is engaged
     sets.idle.Pet.Engaged = {
-        head="Anwig Salade",neck="Shulmanu Collar",ear1="Enmerkar Earring",ear2="Crepuscular Earring",
-        body=gear.taeon_pet_body,hands="Taeon Gloves",ring1="Varar Ring +1",ring2="C. Palug Ring",
-        back="Visucius's Mantle",waist="Incarnation Sash",legs="Taeon Tights",feet="Taeon Boots"}
+        head="Mpaca's Cap",neck="Shulmanu Collar",ear1="Enmerkar Earring",ear2="Handler's Earring +1",
+        body="Pitre Tobe",hands="Mpaca's Gloves",ring1="Varar Ring",ring2="Varar Ring",
+        back="Visucius's Mantle",waist="Incarnation Sash",legs="Mpaca's Hose",feet="Mpaca's Boots"}
 
     sets.idle.Pet.Engaged.Ranged = set_combine(sets.idle.Pet.Engaged, {})
 	sets.idle.Pet.Engaged.Melee = set_combine(sets.idle.Pet.Engaged, {})
@@ -296,7 +296,7 @@ function init_gear_sets()
     sets.engaged = {
         head="Mpaca's Cap",neck="Shulmanu Collar",ear1="Cessance Earring",ear2="Telos Earring",
         body="Sayadio's Kaftan",hands="Ryuo Tekko",ring1="Niqmaddu Ring",ring2="Epona's Ring",
-        back="Visucius's Mantle",waist="Windbuffet Belt +1",legs="Ryuo Hakama",feet=gear.herculean_ta_feet}
+        back="Visucius's Mantle",waist="Windbuffet Belt",legs="Ryuo Hakama",feet=gear.herculean_ta_feet}
     sets.engaged.Acc = {
         head="Mpaca's Cap",neck="Shulmanu Collar",ear1="Cessance Earring",ear2="Telos Earring",
         body="Sayadio's Kaftan",hands="Ryuo Tekko",ring1="Niqmaddu Ring",ring2="Ramuh Ring +1",
@@ -343,8 +343,8 @@ function init_gear_sets()
         back="Visucius's Mantle",waist="Klouskap Sash",legs="Ryuo Hakama",feet=gear.herculean_ta_feet}
 		
 	-- Weapons sets
-	sets.weapons.PetWeapons = {main="Ohtas",range="Animator P +1",}
-	sets.weapons.Godhands = {main="Godhands",range="Animator P +1",}
+	sets.weapons.PetWeapons = {main="Ohtas",range="Animator P",}
+	sets.weapons.Godhands = {main="Sakpata's Fists",range="Animator P",}
 end
 
 -- Select default macro book on initial load or subjob change.

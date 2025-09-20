@@ -8,7 +8,7 @@ function user_job_setup()
 	state.HybridMode:options('Normal','DT')
 	state.ExtraMeleeMode = M{['description']='Extra Melee Mode', 'None', 'DWMax'}
 	state.Weapons:options('Default','Ranged','Savage','Evisceration','DualWeapons','DualSavageWeapons','DualEvisceration','DualLeadenRanged','DualLeadenMelee','DualAeolian','DualLeadenMeleeAcc','DualRanged','DualProcWeapons','None')
-	state.CompensatorMode:options('300','1000','Never','Always')
+	state.CompensatorMode:options('Always','300','1000','Never')
 
     gear.RAbullet = "Chrono Bullet"
     gear.WSbullet = "Chrono Bullet"
@@ -43,6 +43,7 @@ function user_job_setup()
     send_command('bind !Numpad7 input /ws "Savage Blade" <t>')
     send_command('bind !Numpad8 input /ws "Last Stand" <t>')
     send_command('bind !Numpad9 input /ws "Leaden Salute" <t>')
+    send_command('bind !Numpad6 input /ws "Wildfire" <t>')
     send_command('bind !Numpad0 input /ra <t>')
 
     send_command('bind !m input /ja "Spectral Chair" <me>')
@@ -72,9 +73,9 @@ function init_gear_sets()
     sets.precast.JA['Random Deal'] = {body="Lanun Frac +3"}
     sets.precast.FoldDoubleBust = {hands="Lanun Gants"}
 
-    sets.precast.CorsairRoll = {main="Rostam",range="Compensator",
+    sets.precast.CorsairRoll = {main="Lanun Knife",range="Compensator",
         head="Lanun Tricorne +2",neck="Loricate Torque +1",ear1="Etiolation Earring",ear2="Eabani Earring",
-        body="Lanun Frac +2",hands="Chasseur's Gants +1",ring1="Defending Ring",ring2="Barataria Ring",
+        body="Lanun Frac +2",hands="Chasseur's Gants +2"8,ring1="Defending Ring",ring2="Barataria Ring",
         back=gear.snapshot_jse_back,waist="Flume Belt",legs="Mummu Kecks +1",feet="Malignance Boots"}
 
     sets.precast.LuzafRing = {ring2="Luzaf's Ring"}
@@ -83,7 +84,7 @@ function init_gear_sets()
     sets.precast.CorsairRoll["Courser's Roll"] = set_combine(sets.precast.CorsairRoll, {feet="Chass. Bottes +1"})
     sets.precast.CorsairRoll["Blitzer's Roll"] = set_combine(sets.precast.CorsairRoll, {head="Chass. Tricorne +1"})
     sets.precast.CorsairRoll["Tactician's Roll"] = set_combine(sets.precast.CorsairRoll, {body="Chasseur's Frac +1"})
-    sets.precast.CorsairRoll["Allies' Roll"] = set_combine(sets.precast.CorsairRoll, {hands="Chasseur's Gants +1"})
+    sets.precast.CorsairRoll["Allies' Roll"] = set_combine(sets.precast.CorsairRoll, {hands="Chasseur's Gants +2"})
     
     sets.precast.CorsairShot = {ammo=gear.QDbullet,
         head="Ikenga's Hat",neck="Iskur Gorget",ear1="Dedition Earring",ear2="Telos Earring",
@@ -325,11 +326,11 @@ function init_gear_sets()
 	sets.weapons.DualSavageWeapons = {main="Naegling",sub="Blurred Knife +1",range="Ataktos"}
 	sets.weapons.DualEvisceration = {main="Tauret",sub="Blurred Knife +1",range="Ataktos"}
 	sets.weapons.Savage = {main="Naegling",sub="Nusku Shield",range="Ataktos"}
-	sets.weapons.DualLeadenRanged = {main="Rostam",sub="Tauret",range="Fomalhaut"}
+	sets.weapons.DualLeadenRanged = {main="Lanun Knife",sub="Tauret",range="Fomalhaut"}
 	sets.weapons.DualLeadenMelee = {main="Naegling",sub="Atoyac",range="Fomalhaut"}
-	sets.weapons.DualAeolian = {main="Rostam",sub="Tauret",range="Ataktos"}
+	sets.weapons.DualAeolian = {main="Lanun Knife",sub="Tauret",range="Ataktos"}
 	sets.weapons.DualLeadenMeleeAcc = {main="Naegling",sub="Blurred Knife +1",range="Fomalhaut"}
-	sets.weapons.DualRanged = {main="Rostam",sub="Kustawi +1",range="Fomalhaut"}
+	sets.weapons.DualRanged = {main="Lanun Knife",sub="Kustawi +1",range="Fomalhaut"}
 	
     -- Engaged sets
 
@@ -345,18 +346,18 @@ function init_gear_sets()
 		back=gear.tp_jse_back,waist="Windbuffet Belt",legs="Samnuha Tights",feet=gear.herc_feet_TA}
     
     sets.engaged.Acc = {
-		head="Carmine Mask",neck="Sanctity Necklace",ear1="Cessance Earring",ear2="Telos Earring",
-		body=gear.herc_body_WSD,hands="Adhemar Wristbands",ring1="Ramuh Ring",ring2="Epona's Ring",
-		back=gear.tp_jse_back,waist="Olseni Belt",legs="Carmine Cuisses +1",feet="Malignance Boots"}
+		head="Dampening Tam",neck="Defiant Collar",ear1="Cessance Earring",ear2="Telos Earring",
+		body="Mummu Jacket +2",hands="Mummu Wrists +2",ring1="Chirich Ring",ring2="Chirich Ring",
+		back=gear.tp_jse_back,waist="Olseni Belt",legs="Meg. Chausses +2",feet=gear.herc_feet_TA}
 		
     sets.engaged.DT = {
         head="Malignance Chapeau",neck="Loricate Torque +1",ear1="Cessance Earring",ear2="Brutal Earring",
         body="Malignance Tabard",hands="Malignance Gloves",ring1="Defending Ring",ring2="Petrov Ring",
-        back=gear.tp_jse_back,waist="Windbuffet Belt +1",legs="Malignance Tights",feet="Malignance Boots"}
+        back=gear.tp_jse_back,waist="Windbuffet Belt",legs="Malignance Tights",feet="Malignance Boots"}
     
     sets.engaged.Acc.DT = {
         head="Malignance Chapeau",neck="Loricate Torque +1",ear1="Cessance Earring",ear2="Telos Earring",
-        body="Malignance Tabard",hands="Malignance Gloves",ring1="Defending Ring",ring2="Ramuh Ring +1",
+        body="Malignance Tabard",hands="Malignance Gloves",ring1="Defending Ring",ring2="Ramuh Ring",
         back=gear.tp_jse_back,waist="Olseni Belt",legs="Malignance Tights",feet="Malignance Boots"}
 
     sets.engaged.DW = {

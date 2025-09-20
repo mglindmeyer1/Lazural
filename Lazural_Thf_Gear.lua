@@ -11,7 +11,7 @@ function user_job_setup()
 	state.ResistDefenseMode:options('MEVA')
 	state.Weapons:options('Evisceration','Aeneas','Aeolian','Savage','ProcWeapons','Throwing','SwordThrowing','Bow')
 
-    state.ExtraMeleeMode = M{['description']='Extra Melee Mode','None','Suppa','DWMax','Parry'}
+    state.ExtraMeleeMode = M{['description']='Extra Melee Mode','None','Suppa','DWEarrings','DWMax','Parry'}
 	state.AmbushMode = M(false, 'Ambush Mode')
 
 	gear.da_jse_back = {name="Toutatis's Cape", augments={'DEX+20','Accuracy+20 Attack+20','Dbl.Atk."+10',}}
@@ -40,8 +40,8 @@ function init_gear_sets()
     -- Special sets (required by rules)
     --------------------------------------
 
-	sets.TreasureHunter = {hands="Plunderer's Armlets",waist="Chaac Belt",feet="Skulk. Poulaines"}
-    sets.Kiting = {feet="Skd. Jambeaux +1"}
+	sets.TreasureHunter = {hands="Plunderer's Armlets +1",waist="Chaac Belt",legs="Volte Hose",feet="Skulk. Poulaines"}
+    sets.Kiting = {feet="Jute Boots +1"}
 
 	sets.buff.Doom = set_combine(sets.buff.Doom, {})
 	sets.buff.Sleep = {head="Frenzy Sallet"}
@@ -58,11 +58,11 @@ function init_gear_sets()
 	sets.Ambush = {} --body="Plunderer's Vest +1"
 	
 	-- Weapons sets
-	sets.weapons.Aeneas = {main="Aeneas",sub="Gleti's Knife"}
+	sets.weapons.Aeneas = {main="Gleti's Knife",sub="Tauret"}
 	sets.weapons.Aeolian = {main="Malevolence",sub="Malevolence"}
 	sets.weapons.Savage = {main="Naegling",sub="Gleti's Knife"}
 	sets.weapons.ProcWeapons = {main="Blurred Knife +1",sub="Atoyac"}
-	sets.weapons.Evisceration = {main="Tauret",sub="Shijo"}
+	sets.weapons.Evisceration = {main="Tauret",sub="Gleti's Knife"}
 	sets.weapons.Throwing = {main="Aeneas",sub="Gleti's Knife",range="Raider's Bmrng.",ammo=empty}
 	sets.weapons.SwordThrowing = {main="Naegling",sub="Gleti's Knife",range="Raider's Bmrng.",ammo=empty}
 	sets.weapons.Bow = {main="Aeneas",sub="Kustawi +1",range="Kaja Bow",ammo="Chapuli Arrow"}
@@ -94,7 +94,7 @@ function init_gear_sets()
     sets.precast.JA['Steal'] = {feet="Pillager's Poulaines"}
 	sets.precast.JA['Mug'] = {}
     sets.precast.JA['Despoil'] = {legs="Skulker's Culottes",feet="Skulk. Poulaines"}
-    sets.precast.JA['Perfect Dodge'] = {hands="Plunderer's Armlets"}
+    sets.precast.JA['Perfect Dodge'] = {hands="Plunderer's Armlets +1"}
     sets.precast.JA['Feint'] = {} -- {legs="Assassin's Culottes +2"}
 
     sets.precast.JA['Sneak Attack'] = sets.buff['Sneak Attack']
@@ -115,7 +115,7 @@ function init_gear_sets()
     -- Fast cast sets for spells
     sets.precast.FC = {ammo="Impatiens",
 		head=gear.herculean_fc_head,neck="Voltsurge Torque",ear1="Etiolation Earring",ear2="Loquac. Earring",
-		body="Samnuha Coat",hands="Leyline Gloves",ring1="Lebeche Ring",ring2="Prolix Ring",
+		body="Dread Jupon",hands="Leyline Gloves",ring1="Lebeche Ring",ring2="Prolix Ring",
 		legs="Rawhide Trousers"}
 
     sets.precast.FC.Utsusemi = set_combine(sets.precast.FC, {neck="Magoraga Beads",body="Passion Jacket"})
@@ -247,13 +247,15 @@ function init_gear_sets()
     -- Idle sets (default idle set not needed since the other three are defined, but leaving for testing purposes)
 
     sets.idle = {ammo="Staunch Tathlum",
-        head="Dampening Tam",neck="Loricate Torque +1",ear1="Etiolation Earring",ear2="Tuisto Earring",
-        body="Emet Harness +1",hands=gear.herc_hands_DT,ring1="Defending Ring",ring2="Paguroidea Ring",
-        back="Xucau Mantle",waist="Flume Belt",legs="Mummu Kecks +1",feet="Jute Boots +1"}
+        head="Gleti's Mask",neck="Loricate Torque +1",ear1="Odnowa Earring +1",ear2="Tuisto Earring",
+        body="Gleti's Cuirass",hands="Gleti's Gauntlets",ring1="Defending Ring",ring2="Gelatinous Ring +1",
+        back="Moonbeam Cape",waist="Flume Belt",legs="Gleti's Breeches",feet="Jute Boots +1"}
 		
     sets.idle.Sphere = set_combine(sets.idle, {body="Mekosu. Harness"})
 
     sets.idle.Weak = set_combine(sets.idle, {})
+
+
 
 	sets.DayIdle = {}
 	sets.NightIdle = {}
@@ -262,9 +264,9 @@ function init_gear_sets()
     -- Defense sets
 
     sets.defense.PDT = {ammo="Staunch Tathlum",
-        head="Malignance Chapeau",neck="Loricate Torque +1",ear1="Etiolation Earring",ear2="Sanare Earring",
-        body="Malignance Tabard",hands="Malignance Gloves",ring1="Gelatinous Ring +1",ring2="Moonlight Ring",
-        back="Shadow Mantle",waist="Flume Belt +1",legs="Malignance Tights",feet="Malignance Boots"}
+        head="Nyame Helm",neck="Loricate Torque +1",ear1="Odnowa Earring +1",ear2="Tuisto Earring",
+        body="Nyame Mail",hands="Nyame Gauntlets",ring1="Moonlight Ring",ring2="Gelatinous Ring +1",
+        back="Shadow Mantle",waist="Flume Belt",legs="Nyame Flanchard",feet="Jute Boots +1"}
 
     sets.defense.MDT = {ammo="Staunch Tathlum",
         head="Malignance Chapeau",neck="Loricate Torque +1",ear1="Etiolation Earring",ear2="Sanare Earring",
@@ -283,9 +285,9 @@ function init_gear_sets()
 
     -- Normal melee group
     sets.engaged = {ammo="Aurgelmir Orb",
-        head="Dampening Tam",neck="Erudition Necklace",ear1="Dedition Earring",ear2="Telos Earring",
+        head="Adhemar Bonnet",neck="Anu Torque",ear1="Dedition Earring",ear2="Sherida Earring",
         body="Adhemar Jacket",hands="Adhemar Wristbands",ring1="Hetairoi Ring",ring2="Epona's Ring",
-        back=gear.da_jse_back,waist="Patentia Sash",legs="Samnuha Tights",feet=gear.herc_feet_TA}
+        back="Canny Cape",waist="Patentia Sash",legs="Samnuha Tights",feet=gear.herc_feet_TA}
 		
     sets.engaged.SomeAcc = {ammo="Aurgelmir Orb",
         head="Dampening Tam",neck="Combatant's Torque",ear1="Brutal Earring",ear2="Sherida Earring",
@@ -348,25 +350,7 @@ function select_default_macro_book()
 end
 
 function user_job_lockstyle()
-	if player.equipment.main == nil or player.equipment.main == 'empty' then
-		windower.chat.input('/lockstyleset 001')
-	elseif res.items[item_name_to_id(player.equipment.main)].skill == 3 then --Sword in main hand.
-		if player.equipment.sub == nil or player.equipment.sub == 'empty' then --Sword/Nothing.
-				windower.chat.input('/lockstyleset 007')
-		elseif res.items[item_name_to_id(player.equipment.sub)].skill == 2 then --Sword/Dagger.
-			windower.chat.input('/lockstyleset 007')
-		else
-			windower.chat.input('/lockstyleset 007') --Catchall just in case something's weird.
-		end
-	elseif res.items[item_name_to_id(player.equipment.main)].skill == 2 then --Dagger in main hand.
-		if player.equipment.sub == nil or player.equipment.sub == 'empty' then --Dagger/Nothing.
-			windower.chat.input('/lockstyleset 008')
-		elseif res.items[item_name_to_id(player.equipment.sub)].skill == 2 then --Dagger/Dagger.
-			windower.chat.input('/lockstyleset 008')
-		else
-			windower.chat.input('/lockstyleset 008') --Catchall just in case something's weird.
-		end
-	end
+	windower.chat.input('/lockstyleset 006') --Catchall just in case something's weird.
 end
 
 autows_list = {['Aeneas']="Rudra's Storm",['Aeolian']='Aeolian Edge',['Savage']='Savage Blade',['Throwing']="Rudra's Storm",['SwordThrowing']='Savage Blade',['Evisceration']='Evisceration',['ProcWeapons']='Wasp Sting',['Bow']='Empyreal Arrow'}

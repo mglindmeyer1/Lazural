@@ -1,9 +1,9 @@
 function user_job_setup()
 	-- Options: Override default values
-    state.OffenseMode:options('Normal','Grip','SomeAcc','Acc','FullAcc','Fodder')
+    state.OffenseMode:options('Normal','SomeAcc','Acc','FullAcc','Fodder')
     state.WeaponskillMode:options('Match','Normal','SomeAcc','Acc','FullAcc','Fodder')
-    state.HybridMode:options('Normal','Hybrid', 'PDT','Reraise','PDTTP')
-    state.PhysicalDefenseMode:options('PDT', 'PDTReraise', 'PDTTP')
+    state.HybridMode:options('Normal','Hybrid', 'PDT','Reraise')
+    state.PhysicalDefenseMode:options('PDT', 'PDTReraise')
     state.MagicalDefenseMode:options('MDT', 'MDTReraise')
 	state.ResistDefenseMode:options('MEVA')
 	state.IdleMode:options('Normal', 'PDT','Reraise')
@@ -11,7 +11,7 @@ function user_job_setup()
 	state.Passive = M{['description'] = 'Passive Mode','None','Twilight'}
 	state.Weapons:options('Savage','Chango','Greatsword','DualWeapons','Club','Polearm','None','ProcDagger','ProcSword','ProcGreatSword','ProcScythe','ProcPolearm','ProcGreatKatana','ProcKatana','ProcClub','ProcStaff')
 
-	gear.da_jse_back = {name="Cichol's Mantle",augments={'DEX+20','Accuracy+20 Attack+20','"Dbl.Atk."+10'}}
+	gear.da_jse_back = {name="Cichol's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','"Dbl.Atk."+10','Phys. dmg. taken-10%',}}
 	gear.crit_jse_back = {name="Cichol's Mantle",augments={'STR+20','Accuracy+20 Attack+20','Crit.hit rate+10'}}
 	gear.wsd_jse_back = {name="Cichol's Mantle",augments={'STR+20','Accuracy+20 Attack+20','Weapon Skill Damage +10%'}}
 
@@ -43,8 +43,8 @@ function init_gear_sets()
 	sets.passive.Twilight = {head="Twilight Helm",body="Twilight Mail"}
 	
 	-- Precast sets to enhance JAs
-	sets.precast.JA['Berserk'] = {back="Cichol's Mantle",body="Pumm. Lorica +2",feet="Agoge Calligae +1"}
-	sets.precast.JA['Warcry'] = {head="Agoge Mask +2"}
+	sets.precast.JA['Berserk'] = {back="Cichol's Mantle",body="Pumm. Lorica +4",feet="Agoge Calligae +1"}
+	sets.precast.JA['Warcry'] = {head="Agoge Mask +4"}
 	sets.precast.JA['Defender'] = set_combine(sets.Enmity,{})
 	sets.precast.JA['Aggressor'] = {body="Agoge Lorica +3"}
 	sets.precast.JA['Mighty Strikes'] = {}
@@ -71,7 +71,7 @@ function init_gear_sets()
 	sets.precast.FC = {ammo="Impatiens",
 		head="Sakpata's Helm",neck="Voltsurge Torque",ear1="Etiolation Earring",ear2="Loquac. Earring",
 		body="Odyss. Chestplate",hands="Leyline Gloves",ring1="Weatherspoon Ring",ring2="Prolix Ring",
-		back="Moonbeam Cape",waist="Flume Belt",legs="Founder's Hose",feet="Odyssean Greaves"}
+		back="Moonbeam Cape",waist="Flume Belt",legs="Eschite Cuisses",feet="Odyssean Greaves"}
 	
 	sets.precast.FC.Utsusemi = set_combine(sets.precast.FC, {})
 
@@ -79,21 +79,21 @@ function init_gear_sets()
 	sets.midcast.FastRecast = {ammo="Staunch Tathlum",
 		head="Sakpata's Helm",neck="Voltsurge Torque",ear1="Enchntr. Earring +1",ear2="Loquac. Earring",
 		body="Odyss. Chestplate",hands="Leyline Gloves",ring1="Weatherspoon Ring",ring2="Prolix Ring",
-		back="Moonbeam Cape",waist="Ioskeha Belt",legs="Founder's Hose",feet="Odyssean Greaves"}
+		back="Moonbeam Cape",waist="Ioskeha Belt +1",legs="Eschite Cuisses",feet="Odyssean Greaves"}
 	
 	sets.midcast.Utsusemi = set_combine(sets.midcast.FastRecast, {back="Mujin Mantle"})
                    
 	sets.midcast.Cure = {neck="Phalaina Locket",body="Souveran Cuirass +1",feet="Odyssean Greaves",back="Solemnity Cape"}
 	
 	sets.Self_Healing = {Head="Souv. Schaller +1",body="Souveran Cuirass +1",ring2="Kunaji Ring",waist="Gishdubar Sash",legs="Souv. Diechlings +1"}
-	sets.Cure_Received = {Head="Souv. Schaller +1",body="Sakpata's Plate",ring2="Kunaji Ring",waist="Gishdubar Sash",legs="Souv. Diechlings +1"}
+	sets.Cure_Received = {Head="Souv. Schaller +1",body="Sakpata's Plate",ring2="Kunaji Ring",waist="Gishdubar Sash",legs="Souv. Diechlings +1",feet="Souveran schuhs +1"}
 	sets.Phalanx_Received = {hands="Souv. Handsch. +1",legs="Sakpata's Cuisses",feet="Souveran schuhs +1"}					                   
 	-- Weaponskill sets
 	-- Default set for any weaponskill that isn't any more specifically defined
     sets.precast.WS = {ammo="Knobkierrie",
-		head="Agoge Mask +2",neck="Warrior's Beads",ear1="Brutal Earring",ear2="Moonshade Earring",
-		body="Pumm. Lorica +2",hands="Boii Mufflers +2",ring1="Apate Ring",ring2="Niqmaddu Ring",
-		back=gear.wsd_jse_back,waist="Fotia Belt",legs="Boii Cuisses +2",feet="Sulev. Leggings +2"}
+		head="Agoge Mask +4",neck="Warrior's Beads",ear1="Schere Earring",ear2="Moonshade Earring",
+		body="Sakpata's Breastplate",hands="Boii Mufflers +2",ring1="Apate Ring",ring2="Niqmaddu Ring",
+		back=gear.wsd_jse_back,waist="Fotia Belt",legs="Boii Cuisses +2",feet="Sakpata's Leggings"}
 
 	sets.precast.WS.SomeAcc = set_combine(sets.precast.WS, {})
 	sets.precast.WS.Acc = set_combine(sets.precast.WS, {})
@@ -101,7 +101,7 @@ function init_gear_sets()
 	sets.precast.WS.Fodder = set_combine(sets.precast.WS, {})
 
     -- Specific weaponskill sets.  Uses the base set if an appropriate WSMod version isn't found.	
-    sets.precast.WS['Savage Blade'] = set_combine(sets.precast.WS, {ear1="Thrud Earring",feet="Sulev. Leggings +2"})
+    sets.precast.WS['Savage Blade'] = set_combine(sets.precast.WS, {ear1="Thrud Earring",head="Agoge Mask +4",body="Pumm. Lorica +4",hands="Boii Mufflers +2",waist="Sailfi Belt +1",feet="Sulev. Leggings +2"})
     sets.precast.WS['Savage Blade'].SomeAcc = set_combine(sets.precast.WS.SomeAcc, {})
     sets.precast.WS['Savage Blade'].Acc = set_combine(sets.precast.WS.Acc, {})
     sets.precast.WS['Savage Blade'].FullAcc = set_combine(sets.precast.WS.FullAcc, {})
@@ -198,8 +198,8 @@ function init_gear_sets()
            
 	-- Idle sets
 	sets.idle = {ammo="Staunch Tathlum",
-		head="Sakpata's Helm",neck="Loricate Torque +1",ear1="Tuisto Earring",ear2="Ethereal Earring",
-		body="Sakpata's Breastplate",hands="Sakpata's Gauntlets",ring1="Moonlight Ring",ring2="Gelatinous Ring +1",
+		head="Hjarrandi Helm",neck="Loricate Torque +1",ear1="Tuisto Earring",ear2="Ethereal Earring",
+		body="Hjarrandi Breast.",hands="Sakpata's Gauntlets",ring1="Moonlight Ring",ring2="Gelatinous Ring +1",
 		back="Shadow Mantle",waist="Flume Belt",legs="Sakpata's Cuisses",feet="Sakpata's Leggings"}
 		
 	sets.idle.Weak = set_combine(sets.idle, {head="Twilight Helm",body="Twilight Mail"})
@@ -234,12 +234,12 @@ function init_gear_sets()
 	sets.buff.Sleep = {head="Frenzy Sallet"}
     
             -- Engaged sets
-	sets.engaged = {ammo="Aurgelmir Orb",
-		head="Flam. Zucchetto +2",neck="Warrior's Beads",ear1="Brutal Earring",ear2="Cessance Earring",
+	sets.engaged = {ammo="Coiste Bodhar",
+		head="Flam. Zucchetto +2",neck="Warrior's Beads",ear1="Schere Earring",ear2="Telos Earring",
 		body="Agoge Lorica +3",hands="Sulev. Gauntlets +2",ring1="Moonlight Ring",ring2="Niqmaddu Ring",
-		back=gear.da_jse_back,waist="Ioskeha Belt",legs="Pumm. Cuisses +2",feet="Flam. Gambieras +2"}
+		back=gear.da_jse_back,waist="Ioskeha Belt +1",legs="Pumm. Cuisses +2",feet="Flam. Gambieras +2"}
 	
-	sets.engaged.PDTTP = set_combine(sets.engaged, {head="Arke Zuchetto",body="Arke Corazza",hands="Arke Manopolas",legs="Arke Cosciales",feet="Arke Gambieras"})
+	
     
 	sets.engaged.Hybrid = set_combine(sets.engaged,{head="Hjarrandi Helm",body="Hjarrandi Breast.",ear1="Dedition Earring"})
 
@@ -248,38 +248,52 @@ function init_gear_sets()
 	sets.engaged.Reraise = set_combine(sets.engaged,{neck="Loricate Torque +1",head="Twilight Helm",body="Twilight Mail",Ring1="Defending Ring",Ring2="Moonlight Ring",ear1="Dedition Earring"}) 
 
 	sets.engaged['Chango'] = {ammo="Aurgelmir Orb",
-		head="Flam. Zucchetto +2",neck="Warrior's Beads",ear1="Brutal Earring",ear2="Cessance Earring",
+		head="Flam. Zucchetto +2",neck="Warrior's Beads",ear1="Dedition Earring",ear2="Schere Earring",
 		body="Agoge Lorica +3",hands="Sulev. Gauntlets +2",ring1="Moonlight Ring",ring2="Niqmaddu Ring",
-		back=gear.da_jse_back,waist="Ioskeha Belt",legs="Pumm. Cuisses +2",feet="Flam. Gambieras +2"}
-	sets.engaged['Chango'].PDT = set_combine(sets.engaged['Chango'],{head="Hjarrandi Helm",body="Sakpata's Plate",ear1="Dedition Earring"})
+		back=gear.da_jse_back,waist="Ioskeha Belt +1",legs="Pumm. Cuisses +2",feet="Flam. Gambieras +2"}
+	
+    
+	sets.engaged['Chango'].Hybrid = set_combine(sets.engaged,{head="Hjarrandi Helm",body="Hjarrandi Breast.",ear1="Dedition Earring"})
+
+	sets.engaged['Chango'].PDT = set_combine(sets.engaged,{head="Hjarrandi Helm",body="Sakpata's Plate",ear1="Dedition Earring",hands="Sakpata's Gauntlets",legs="Sakpata's Cuisses",feet="Sakpata's Leggings" })
+	
+	sets.engaged['Chango'].Reraise = set_combine(sets.engaged,{neck="Loricate Torque +1",head="Twilight Helm",body="Twilight Mail",Ring1="Defending Ring",Ring2="Moonlight Ring",ear1="Dedition Earring"}) 
 
 
 	sets.engaged['Greatsword'] = {ammo="Aurgelmir Orb",
 		head="Flam. Zucchetto +2",neck="Warrior's Beads",ear1="Telos Earring",ear2="Cessance Earring",
 		body="Agoge Lorica +3",hands="Sulev. Gauntlets +2",ring1="Moonlight Ring",ring2="Niqmaddu Ring",
-		back=gear.da_jse_back,waist="Ioskeha Belt",legs="Pumm. Cuisses +2",feet="Flam. Gambieras +2"}	
+		back=gear.da_jse_back,waist="Ioskeha Belt +1",legs="Pumm. Cuisses +2",feet="Flam. Gambieras +2"}	
+
+	
+    
+	sets.engaged['Greatsword'].Hybrid = set_combine(sets.engaged,{head="Hjarrandi Helm",body="Hjarrandi Breast.",ear1="Dedition Earring"})
+
+	sets.engaged['Greatsword'].PDT = set_combine(sets.engaged,{head="Hjarrandi Helm",body="Sakpata's Plate",ear1="Dedition Earring",hands="Sakpata's Gauntlets",legs="Sakpata's Cuisses",feet="Sakpata's Leggings" })
+	
+	sets.engaged['Greatsword'].Reraise = set_combine(sets.engaged,{neck="Loricate Torque +1",head="Twilight Helm",body="Twilight Mail",Ring1="Defending Ring",Ring2="Moonlight Ring",ear1="Dedition Earring"}) 
 	
 	sets.engaged['DualWeapons'] = {ammo="Aurgelmir Orb",
 		head="Flam. Zucchetto +2",neck="Warrior's Beads",ear1="Eabani earring",ear2="Suppanomimi",
 		body="Agoge Lorica +3",hands="Sulev. Gauntlets +2",ring1="Moonlight Ring",ring2="Niqmaddu Ring",
-		back=gear.da_jse_back,waist="Ioskeha Belt", Legs="Pumm. Cuisses +2",feet="Pumm. Calligae +2"}
+		back=gear.da_jse_back,waist="Ioskeha Belt +1", Legs="Pumm. Cuisses +2",feet="Pumm. Calligae +2"}
 
 	sets.engaged.SomeAcc = {ammo="Seething Bomblet",
 		head="Flam. Zucchetto +2",neck="Warrior's Beads",ear1="Telos Earring",ear2="Cessance Earring",
 		body="Agoge Lorica +3",hands="Valorous Mitts",ring1="Moonlight Ring",ring2="Niqmaddu Ring",
-		back=gear.da_jse_back,waist="Ioskeha Belt",legs="Pumm. Cuisses +2",feet="Pumm. Calligae +2"}
+		back=gear.da_jse_back,waist="Ioskeha Belt +1",legs="Pumm. Cuisses +2",feet="Pumm. Calligae +2"}
 	sets.engaged.Acc = {ammo="Aurgelmir Orb",
 		head="Flam. Zucchetto +2",neck="Warrior's Beads",ear1="Digni. Earring",ear2="Telos Earring",
 		body=gear.valorous_wsd_body,hands=gear.valorous_acc_hands,ring1="Flamma Ring",ring2="Niqmaddu Ring",
-		back=gear.da_jse_back,waist="Ioskeha Belt",legs="Sulev. Cuisses +2",feet="Flam. Gambieras +2"}
+		back=gear.da_jse_back,waist="Ioskeha Belt +1",legs="Sulev. Cuisses +2",feet="Flam. Gambieras +2"}
     sets.engaged.FullAcc = {ammo="Aurgelmir Orb",
 		head="Flam. Zucchetto +2",neck="Warrior's Beads",ear1="Mache Earring +1",ear2="Telos Earring",
 		body=gear.valorous_wsd_body,hands=gear.valorous_acc_hands,ring1="Flamma Ring",ring2="Ramuh Ring +1",
-		back=gear.da_jse_back,waist="Ioskeha Belt",legs="Sulev. Cuisses +2",feet="Flam. Gambieras +2"}
+		back=gear.da_jse_back,waist="Ioskeha Belt +1",legs="Sulev. Cuisses +2",feet="Flam. Gambieras +2"}
     sets.engaged.Fodder = {ammo="Aurgelmir Orb",
 		head="Flam. Zucchetto +2",neck="Warrior's Beads",ear1="Brutal Earring",ear2="Cessance Earring",
 		body="Agoge Lorica +3",hands="Sulev. Gauntlets +2",ring1="Petrov Ring",ring2="Niqmaddu Ring",
-		back=gear.da_jse_back,waist="Ioskeha Belt",legs="Sulev. Cuisses +2",feet="Flam. Gambieras +2"}
+		back=gear.da_jse_back,waist="Ioskeha Belt +1",legs="Sulev. Cuisses +2",feet="Flam. Gambieras +2"}
 
 
 	
@@ -350,21 +364,21 @@ end
 
 
 
-function status_change(new, old)
-    check_hp_and_equip()
-end
+--function status_change(new, old)
+    --check_hp_and_equip()
+--end
 
-function precast(spell)
-    check_hp_and_equip()
-end
+--function precast(spell)
+    --check_hp_and_equip()
+--end
 
-function aftercast(spell)
-    check_hp_and_equip()
-end
+--function aftercast(spell)
+    --check_hp_and_equip()
+--end
 
-function job_handle_equipping_gear(status, eventArgs)
-    select_engaged_set()
-end
+--function job_handle_equipping_gear(status, eventArgs)
+    --select_engaged_set()
+--end
 
 --function job_state_change(stateField, newValue, oldValue)
     --if stateField == 'Weapon Mode' then
