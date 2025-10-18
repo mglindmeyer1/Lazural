@@ -92,7 +92,7 @@ function init_gear_sets()
 	-- Default set for any weaponskill that isn't any more specifically defined
     sets.precast.WS = {ammo="Knobkierrie",
 		head="Agoge Mask +4",neck="Warrior's Beads",ear1="Schere Earring",ear2="Moonshade Earring",
-		body="Sakpata's Breastplate",hands="Boii Mufflers +2",ring1="Apate Ring",ring2="Niqmaddu Ring",
+		body="Sakpata's Breastplate",hands="Boii Mufflers +2",ring1="Sroda Ring",ring2="Niqmaddu Ring",
 		back=gear.wsd_jse_back,waist="Fotia Belt",legs="Boii Cuisses +2",feet="Sakpata's Leggings"}
 
 	sets.precast.WS.SomeAcc = set_combine(sets.precast.WS, {})
@@ -161,11 +161,17 @@ function init_gear_sets()
     sets.precast.WS['Raging Rush'].FullAcc = set_combine(sets.precast.WS.FullAcc, {})
     sets.precast.WS['Raging Rush'].Fodder = set_combine(sets.precast.WS.Fodder, {})
 	
-    sets.precast.WS["Ukko's Fury"] = set_combine(sets.precast.WS, {ring1="Begrudging Ring"})
+    sets.precast.WS["Ukko's Fury"] = set_combine(sets.precast.WS, {body="Hjarrandi Breast.",ring1="Begrudging Ring"})
     sets.precast.WS["Ukko's Fury"].SomeAcc = set_combine(sets.precast.WS.SomeAcc, {})
     sets.precast.WS["Ukko's Fury"].Acc = set_combine(sets.precast.WS.Acc, {})
     sets.precast.WS["Ukko's Fury"].FullAcc = set_combine(sets.precast.WS.FullAcc, {})
     sets.precast.WS["Ukko's Fury"].Fodder = set_combine(sets.precast.WS.Fodder, {})
+
+	sets.precast.WS["Impulse Drive"] = set_combine(sets.precast.WS, {body="Hjarrandi Breast.",ring1="Begrudging Ring"})
+    sets.precast.WS["Impulse Drive"].SomeAcc = set_combine(sets.precast.WS.SomeAcc, {})
+    sets.precast.WS["Impulse Drive"].Acc = set_combine(sets.precast.WS.Acc, {})
+    sets.precast.WS["Impulse Drive"].FullAcc = set_combine(sets.precast.WS.FullAcc, {})
+    sets.precast.WS["Impulse Drive"].Fodder = set_combine(sets.precast.WS.Fodder, {})
 	
     sets.precast.WS["King's Justice"] = set_combine(sets.precast.WS, {})
     sets.precast.WS["King's Justice"].SomeAcc = set_combine(sets.precast.WS.SomeAcc, {})
@@ -174,7 +180,7 @@ function init_gear_sets()
     sets.precast.WS["King's Justice"].Fodder = set_combine(sets.precast.WS.Fodder, {})
 
 	-- Swap to these on Moonshade using WS if at 3000 TP
-	sets.MaxTP = {ear1="Thrud Earring",ear2="Brutal Earring",}
+	sets.MaxTP = {ear1="Thrud Earring",ear2="Schere Earring",}
 	sets.AccMaxTP = {ear1="Mache Earring",ear2="Telos Earring"}
 	sets.AccDayMaxTPWSEars = {ear1="Mache Earring",ear2="Telos Earring"}
 	sets.DayMaxTPWSEars = {ear1="Thrud Earring",ear2="Brutal Earring",}
@@ -236,7 +242,7 @@ function init_gear_sets()
             -- Engaged sets
 	sets.engaged = {ammo="Coiste Bodhar",
 		head="Flam. Zucchetto +2",neck="Warrior's Beads",ear1="Schere Earring",ear2="Telos Earring",
-		body="Agoge Lorica +3",hands="Sulev. Gauntlets +2",ring1="Moonlight Ring",ring2="Niqmaddu Ring",
+		body="Boii Lorica +2",hands="Sakpata's Gauntlets",ring1="Moonlight Ring",ring2="Niqmaddu Ring",
 		back=gear.da_jse_back,waist="Ioskeha Belt +1",legs="Pumm. Cuisses +2",feet="Flam. Gambieras +2"}
 	
 	
@@ -249,7 +255,7 @@ function init_gear_sets()
 
 	sets.engaged['Chango'] = {ammo="Aurgelmir Orb",
 		head="Flam. Zucchetto +2",neck="Warrior's Beads",ear1="Dedition Earring",ear2="Schere Earring",
-		body="Agoge Lorica +3",hands="Sulev. Gauntlets +2",ring1="Moonlight Ring",ring2="Niqmaddu Ring",
+		body="Agoge Lorica +3",hands="Sakpata's Gauntlets",ring1="Moonlight Ring",ring2="Niqmaddu Ring",
 		back=gear.da_jse_back,waist="Ioskeha Belt +1",legs="Pumm. Cuisses +2",feet="Flam. Gambieras +2"}
 	
     
@@ -262,7 +268,7 @@ function init_gear_sets()
 
 	sets.engaged['Greatsword'] = {ammo="Aurgelmir Orb",
 		head="Flam. Zucchetto +2",neck="Warrior's Beads",ear1="Telos Earring",ear2="Cessance Earring",
-		body="Agoge Lorica +3",hands="Sulev. Gauntlets +2",ring1="Moonlight Ring",ring2="Niqmaddu Ring",
+		body="Agoge Lorica +3",hands="Sakpata's Gauntlets",ring1="Moonlight Ring",ring2="Niqmaddu Ring",
 		back=gear.da_jse_back,waist="Ioskeha Belt +1",legs="Pumm. Cuisses +2",feet="Flam. Gambieras +2"}	
 
 	
@@ -275,7 +281,7 @@ function init_gear_sets()
 	
 	sets.engaged['DualWeapons'] = {ammo="Aurgelmir Orb",
 		head="Flam. Zucchetto +2",neck="Warrior's Beads",ear1="Eabani earring",ear2="Suppanomimi",
-		body="Agoge Lorica +3",hands="Sulev. Gauntlets +2",ring1="Moonlight Ring",ring2="Niqmaddu Ring",
+		body="Boii Lorica +2",hands="Sakpata's Gauntlets",ring1="Moonlight Ring",ring2="Niqmaddu Ring",
 		back=gear.da_jse_back,waist="Ioskeha Belt +1", Legs="Pumm. Cuisses +2",feet="Pumm. Calligae +2"}
 
 	sets.engaged.SomeAcc = {ammo="Seething Bomblet",
@@ -292,7 +298,7 @@ function init_gear_sets()
 		back=gear.da_jse_back,waist="Ioskeha Belt +1",legs="Sulev. Cuisses +2",feet="Flam. Gambieras +2"}
     sets.engaged.Fodder = {ammo="Aurgelmir Orb",
 		head="Flam. Zucchetto +2",neck="Warrior's Beads",ear1="Brutal Earring",ear2="Cessance Earring",
-		body="Agoge Lorica +3",hands="Sulev. Gauntlets +2",ring1="Petrov Ring",ring2="Niqmaddu Ring",
+		body="Agoge Lorica +3",hands="Sakpata's Gauntlets",ring1="Petrov Ring",ring2="Niqmaddu Ring",
 		back=gear.da_jse_back,waist="Ioskeha Belt +1",legs="Sulev. Cuisses +2",feet="Flam. Gambieras +2"}
 
 
@@ -306,7 +312,7 @@ function init_gear_sets()
 	
 	-- Weapons sets
 	sets.weapons.Chango = {main="Lycurgos",sub="Utu Grip"}
-	sets.weapons.Polearm = {main="Kaja Lance",sub="Utu Grip"}
+	sets.weapons.Polearm = {main="Shining One",sub="Utu Grip"}
 	sets.weapons.DualWeapons = {main="Naegling",sub="Reikiko"}
 	sets.weapons.Greatsword = {main="Montante",sub="Utu Grip"}
 	sets.weapons.Savage = {main="Naegling", sub="Blurred Shield +1"}

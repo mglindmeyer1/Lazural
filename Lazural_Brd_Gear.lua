@@ -68,12 +68,12 @@ function init_gear_sets()
 	sets.precast.FC = {main="Grioavolr",sub="Clerisy Strap",ammo="Impatiens",
 		head="Bunzi's Hat",neck="Voltsurge Torque",ear1="Etiolation Earring",ear2="Loquac. Earring",
 		body="Inyanga Jubbah +2",hands="Leyline Gloves",ring1="Kishar Ring",ring2="Weatherspoon Ring",
-		back=gear.magic_jse_back,waist="Embla Sash",legs="Aya. Cosciales +2",feet="Chelona Boots"}
+		back=gear.magic_jse_back,waist="Embla Sash",legs="Aya. Cosciales +2",feet="Fili Cothurnes +2"}
 		
 	sets.precast.FC.DT = {main="Grioavolr",sub="Clerisy Strap",ammo="Impatiens",
 		head="Bunzi's Hat",neck="Voltsurge Torque",ear1="Etiolation Earring",ear2="Loquac. Earring",
 		body="Inyanga Jubbah +2",hands="Leyline Gloves",ring1="Kishar Ring",ring2="Lebeche Ring",
-		back=gear.magic_jse_back,waist="Embla Sash",legs="Aya. Cosciales +2",feet="Bihu Slippers +1"}
+		back=gear.magic_jse_back,waist="Embla Sash",legs="Aya. Cosciales +2",feet="Fili Cothurnes +2"}
 
 	sets.precast.FC.Cure = set_combine(sets.precast.FC, {feet="Vanya Clogs"})
 
@@ -83,7 +83,7 @@ function init_gear_sets()
 	sets.precast.FC.BardSong = {main="Kali",sub="",range="Miracle Cheer",ammo=empty,
 		head="Fili Calot",neck="Voltsurge Torque",ear1="Etiolation Earring",ear2="Loquac. Earring",
 		body="Inyanga Jubbah +2",hands="Leyline Gloves",ring1="Kishar Ring",ring2="Weatherspoon Ring",
-		back=gear.magic_jse_back,waist="Embla Sash",legs="Aya. Cosciales +2",feet="Bihu Slippers"}
+		back=gear.magic_jse_back,waist="Embla Sash",legs="Aya. Cosciales +2",feet="Fili Cothurnes +2"}
 
 	sets.precast.FC.SongDebuff = set_combine(sets.precast.FC.BardSong,{})
 	sets.precast.FC.SongDebuff.Resistant = set_combine(sets.precast.FC.BardSong,{range="Blurred Harp"})
@@ -125,7 +125,7 @@ function init_gear_sets()
 		
 	sets.precast.WS['Savage Blade'] = {ammo="Aurgelmir Orb",
 		head="Aya. Zucchetto +2",neck="Bard's Charm +1",ear1="Moonshade Earring",ear2="Ishvara Earring",
-		body="Bihu Justacorps +3",hands="Bunzi's Gloves",ring1="Rufescent Ring",ring2="Ifrit Ring",
+		body="Bihu Justacorps +3",hands="Bunzi's Gloves",ring1="Sroda Ring",ring2="Ifrit Ring",
 		back=gear.melee_jse_back,waist="Sailfi Belt +1",legs="Aya. Cosciales +2",feet="Aya. Gambieras +2"}
 		
 	sets.precast.WS['Aeolian Edge'] = {ammo="Aurgelmir Orb",
@@ -145,7 +145,7 @@ function init_gear_sets()
 	sets.midcast.FastRecast = {main="Kali",sub="Kali",ammo="Hasty Pinion +1",
 		head="Bunzi's Hat",neck="Voltsurge Torque",ear1="Etiolation Earring",ear2="Loquac. Earring",
 		body="Inyanga Jubbah +2",hands="Leyline Gloves",ring1="Kishar Ring",ring2="Weatherspoon Ring",
-		back=gear.magic_jse_back,waist="Witful Belt",legs="Aya. Cosciales +2",feet="Bihu Slippers"}
+		back=gear.magic_jse_back,waist="Witful Belt",legs="Aya. Cosciales +2",feet="Fili Cothurnes +2"}
 
 	-- Gear to enhance certain classes of songs
 	sets.midcast.Ballad = {legs="Fili Rhingrave"}
@@ -164,7 +164,7 @@ function init_gear_sets()
 	sets.midcast.Minuet = {body="Fili Hongreline"}
 	sets.midcast.Minne = {}
 	sets.midcast.Carol = {}
-	sets.midcast["Sentinel's Scherzo"] = {feet="Fili Cothurnes +1"}
+	sets.midcast["Sentinel's Scherzo"] = {feet="Fili Cothurnes +2"}
 	sets.midcast['Magic Finale'] = {}
 	sets.midcast.Mazurka = {}
 	
@@ -172,7 +172,7 @@ function init_gear_sets()
 	sets.midcast.SongEffect = {main="Kali",sub="Culminus",range="Miracle Cheer",ammo=empty,
 		head="Fili Calot",neck="Moonbow Whistle",ear1="Etiolation Earring",ear2="Loquac. Earring",
 		body="Fili Hongreline",hands="Fili Manchettes",ring1="Stikini Ring",ring2="Stikini Ring",
-		back=gear.magic_jse_back,waist="Ovate Rope",legs="Fili Rhingrave",feet="Fili Cothurnes +1"}
+		back=gear.magic_jse_back,waist="Ovate Rope",legs="Fili Rhingrave",feet="Fili Cothurnes +2"}
 		
 	sets.midcast.SongEffect.DW = {main="Kali",sub="Kali"} --Only weapons in this set. This set is overlayed onto  SongEffect
 
@@ -245,7 +245,7 @@ function init_gear_sets()
 	sets.idle = {main="Mpaca's Staff",sub="Oneiros Grip",ammo="Staunch Tathlum",
 		head="Inyanga Tiara +2",neck="Loricate Torque +1",ear1="Etiolation Earring",ear2="Ethereal Earring",
 		body="Inyanga Jubbah +2",hands=gear.chiron_hands_REF,ring1="Defending Ring",ring2="Inyanga Ring",
-		back="Moonbeam Cape",waist="Flume Belt",legs="Assid. Pants +1",feet="Fili Cothurnes +1"}
+		back="Moonbeam Cape",waist="Flume Belt",legs="Assid. Pants +1",feet="Fili Cothurnes +2"}
 		
 	sets.idle.NoRefresh = {main="Daybreak",sub="Genmei Shield",ammo="Inyanga Dastanas",
 		head="Nyame Helm",neck="Loricate Torque +1",ear1="Etiolation Earring",ear2="Sanare Earring",
@@ -255,21 +255,21 @@ function init_gear_sets()
 	sets.idle.DT = {main="Mpaca's Staff",sub="Oneiros Grip",ammo="Staunch Tathlum",
 		head="Bunzi's Hat",neck="Loricate Torque +1",ear1="Etiolation Earring",ear2="Eabani Earring",
 		body="Bunzi's Robe",hands="Bunzi's Gloves",ring1="Defending Ring",ring2="Shadow Ring",
-		back="Moonbeam Cape",waist="Carrier's Sash",legs="Assid. Pants +1",feet="Fili Cothurnes +1"}
+		back="Moonbeam Cape",waist="Carrier's Sash",legs="Assid. Pants +1",feet="Fili Cothurnes +2"}
 	
 	-- Defense sets
 
 	sets.defense.PDT = {main="Mpaca's Staff",sub="Oneiros Grip",ammo="Staunch Tathlum",
 		head="Bunzi's Hat",neck="Loricate Torque +1",ear1="Etiolation Earring",ear2="Odnowa Earring +1",
 		body="Bunzi's Robe",hands="Bunzi's Gloves",ring1="Defending Ring",ring2="Shadow Ring",
-		back="Moonbeam Cape",waist="Carrier's Sash",legs="Assid. Pants +1",feet="Fili Cothurnes +1"}
+		back="Moonbeam Cape",waist="Carrier's Sash",legs="Assid. Pants +1",feet="Fili Cothurnes +2"}
 
 	sets.defense.MDT = {main="Terra's Staff", sub="Umbra Strap",ammo="Staunch Tathlum",
 		head="Nyame Helm",neck="Loricate Torque +1",ear1="Etiolation Earring",ear2="Sanare Earring",
 		body="Nyame Mail",hands="Nyame Gauntlets",ring1="Defending Ring",ring2="Shadow Ring",
 		back="Moonbeam Cape",waist="Carrier's Sash",legs="Nyame Flanchard",feet="Nyame Sollerets"}
 
-	sets.Kiting = {feet="Fili Cothurnes +1"}
+	sets.Kiting = {feet="Fili Cothurnes +2"}
 	sets.latent_refresh = {waist="Fucho-no-obi"}
 	sets.latent_refresh_grip = {sub="Oneiros Grip"}
 	sets.TPEat = {neck="Chrys. Torque"}

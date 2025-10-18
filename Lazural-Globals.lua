@@ -93,7 +93,8 @@ send_command('bind @Delete input /con send Aneybug c4 Mrgamm')
 send_command('bind !Delete input /con cmp')
 send_command('bind ^Delete input /con send @others hb as Lazural')
 send_command('bind ~Delete input /con send @others hb as attack')
-send_command('bind !Insert input /con switch n')
+send_command('bind ^Home input /con switch next')
+send_command('bind @Home input /con switch previous')
 
 
 

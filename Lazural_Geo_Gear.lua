@@ -275,7 +275,7 @@ function init_gear_sets()
 	-- .Pet sets are for when Luopan is present.
 	sets.idle.Pet = {main="Solstice",sub="Culminus",range="Dunna",
 		head="Azimuth Hood +2",neck="Bagua Charm +1",ear1="Handler's Earring",ear2="Handler's Earring +1",
-		body="Azimuth Coat +2"hands="Geomancy Mitaines +1",ring1="Defending Ring",ring2="Dark Ring",
+		body="Azimuth Coat +2",hands="Geomancy Mitaines +1",ring1="Defending Ring",ring2="Dark Ring",
 		back=gear.idle_jse_back,waist="Isa Belt",legs="Psycloth Lappas",feet="Bagua Sandals +2"}
 
 	sets.idle.PDT.Pet = {main="Malignance Pole",sub="Umbra Strap",range="Dunna",

@@ -17,7 +17,7 @@ function user_job_setup()
 	gear.stp_jse_back = {name="Rosmerta's Cape", augments={'DEX+20','Accuracy+20 Attack+20','Accuracy+1','"Store TP"+10',}}
 	gear.crit_jse_back = {name="Rosmerta's Cape", augments={'DEX+20','Accuracy+20 Attack+20','Crit.hit rate+10',}}
 	gear.wsd_jse_back = {name="Rosmerta's Cape", augments={'STR+20','Accuracy+20 Attack+20','Weapon skill damage +10%',}}
-	gear.nuke_jse_back = {"Cornflower Cape"}
+	gear.nuke_jse_back = {name="Cornflower Cape"}
 
 
 	autows = 'Savage Blade'
@@ -164,7 +164,7 @@ function init_gear_sets()
 	sets.precast.WS['Chant du Cygne'].DT = set_combine(sets.precast.WS.DT, {back=gear.crit_jse_back})
 	sets.precast.WS['Chant du Cygne'].Fodder = set_combine(sets.precast.WS['Chant du Cygne'], {})
 
-	sets.precast.WS['Savage Blade'] = set_combine(sets.precast.WS, {head="Hashishin Kavuk +2",ear1="Moonshade Earring",ear2="Ishvara Earring",body="Assim. Jubbah +2",hands="Jhakri Cuffs +2",ring1="Ifrit Ring",ring2="Rufescent Ring",back=gear.wsd_jse_back,waist="Grunfeld Rope",legs="Luhlaza Shalwar +3",feet=gear.herc_feet_TA})
+	sets.precast.WS['Savage Blade'] = set_combine(sets.precast.WS, {head="Hashishin Kavuk +2",ear1="Moonshade Earring",ear2="Ishvara Earring",body="Gleti's Cuirass",hands="Jhakri Cuffs +2",ring1="Ifrit Ring",ring2="Rufescent Ring",back=gear.wsd_jse_back,waist="Grunfeld Rope",legs="Luhlaza Shalwar +3",feet="Gleti's Boots"})
 	sets.precast.WS['Savage Blade'].Acc = set_combine(sets.precast.WS.Acc, {ear1="Moonshade Earring",hands="Jhakri Cuffs +2",back=gear.wsd_jse_back,waist="Grunfeld Rope",legs="Luhlaza Shalwar +3",feet=gear.herculean_wsd_feet})
 	sets.precast.WS['Savage Blade'].FullAcc = set_combine(sets.precast.WS.FullAcc, {})
 	sets.precast.WS['Savage Blade'].DT = set_combine(sets.precast.WS.DT, {back=gear.wsd_jse_back})
@@ -267,19 +267,19 @@ function init_gear_sets()
 
 	-- Magical Spells --
 
-	sets.midcast['Blue Magic'].Magical = {main="Bunzi's Rod",sub="Maxentius",ammo="Pemphredo Tathlum",
+	sets.midcast['Blue Magic'].Magical = {main="Bunzi's Rod",sub="Maxentius",ammo="Ghastly Tathlum +1",
 		head="Hashishin Kavuk +2",neck="Baetyl Pendant",ear1="Crematio Earring",ear2="Friomisi Earring",
-		body="Hashishin Mintan +2",hands="Jhakri Cuffs +2",ring1="Acumen Ring",ring2="Shiva Ring",
-		back=gear.nuke_jse_back,waist="Eschan Stone",legs="Luhlaza Shalwar +3",feet="Hashi. Basmak +2"}
+		body="Hashishin Mintan +2",hands="Hashi. Bazu. +2",ring1="Metamorph Ring +1",ring2="Shiva Ring +1",
+		back=gear.nuke_jse_back,waist=gear.ElementalObi,legs="Luhlaza Shalwar +3",feet="Hashi. Basmak +2"}
 		 
 	sets.midcast['Blue Magic'].Magical.SIRD = {main="Bunzi's Rod",sub="Sakpata's Sword",ammo="Staunch Tathlum",
 		 head="Hashishin Kavuk +2",neck="Loricate Torque +1",ear1="Regal Earring",ear2="Friomisi Earring",
 		 body="Hashishin Mintan +2",hands="Rawhide Gloves",ring1="Defending Ring",ring2="Metamor. Ring +1",
 		 back=gear.nuke_jse_back,waist="Emphatikos Rope",legs="Carmine Cuisses +1",feet="Hashi. Basmak +2"}
 		 
-	sets.midcast['Blue Magic'].Subduction = {main="Bunzi's Rod",sub="Maxentius",ammo="Pemphredo Tathlum",
+	sets.midcast['Blue Magic'].Subduction = {main="Bunzi's Rod",sub="Maxentius",ammo="Ghastly Tathlum +1",
 		 head="Hashishin Kavuk +2",neck="Baetyl Pendant",ear1="Crematio Earring",ear2="Friomisi Earring",
-		 body="Hashishin Mintan +2",hands="Amalric Gages",ring1="Acumen Ring",ring2="Shiva Ring",
+		 body="Hashishin Mintan +2",hands="Hashi Bazu. +2",ring1="Metamporh Ring +1",ring2="Shiva Ring +1",
 		 back=gear.nuke_jse_back,waist=gear.ElementalObi,legs="Luhlaza Shalwar +3",feet="Hashi. Basmak +2"}
 					 
 	sets.midcast['Blue Magic'].Magical.Proc = {ammo="Sapience Orb",
