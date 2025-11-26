@@ -45,8 +45,8 @@ function init_gear_sets()
 	sets.DWMax = {ear1="Dudgeon Earring",ear2="Heartseeker Earring",body="Adhemar Jacket +1",hands="Floral Gauntlets",waist="Shetal Stone"}
 	
 	-- Weapons sets
-	sets.weapons.Aeneas = {main="Aeneas",sub="Taming Sari"}
-	sets.weapons.LowBuff = {main="Aeneas",sub="Blurred Knife +1"}
+	sets.weapons.Aeneas = {main="Gleti's Knife",sub="Tauret"}
+	sets.weapons.LowBuff = {main="Tauret",sub="Gleti's Knife"}
 	
     -- Precast Sets
     
@@ -59,23 +59,23 @@ function init_gear_sets()
 
     -- Waltz set (chr and vit)
     sets.precast.Waltz = {ammo="Yamarang",
-        head="Mummu Bonnet +2",neck="Unmoving Collar +1",ear1="Enchntr. Earring +1",ear2="Handler's Earring +1",
-        body=gear.herculean_waltz_body,hands=gear.herculean_waltz_hands,ring1="Defending Ring",ring2="Valseur's Ring",
-        back="Toetapper Mantle",waist="Chaac Belt",legs="Dashing Subligar",feet=gear.herculean_waltz_feet}
+        head="Mummu Bonnet +2",neck="Unmoving Collar +1",ear1="Roundel Earring",ear2="Handler's Earring +1",
+        body="Maxixi Casaque",hands="Gleti's Gauntlets",ring1="Defending Ring",ring2="Metamorph Ring +1",
+        back="Toetapper Mantle",waist="Chaac Belt",legs="Volte Hose",feet="Maxixi Toe Shoes +1"}
 		
 	sets.Self_Waltz = {head="Mummu Bonnet +2",body="Passion Jacket",ring1="Asklepian Ring"}
         
     -- Don't need any special gear for Healing Waltz.
     sets.precast.Waltz['Healing Waltz'] = {}
     
-    sets.precast.Samba = {back=gear.stp_jse_back} --head="Maxixi Tiara"
+    sets.precast.Samba = {back=gear.stp_jse_back, head="Maxixi Tiara"} --head="Maxixi Tiara"
 
-    sets.precast.Jig = {} --legs="Horos Tights", feet="Maxixi Toe Shoes"
+    sets.precast.Jig = {feet="Maxixi Toe Shoes +1"} --legs="Horos Tights", feet="Maxixi Toe Shoes"
 
-    sets.precast.Step = {ammo="C. Palug Stone",
-        head="Dampening Tam",neck="Combatant's Torque",ear1="Telos Earring",ear2="Digni. Earring",
-        body="Mummu Jacket +2",hands="Adhemar Wrist. +1",ring1="Ramuh Ring +1",ring2="Ramuh Ring +1",
-        back=gear.stp_jse_back,waist="Olseni Belt",legs="Meg. Chausses +2",feet="Malignance Boots"}
+    sets.precast.Step = {ammo="Yamarang",
+        head="Maxixi Tiara",neck="Combatant's Torque",ear1="Telos Earring",ear2="Digni. Earring",
+        body="Mummu Jacket +2",hands="Adhemar Wristbands",ring1="Ramuh Ring +1",ring2="Ramuh Ring +1",
+        back=gear.stp_jse_back,waist="Olseni Belt",legs="Volte Hose",feet="Malignance Boots"}
 		
     sets.Enmity = {ammo="Paeapua",
         head="Nyame Helm",neck="Unmoving Collar +1",ear1="Friomisi Earring",ear2="Trux Earring",
@@ -98,7 +98,7 @@ function init_gear_sets()
         back=gear.stp_jse_back,waist="Olseni Belt",legs="Meg. Chausses +2",feet="Malignance Boots"}
 
     sets.precast.Flourish2 = {}
-    sets.precast.Flourish2['Reverse Flourish'] = {back="Toetapper Mantle"} --hands="Charis Bangles +2"
+    sets.precast.Flourish2['Reverse Flourish'] = {hands="Maculele Bangles",back="Toetapper Mantle"} --hands="Charis Bangles +2"
 
     sets.precast.Flourish3 = {}
     sets.precast.Flourish3['Striking Flourish'] = {} --body="Charis Casaque +2"
@@ -116,10 +116,10 @@ function init_gear_sets()
        
     -- Weaponskill sets
     -- Default set for any weaponskill that isn't any more specifically defined
-    sets.precast.WS = {ammo="Voluspa Tathlum",
+    sets.precast.WS = {ammo="Aurgelmir Orb",
         head="Dampening Tam",neck="Asperity Necklace",ear1="Brutal Earring",ear2="Sherida Earring",
-        body="Adhemar Jacket +1",hands="Meg. Gloves +2",ring1="Ilabrat Ring",ring2="Regal Ring",
-        back=gear.wsd_jse_back,waist="Grunfeld Rope",legs="Samnuha Tights",feet=gear.herculean_wsd_feet}
+        body="Adhemar Jacket",hands="Meg. Gloves +2",ring1="Epaminondas's Ring",ring2="Petrov Ring",
+        back="Senuna's Mantle",waist="Grunfeld Rope",legs="Samnuha Tights",feet=gear.herc_feet_TA}
 
 	sets.precast.WS.SomeAcc = set_combine(sets.precast.WS, {neck="Combatant's Torque"})
 	sets.precast.WS.Acc = set_combine(sets.precast.WS, {ammo="C. Palug Stone",neck="Combatant's Torque",ear1="Telos Earring",body="Meg. Cuirie +2",waist="Olseni Belt",legs="Meg. Chausses +2",feet="Malignance Boots"})
@@ -130,7 +130,7 @@ function init_gear_sets()
         back="Moonlight Cape",waist="Flume Belt +1",legs="Dashing Subligar",feet="Ahosi Leggings"}
 
     -- Specific weaponskill sets.  Uses the base set if an appropriate WSMod version isn't found.
-    sets.precast.WS["Rudra's Storm"] = set_combine(sets.precast.WS, {ammo="C. Palug Stone",head="Lilitu Headpiece",neck="Caro Necklace",ear1="Moonshade Earring",ear2="Ishvara Earring",body=gear.herculean_wsd_body,legs=gear.herculean_wsd_legs})
+    sets.precast.WS["Rudra's Storm"] = set_combine(sets.precast.WS, {head="Lilitu Headpiece",neck="Caro Necklace",ear1="Moonshade Earring",ear2="Ishvara Earring",body=gear.herc_body_WSD})
     sets.precast.WS["Rudra's Storm"].SomeAcc = set_combine(sets.precast.WS.SomeAcc, {ammo="C. Palug Stone",head="Lilitu Headpiece",neck="Caro Necklace",ear1="Moonshade Earring",body="Meg. Cuirie +2",legs=gear.herculean_wsd_legs})
     sets.precast.WS["Rudra's Storm"].Acc = set_combine(sets.precast.WS.Acc, {ear1="Moonshade Earring",body="Meg. Cuirie +2"})
 	sets.precast.WS["Rudra's Storm"].FullAcc = set_combine(sets.precast.WS.FullAcc, {})
@@ -142,7 +142,7 @@ function init_gear_sets()
 	sets.precast.WS["Shark Bite"].FullAcc = set_combine(sets.precast.WS.FullAcc, {})
     sets.precast.WS["Shark Bite"].Fodder = set_combine(sets.precast.WS["Shark Bite"], {})
 	
-    sets.precast.WS['Evisceration'] = set_combine(sets.precast.WS, {ammo="Charis Feather",head="Adhemar Bonnet +1",neck="Fotia Gorget",body="Abnoba Kaftan",hands="Mummu Wrists +2",ring1="Begrudging Ring",waist="Fotia Belt",feet="Mummu Gamash. +2"})
+    sets.precast.WS['Evisceration'] = set_combine(sets.precast.WS, {ear1="Odr Earring",head="Gleti's Mask",body="Gleti's Cuirass",hands="Gleti's Gauntlets",ring1="Begrudging Ring",ring2="Ramuh Ring +1",waist="Fotia Belt",feet="Gleti's Boots"})
     sets.precast.WS['Evisceration'].SomeAcc = set_combine(sets.precast.WS.SomeAcc, {head="Adhemar Bonnet +1",neck="Fotia Gorget",body="Abnoba Kaftan",hands="Mummu Wrists +2",ring1="Begrudging Ring",waist="Fotia Belt",legs="Mummu Kecks +2",feet="Mummu Gamash. +2"})
     sets.precast.WS['Evisceration'].Acc = set_combine(sets.precast.WS.Acc, {head="Mummu Bonnet +2",ring1="Begrudging Ring",neck="Fotia Gorget",body="Sayadio's Kaftan",hands="Mummu Wrists +2",waist="Fotia Belt",legs="Mummu Kecks +2",feet="Mummu Gamash. +2"})
 	sets.precast.WS['Evisceration'].FullAcc = set_combine(sets.precast.WS.FullAcc, {head="Mummu Bonnet +2",body="Mummu Jacket +2",hands="Mummu Wrists +2",legs="Mummu Kecks +2",feet="Mummu Gamash. +2"})
@@ -188,31 +188,31 @@ function init_gear_sets()
 
     -- Idle sets
 
-    sets.idle = {ammo="Staunch Tathlum +1",
-        head="Nyame Helm",neck="Loricate Torque +1",ear1="Etiolation Earring",ear2="Sanare Earring",
-        body="Nyame Mail",hands="Nyame Gauntlets",ring1="Defending Ring",ring2="Sheltered Ring",
-        back="Shadow Mantle",waist="Flume Belt +1",legs="Nyame Flanchard",feet="Malignance Boots"}
+    sets.idle = {ammo="Staunch Tathlum",
+        head="Gleti's Mask",neck="Loricate Torque +1",ear1="Etiolation Earring",ear2="Alabaster Earring",
+        body="Gleti's Cuirass",hands="Gleti's Gauntlets",ring1="Defending Ring",ring2="Murky Ring",
+        back="Moonbeam Cape",waist="Flume Belt",legs="Gleti's Breeches",feet="Glet's Boots"}
 		
     sets.idle.Sphere = set_combine(sets.idle, {body="Mekosu. Harness"})
     
     -- Defense sets
 
-    sets.defense.PDT = {ammo="Staunch Tathlum +1",
+    sets.defense.PDT = {ammo="Staunch Tathlum",
         head="Dampening Tam",neck="Loricate Torque +1",ear1="Etiolation Earring",ear2="Sanare Earring",
         body="Meg. Cuirie +2",hands="Nyame Gauntlets",ring1="Defending Ring",ring2="Dark Ring",
         back="Shadow Mantle",waist="Flume Belt +1",legs="Nyame Flanchard",feet="Malignance Boots"}
 
-    sets.defense.MDT = {ammo="Staunch Tathlum +1",
+    sets.defense.MDT = {ammo="Staunch Tathlum",
         head="Dampening Tam",neck="Loricate Torque +1",ear1="Etiolation Earring",ear2="Sanare Earring",
         body="Meg. Cuirie +2",hands="Floral Gauntlets",ring1="Defending Ring",ring2="Dark Ring",
         back="Engulfer Cape +1",waist="Engraved Belt",legs="Nyame Flanchard",feet="Ahosi Leggings"}
 		
-	sets.defense.MEVA = {ammo="Staunch Tathlum +1",
+	sets.defense.MEVA = {ammo="Staunch Tathlum",
 		head=gear.herculean_fc_head,neck="Warder's Charm +1",ear1="Etiolation Earring",ear2="Sanare Earring",
 		body="Adhemar Jacket +1",hands="Leyline Gloves",ring1="Vengeful Ring",ring2="Purity Ring",
 		back="Mujin Mantle",waist="Engraved Belt",legs="Meg. Chausses +2",feet="Ahosi Leggings"}
 
-    sets.Kiting = {feet="Skd. Jambeaux +1"}
+    sets.Kiting = {feet="Tandava Crackows"}
 
     -- Engaged sets
 
@@ -223,9 +223,9 @@ function init_gear_sets()
     
     -- Normal melee group
     sets.engaged = {ammo="Yamarang",
-        head="Dampening Tam",neck="Anu Torque",ear1="Brutal Earring",ear2="Sherida Earring",
-        body="Adhemar Jacket +1",hands="Adhemar Wrist. +1",ring1="Gere Ring",ring2="Epona's Ring",
-        back=gear.stp_jse_back,waist="Windbuffet Belt +1",legs="Samnuha Tights",feet=gear.herculean_ta_feet}
+        head="Malignance Chapeau",neck="Etoile Gorget +1",ear1="Sherida Earring",ear2="Macu. Earring +2",
+        body="Turms Harness",hands="Adhemar Wristbands",ring1="Chirich Ring",ring2="Chirich Ring",
+        back=gear.stp_jse_back,waist="Windbuffet Belt +1",legs="Samnuha Tights",feet=gear.herc_feet_TA}
 		
     sets.engaged.DTLite = {ammo="Yamarang",
         head="Dampening Tam",neck="Loricate Torque +1",ear1="Brutal Earring",ear2="Sherida Earring",
@@ -288,14 +288,14 @@ end
 function select_default_macro_book()
     -- Default macro set/book
     if player.sub_job == 'WAR' then
-        set_macro_page(10, 9)
+        set_macro_page(1, 16)
     elseif player.sub_job == 'NIN' then
-        set_macro_page(1, 9)
+        set_macro_page(1, 16)
     elseif player.sub_job == 'SAM' then
-        set_macro_page(9, 9)
+        set_macro_page(2, 16)
     elseif player.sub_job == 'THF' then
-        set_macro_page(8, 9)
+        set_macro_page(3, 16)
     else
-        set_macro_page(10, 9)
+        set_macro_page(1, 16)
     end
 end

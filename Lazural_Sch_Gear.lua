@@ -1,3 +1,4 @@
+
 -- Setup vars that are user-dependent.  Can override this function in a sidecar file.
 function user_job_setup()
     state.OffenseMode:options('Normal')
@@ -212,7 +213,7 @@ function init_gear_sets()
     sets.midcast['Elemental Magic'] = {main="Bunzi's Rod",sub="Culminus",ammo="Ghastly Tathlum +1",
         head="Arbatel Bonnet +2",neck="Argute Stole +1",ear1="Malignance Earring",ear2="Arbatel Earring +1",
         body="Arbatel Gown +2",hands="Arbatel Bracers +2",ring1="Metamorph Ring +1",ring2="Shiva Ring +1",
-        back=gear.nuke_jse_back,waist="Hachirin-no-Obi",legs="Arbatel Pants +2",feet="Arbatel Loafers +2"}
+        back=gear.nuke_jse_back,waist="Skrymir Cord",legs="Arbatel Pants +2",feet="Arbatel Loafers +2"}
 		
     sets.midcast['Elemental Magic'].Resistant = {main="Mpaca's Staff",sub="Clerisy Strap",ammo="Pemphredo Tathlum",
         head="Arbatel Bonnet +2",neck="Argute Stole +1",ear1="Malignance Earring",ear2="Arbatel Earring +1",

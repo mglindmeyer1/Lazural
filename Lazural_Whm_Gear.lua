@@ -43,7 +43,7 @@ function init_gear_sets()
     --------------------------------------
 
 	-- Weapons sets
-	sets.weapons.MeleeWeapons = {main="Izcalli",sub="Ammurapi Shield"}
+	sets.weapons.MeleeWeapons = {main="Kaja Rod",sub="Culminus"}
 	sets.weapons.DualWeapons = {main="Izcalli",sub="Nehushtan"}
 	
     sets.buff.Sublimation = {waist="Embla Sash"}
@@ -66,7 +66,7 @@ function init_gear_sets()
 	
     sets.precast.FC.Stoneskin = set_combine(sets.precast.FC['Enhancing Magic'], {})
 
-    sets.precast.FC['Healing Magic'] = set_combine(sets.precast.FC, {legs="Ebers Pant. +1"})
+    sets.precast.FC['Healing Magic'] = set_combine(sets.precast.FC, {legs="Ebers Pant. +2"})
 
     sets.precast.FC.StatusRemoval = sets.precast.FC['Healing Magic']
 	
@@ -94,13 +94,13 @@ function init_gear_sets()
     -- Default set for any weaponskill that isn't any more specifically defined
     sets.precast.WS = {ammo="Hasty Pinion +1",
         head="Aya. Zucchetto +2",neck="Combatant's Torque",ear1="Mache Earring",ear2="Telos Earring",
-		body="Ayanmo Corazza +2",hands="Aya. Manopolas +2",ring1="Petrov Ring",Ring2="Ilabrat Ring",
-        back="Moonlight Cape",waist="Olseni Belt",legs="Aya. Cosciales +2",feet="Aya. Gambieras +2"}
+		body="Ayanmo Corazza +2",hands="Aya. Manopolas +2",ring1="Petrov Ring",Ring2="Rajas Ring",
+        back="Moonbeam Cape",waist="Olseni Belt",legs="Aya. Cosciales +2",feet="Aya. Gambieras +2"}
 		
     sets.precast.WS.Fodder = {ammo="Hasty Pinion +1",
         head="Aya. Zucchetto +2",neck="Asperity Necklace",ear1="Cessance Earring",ear2="Brutal Earring",
 		body="Ayanmo Corazza +2",hands="Aya. Manopolas +2",ring1="Petrov Ring",Ring2="Ilabrat Ring",
-        back="Moonlight Cape",waist="Windbuffet Belt +1",legs="Aya. Cosciales +2",feet="Aya. Gambieras +2"}
+        back="Moonbeam Cape",waist="Windbuffet Belt +1",legs="Aya. Cosciales +2",feet="Aya. Gambieras +2"}
 
     sets.precast.WS.Dagan = {ammo="Ghastly Tathlum +1",
 		head="Pixie Hairpin +1",neck="Sanctity Necklace",ear1="Etiolation Earring",ear2="Moonshade Earring",
@@ -153,58 +153,58 @@ function init_gear_sets()
 	sets.midcast.Cure = {main="Queller Rod",sub="Sors Shield",ammo="Pemphredo Tathlum",
 		head="Gende. Caubeen",neck="Incanter's Torque",ear1="Regal Earring",ear2="Glorious Earring",
 		body="Theo. Bliaut +2",hands="Theophany Mitts +3",ring1="Janniston Ring",ring2="Menelaus's Ring",
-		back="Alaunus's Cape",waist="Luminary Sash",legs="Ebers Pant. +1",feet="Kaykaus Boots"}
+		back="Alaunus's Cape",waist="Luminary Sash",legs="Ebers Pant. +2",feet="Kaykaus Boots"}
 		
 	sets.midcast.CureSolace = {main="Queller Rod",sub="Sors Shield",ammo="Pemphredo Tathlum",
 		head="Gende. Caubeen",neck="Incanter's Torque",ear1="Mendi. Earring",ear2="Glorious Earring",
 		body="Ebers Bliaut +2",hands="Bunzi's Gloves",ring1="Lebeche Ring",ring2="Metamor. Ring +1",
-		back="Alaunus's Cape",waist="Bishop's Sash",legs="Ebers Pant. +1",feet="Kaykaus Boots"}
+		back="Alaunus's Cape",waist="Bishop's Sash",legs="Ebers Pant. +2",feet="Kaykaus Boots"}
 
 	sets.midcast.LightWeatherCure = {main="Chatoyant Staff",sub="Curatio Grip",ammo="Esper Stone +1",
 		head="Gende. Caubeen",neck="Incanter's Torque",ear1="Mendi. Earring",ear2="Glorious Earring",
 		body="Kaykaus Bliaut",hands="Bunzi's Gloves",ring1="Janniston Ring",ring2="Lebeche Ring",
-		back="Twilight Cape",waist="Hachirin-no-Obi",legs="Ebers Pant. +1",feet="Kaykaus Boots"}
+		back="Twilight Cape",waist="Hachirin-no-Obi",legs="Ebers Pant. +2",feet="Kaykaus Boots"}
 
 	sets.midcast.LightWeatherCureSolace = {main="Chatoyant Staff",sub="Curatio Grip",ammo="Esper Stone +1",
 		head="Gende. Caubeen",neck="Incanter's Torque",ear1="Mendi. Earring",ear2="Glorious Earring",
 		body="Ebers Bliaut +2",hands="Bunzi's Gloves",ring1="Lebeche Ring",ring2="Metamor. Ring +1",
-		back="Alaunus's Cape",waist="Hachirin-no-Obi",legs="Ebers Pant. +1",feet="Kaykaus Boots"}
+		back="Alaunus's Cape",waist="Hachirin-no-Obi",legs="Ebers Pant. +2",feet="Kaykaus Boots"}
 		
 	sets.midcast.LightDayCureSolace = {main="Queller Rod",sub="Sors Shield",ammo="Pemphredo Tathlum",
 		head="Gende. Caubeen",neck="Incanter's Torque",ear1="Mendi. Earring",ear2="Glorious Earring",
 		body="Ebers Bliaut +2",hands="Bunzi's Gloves",ring1="Lebeche Ring",ring2="Metamor. Ring +1",
-		back="Alaunus's Cape",waist="Hachirin-no-Obi",legs="Ebers Pant. +1",feet="Kaykaus Boots"}
+		back="Alaunus's Cape",waist="Hachirin-no-Obi",legs="Ebers Pant. +2",feet="Kaykaus Boots"}
 
 	sets.midcast.LightDayCure = {main="Queller Rod",sub="Sors Shield",ammo="Pemphredo Tathlum",
 		head="Gende. Caubeen +1",neck="Incanter's Torque",ear1="Nourish. Earring +1",ear2="Glorious Earring",
 		body="Theo. Bliaut +2",hands="Theophany Mitts +3",ring1="Janniston Ring",ring2="Menelaus's Ring",
-		back="Twilight Cape",waist="Hachirin-no-Obi",legs="Ebers Pant. +1",feet="Kaykaus Boots"}
+		back="Twilight Cape",waist="Hachirin-no-Obi",legs="Ebers Pant. +2",feet="Kaykaus Boots"}
 
 	sets.midcast.Curaga = {main="Queller Rod",sub="Sors Shield",ammo="Pemphredo Tathlum",
 		head="Gende. Caubeen",neck="Incanter's Torque",ear1="Mendi. Earring",ear2="Glorious Earring",
 		body="Kaykaus Bliaut",hands="Bunzi's Gloves",ring1="Janniston Ring",ring2="Lebeche Ring",
-		back="Twilight Cape",waist="Bishop's Sash",legs="Ebers Pant. +1",feet="Kaykaus Boots"}
+		back="Twilight Cape",waist="Bishop's Sash",legs="Ebers Pant. +2",feet="Kaykaus Boots"}
 		
 	sets.midcast.LightWeatherCuraga = {main="Chatoyant Staff",sub="Curatio Grip",ammo="Esper Stone +1",
 		head="Gende. Caubeen +1",neck="Incanter's Torque",ear1="Nourish. Earring +1",ear2="Glorious Earring",
 		body="Kaykaus Bliaut",hands="Theophany Mitts +3",ring1="Janniston Ring",ring2="Lebeche Ring",
-		back="Twilight Cape",waist="Hachirin-no-Obi",legs="Ebers Pant. +1",feet="Kaykaus Boots"}
+		back="Twilight Cape",waist="Hachirin-no-Obi",legs="Ebers Pant. +2",feet="Kaykaus Boots"}
 		
 	sets.midcast.LightDayCuraga = {main="Queller Rod",sub="Sors Shield",ammo="Pemphredo Tathlum",
 		head="Gende. Caubeen +1",neck="Incanter's Torque",ear1="Nourish. Earring +1",ear2="Glorious Earring",
 		body="Theo. Bliaut +2",hands="Theophany Mitts +3",ring1="Janniston Ring",ring2="Menelaus's Ring",
-		back="Twilight Cape",waist="Hachirin-no-Obi",legs="Ebers Pant. +1",feet="Kaykaus Boots"}
+		back="Twilight Cape",waist="Hachirin-no-Obi",legs="Ebers Pant. +2",feet="Kaykaus Boots"}
 
 	sets.midcast.Cure.DT = {main="Queller Rod",sub="Genmei Shield",ammo="Staunch Tathlum +1",
 		head="Gende. Caubeen +1",neck="Loricate Torque +1",ear1="Nourish. Earring +1",ear2="Glorious Earring",
 		body="Nyame Mail",hands="Theophany Mitts +3",ring1="Defending Ring",ring2="Janniston Ring",
-		back="Alaunus's Cape",waist="Luminary Sash",legs="Ebers Pant. +1",feet="Nyame Sollerets"}
+		back="Alaunus's Cape",waist="Luminary Sash",legs="Ebers Pant. +2",feet="Nyame Sollerets"}
 		
 	--Melee Curesets are used whenever your Weapons state is set to anything but None.
 	sets.midcast.MeleeCure = {ammo="Pemphredo Tathlum",
 		head="Gende. Caubeen +1",neck="Incanter's Torque",ear1="Regal Earring",ear2="Glorious Earring",
 		body="Theo. Bliaut +2",hands="Kaykaus Cuffs",ring1="Janniston Ring",ring2="Lebeche Ring",
-		back="Alaunus's Cape",waist="Luminary Sash",legs="Ebers Pant. +1",feet="Kaykaus Boots"}
+		back="Alaunus's Cape",waist="Luminary Sash",legs="Ebers Pant. +2",feet="Kaykaus Boots"}
 		
 	sets.midcast.MeleeCureSolace = set_combine(sets.midcast.MeleeCure, {body="Ebers Bliaut +2"})
 	sets.midcast.MeleeLightWeatherCure = set_combine(sets.midcast.MeleeCure, {waist="Hachirin-no-Obi"})
@@ -242,7 +242,7 @@ function init_gear_sets()
 	sets.midcast.StatusRemoval = {main=gear.grioavolr_fc_staff,sub="Clemency Grip",ammo="Hasty Pinion +1",
 		head="Ebers Cap +1",neck="Voltsurge Torque",ear1="Enchntr. Earring +1",ear2="Malignance Earring",
 		body="Inyanga Jubbah +2",hands="Fanatic Gloves",ring1="Kishar Ring",ring2="Prolix Ring",
-		back="Swith Cape +1",waist="Witful Belt",legs="Ebers Pant. +1",feet="Regal Pumps +1"}
+		back="Swith Cape +1",waist="Witful Belt",legs="Ebers Pant. +2",feet="Regal Pumps +1"}
 		
 	sets.midcast.Erase = set_combine(sets.midcast.StatusRemoval, {neck="Cleric's Torque"})
 
@@ -367,17 +367,17 @@ function init_gear_sets()
 	sets.idle = {main="Mpaca's Staff",sub="Oneiros Grip",ammo="Homiliary",
 		head="Befouled Crown",neck="Loricate Torque +1",ear1="Etiolation Earring",ear2="Ethereal Earring",
 		body="Ebers Bliaut +2",hands=gear.chiron_hands_REF,ring1="Defending Ring",ring2="Murky Ring",
-		back="Moonlight Cape",waist="Carrier's Sash",legs="Assid. Pants +1",feet=gear.chironic_refresh_feet}
+		back="Moonbeam Cape",waist="Carrier's Sash",legs="Assid. Pants +1",feet="Bunzi's Sabots"}
 
 	sets.idle.PDT = {main="Malignance Pole",sub="Umbra Strap",ammo="Homiliary",
-		head="Nyame Helm",neck="Loricate Torque +1",ear1="Etiolation Earring",ear2="Ethereal Earring",
+		head="Befouled Crown",neck="Loricate Torque +1",ear1="Etiolation Earring",ear2="Ethereal Earring",
 		body="Ebers Bliaut +2",hands=gear.chiron_hands_REF,ring1="Defending Ring",ring2="Murky Ring",
-		back="Moonlight Cape",waist="Carrier's Sash",legs="Assid. Pants +1",feet=gear.chironic_refresh_feet}
+		back="Moonbeam Cape",waist="Carrier's Sash",legs="Assid. Pants +1",feet="Bunzi's Sabots"}
 		
 	sets.idle.MDT = {main="Daybreak",sub="Ammurapi Shield",ammo="Homiliary",
-		head="Nyame Helm",neck="Warder's Charm +1",ear1="Etiolation Earring",ear2="Ethereal Earring",
+		head="Bunzi's Hat",neck="Warder's Charm +1",ear1="Etiolation Earring",ear2="Ethereal Earring",
 		body="Nyame Mail",hands="Nyame Gauntlets",ring1="Defending Ring",ring2="Shadow Ring",
-		back="Moonlight Cape",waist="Carrier's Sash",legs="Nyame Flanchard",feet="Nyame Sollerets"}
+		back="Moonbeam Cape",waist="Carrier's Sash",legs="Nyame Flanchard",feet="Nyame Sollerets"}
 
     -- Defense sets
 
@@ -389,7 +389,7 @@ function init_gear_sets()
 	sets.defense.MDT = {main="Daybreak",sub="Ammurapi Shield",ammo="Staunch Tathlum +1",
 		head="Nyame Helm",neck="Warder's Charm +1",ear1="Etiolation Earring",ear2="Ethereal Earring",
 		body="Nyame Mail",hands="Nyame Gauntlets",ring1="Shadow Ring",ring2="Archon Ring",
-		back="Moonlight Cape",waist="Carrier's Sash",legs="Nyame Flanchard",feet="Nyame Sollerets"}
+		back="Moonbeam Cape",waist="Carrier's Sash",legs="Nyame Flanchard",feet="Nyame Sollerets"}
 
     sets.defense.MEVA = {main="Daybreak",sub="Ammurapi Shield",ammo="Staunch Tathlum +1",
 		head="Nyame Helm",neck="Warder's Charm +1",ear1="Etiolation Earring",ear2="Ethereal Earring",
@@ -404,25 +404,25 @@ function init_gear_sets()
     -- EG: sets.engaged.Dagger.Accuracy.Evasion
 
     -- Basic set for if no TP weapon is defined.
-    sets.engaged = {ammo="Staunch Tathlum +1",
+    sets.engaged = {ammo="Hasty Pinion +1",
         head="Aya. Zucchetto +2",neck="Asperity Necklace",ear1="Cessance Earring",ear2="Brutal Earring",
-		body="Ayanmo Corazza +2",hands="Aya. Manopolas +2",ring1="Petrov Ring",Ring2="Ilabrat Ring",
-        back="Moonlight Cape",waist="Windbuffet Belt +1",legs="Aya. Cosciales +2",feet="Battlecast Gaiters"}
+		body="Ayanmo Corazza +2",hands="Bunzi's Gloves",ring1="Chirich Ring",Ring2="Chirich Ring",
+        back="Moonbeam Cape",waist="Windbuffet Belt",legs="Telchine Braconi",feet="Battlecast Gaiters"}
 
     sets.engaged.Acc = {ammo="Hasty Pinion +1",
         head="Aya. Zucchetto +2",neck="Combatant's Torque",ear1="Telos Earring",ear2="Brutal Earring",
 		body="Ayanmo Corazza +2",hands="Aya. Manopolas +2",ring1="Petrov Ring",Ring2="Ilabrat Ring",
-        back="Moonlight Cape",waist="Olseni Belt",legs="Aya. Cosciales +2",feet="Aya. Gambieras +2"}
+        back="Moonbeam Cape",waist="Olseni Belt",legs="Aya. Cosciales +2",feet="Aya. Gambieras +2"}
 
 	sets.engaged.DW = {ammo="Staunch Tathlum +1",
         head="Aya. Zucchetto +2",neck="Asperity Necklace",ear1="Telos Earring",ear2="Suppanomimi",
 		body="Ayanmo Corazza +2",hands="Aya. Manopolas +2",ring1="Petrov Ring",Ring2="Ilabrat Ring",
-        back="Moonlight Cape",waist="Shetal Stone",legs="Aya. Cosciales +2",feet="Battlecast Gaiters"}
+        back="Moonbeam Cape",waist="Shetal Stone",legs="Aya. Cosciales +2",feet="Battlecast Gaiters"}
 
     sets.engaged.DW.Acc = {ammo="Hasty Pinion +1",
         head="Aya. Zucchetto +2",neck="Combatant's Torque",ear1="Telos Earring",ear2="Suppanomimi",
 		body="Ayanmo Corazza +2",hands="Aya. Manopolas +2",ring1="Petrov Ring",Ring2="Ilabrat Ring",
-        back="Moonlight Cape",waist="Shetal Stone",legs="Aya. Cosciales +2",feet="Aya. Gambieras +2"}
+        back="Moonbeam Cape",waist="Shetal Stone",legs="Aya. Cosciales +2",feet="Aya. Gambieras +2"}
 
 		-- Buff sets: Gear that needs to be worn to actively enhance a current player buff.
     sets.buff['Divine Caress'] = {hands="Ebers Mitts +1",back="Mending Cape"}
@@ -434,7 +434,7 @@ function init_gear_sets()
 	sets.HPCure = {main="Queller Rod",sub="Ammurapi Shield",ammo="Pemphredo Tathlum",
 		head="Nyame Helm",neck="Nodens Gorget",ear1="Etiolation Earring",ear2="Ethereal Earring",
 		body="Kaykaus Bliaut",hands="Kaykaus Cuffs",ring1="Kunaji Ring",ring2="Meridian Ring",
-		back="Alaunus's Cape",waist="Eschan Stone",legs="Ebers Pant. +1",feet="Kaykaus Boots"}
+		back="Alaunus's Cape",waist="Eschan Stone",legs="Ebers Pant. +2",feet="Kaykaus Boots"}
 
 	sets.buff.Doom = set_combine(sets.buff.Doom, {})
 

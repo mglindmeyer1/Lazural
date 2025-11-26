@@ -10,7 +10,7 @@ function user_job_setup()
     state.MagicalDefenseMode:options('MDT_HP','MDT','MDT_Reraise')
 	state.ResistDefenseMode:options('MEVA_HP','MEVA')
 	state.IdleMode:options('Tank','Kiting','PDT','Block','MDT','Normal')
-	state.Weapons:options('SakpataPriwen','SakpataOchain','MagPriwen','NaeglingBlurred','None') --'ClubOchain',
+	state.Weapons:options('SakpataAegis','SakpataPriwen','SakpataOchain','MagAegis','MagPriwen','NaeglingBlurred','None') --'ClubOchain',
 	
     state.ExtraDefenseMode = M{['description']='Extra Defense Mode','None','MP','Twilight'}
 	
@@ -342,9 +342,11 @@ function init_gear_sets()
 	
 	-- Weapons sets
 	sets.weapons.MagPriwen = {main="Malignance Sword",sub="Priwen"}
+	sets.weapons.MagAegis = {main="Malignance Sword",sub="Aegis"}
 	sets.weapons.NaeglingBlurred = {main="Naegling",sub="Blurred Shield +1"}
 	sets.weapons.SakpataOchain = {main="Sakpata's Sword",sub="Ochain"}
-	sets.weapons.SakpataPriwen = {main="Sakpata's Sword",sub="Priwen"}          
+	sets.weapons.SakpataPriwen = {main="Sakpata's Sword",sub="Priwen"}  
+	sets.weapons.SakpataAegis = {main="Sakpata's Sword",sub="Aegis"}          
 	sets.weapons.ClubOchain = {main="Mafic Cudgel",sub="Ochain"}
 	sets.weapons.DualWeapons = {main="Naegling",sub="Demersal Degen +1"}
     

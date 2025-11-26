@@ -113,7 +113,7 @@ function init_gear_sets()
     -- Weaponskill sets
     -- Default set for any weaponskill that isn't any more specifically defined
     sets.precast.WS = {
-        head="Lilitu Headpiece",neck="Caro Necklace",ear1="Moonshade Earring",ear2="Brutal Earring",
+        head="Mpaca's Cap",neck="Caro Necklace",ear1="Moonshade Earring",ear2="Brutal Earring",
         body=gear.herculean_wsd_body,hands="Ryuo Tekko",ring1="Niqmaddu Ring",ring2="Regal Ring",
         back="Visucius's Mantle",waist="Grunfeld Rope",legs="Hiza. Hizayoroi +2",feet=gear.herculean_ta_feet}
 	sets.precast.WS.Acc = {
@@ -246,19 +246,19 @@ function init_gear_sets()
 		
     -- Set for idle while pet is out (eg: pet regen gear)
     sets.idle.Pet = {
-        head="Rao Kabuto",neck="Loricate Torque +1",ear1="Enmerkar Earring",ear2="Handler's Earring +1",
+        head="Rao Kabuto",neck="Loricate Torque +1",ear1="Enmerkar Earring",ear2="Karagoz Earring",
         body="Hiza. Haramaki +2",hands="Rao Kote",ring1="Defending Ring",ring2="Dark Ring",
         back="Moonlight Cape",waist="Isa Belt",legs="Rao Haidate",feet="Rao Sune-ate"}
 
     -- Idle sets to wear while pet is engaged
     sets.idle.Pet.Engaged = {
-        head="Mpaca's Cap",neck="Shulmanu Collar",ear1="Enmerkar Earring",ear2="Handler's Earring +1",
+        head="Mpaca's Cap",neck="Shulmanu Collar",ear1="Enmerkar Earring",ear2="Karagoz Earring",
         body="Pitre Tobe",hands="Mpaca's Gloves",ring1="Varar Ring",ring2="Varar Ring",
         back="Visucius's Mantle",waist="Incarnation Sash",legs="Mpaca's Hose",feet="Mpaca's Boots"}
 
     sets.idle.Pet.Engaged.Ranged = set_combine(sets.idle.Pet.Engaged, {})
 	sets.idle.Pet.Engaged.Melee = set_combine(sets.idle.Pet.Engaged, {})
-	sets.idle.Pet.Engaged.Tank = set_combine(sets.idle.Pet.Engaged, {waist="Isa Belt",ear2="Handler's Earring +1"})
+	sets.idle.Pet.Engaged.Tank = set_combine(sets.idle.Pet.Engaged, {head="Rao Kabuto",hands="Rao Kote",waist="Isa Belt",ear2="Karagoz Earring",legs="Rao Haidate"})
 	sets.idle.Pet.Engaged.Bruiser = set_combine(sets.idle.Pet.Engaged, {hands="Mpaca's Gloves",feet="Mpaca's Boots"})
 	sets.idle.Pet.Engaged.LightTank = set_combine(sets.idle.Pet.Engaged, {waist="Isa Belt",ear2="Handler's Earring +1"})
     sets.idle.Pet.Engaged.Magic = set_combine(sets.idle.Pet.Engaged, {})
@@ -326,13 +326,13 @@ function init_gear_sets()
         body=gear.herculean_wsd_body,hands="Ryuo Tekko",ring1="Niqmaddu Ring",ring2="Regal Ring",
         back="Visucius's Mantle",waist="Grunfeld Rope",legs="Hiza. Hizayoroi +2",feet=gear.herculean_ta_feet}
     sets.engaged.Pet = {
-        head="Mpaca's Cap",neck="Shulmanu Collar",ear1="Cessance Earring",ear2="Telos Earring",
-        body="Sayadio's Kaftan",hands="Ryuo Tekko",ring1="Niqmaddu Ring",ring2="Epona's Ring",
-        back="Visucius's Mantle",waist="Klouskap Sash",legs="Ryuo Hakama",feet=gear.herculean_ta_feet}
+        head="Mpaca's Cap",neck="Shulmanu Collar",ear1="Telos Earring",ear2="Karagoz Earring",
+        body="Mpaca's Doublet",hands="Mpaca's Gloves",ring1="Niqmaddu Ring",ring2="Epona's Ring",
+        back="Visucius's Mantle",waist="Moonbow Belt",legs="Ryuo Hakama",feet="Mpaca's Boots"}
     sets.engaged.Acc.Pet = {
         head="Mpaca's Cap",neck="Shulmanu Collar",ear1="Cessance Earring",ear2="Telos Earring",
-        body="Sayadio's Kaftan",hands="Ryuo Tekko",ring1="Niqmaddu Ring",ring2="Epona's Ring",
-        back="Visucius's Mantle",waist="Klouskap Sash",legs="Ryuo Hakama",feet=gear.herculean_ta_feet}
+        body="Mpaca's Doublet",hands="Mpaca's Gloves",ring1="Niqmaddu Ring",ring2="Epona's Ring",
+        back="Visucius's Mantle",waist="Klouskap Sash",legs="Ryuo Hakama",feet="Mpaca's Boots"}
     sets.engaged.FullAcc.Pet = {
         head="Mpaca's Cap",neck="Shulmanu Collar",ear1="Cessance Earring",ear2="Telos Earring",
         body="Sayadio's Kaftan",hands="Ryuo Tekko",ring1="Niqmaddu Ring",ring2="Epona's Ring",

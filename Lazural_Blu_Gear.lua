@@ -122,7 +122,7 @@ function init_gear_sets()
 	-- Default set for any weaponskill that isn't any more specifically defined
 	sets.precast.WS = {ammo="Aurgelmir Orb",
 				  head="Hashishin Kavuk +2",neck="Mirage Stole +1",ear1="Cessance Earring",ear2="Brutal Earring",
-                  body="Adhemar Jacket",hands="Jhakri Cuffs +2",ring1="Epona's Ring",ring2="Apate Ring",
+                  body="Adhemar Jacket",hands="Jhakri Cuffs +2",ring1="Epona's Ring",ring2="Ifrit Ring +1",
 				  back=gear.wsd_jse_back,waist="Fotia Belt",legs="Samnuha Tights",feet=gear.herc_feet_TA}
 
 	sets.precast.WS.Acc = {ammo="Falcon Eye",
@@ -132,17 +132,17 @@ function init_gear_sets()
 
 	sets.precast.WS.FullAcc = {ammo="Falcon Eye",
 				  head="Hashishin Kavuk +2",neck="Sanctity Necklace",ear1="Mache Earring",ear2="Odr Earring",
-				  body="Assim. Jubbah +2",hands=gear.herc_hands_AA,ring1="Ramuh Ring",ring2="Rufescent Ring",
+				  body="Assim. Jubbah +2",hands=gear.herc_hands_AA,ring1="Ramuh Ring +1",ring2="Rufescent Ring",
 			      back=gear.wsd_jse_back,waist="Kentarch Belt",legs="Carmine Cuisses +1",feet=gear.herc_feet_TA}
 
 	sets.precast.WS.DT = {ammo="Focal Orb",
 				  head="Hashishin Kavuk +2",neck="Loricate Torque +1",ear1="Cessance Earring",ear2="Brutal Earring",
-                  body="Ayanmo Corazza +2",hands=gear.herc_hands_DT,ring1="Defending Ring",ring2="Apate Ring",
+                  body="Ayanmo Corazza +2",hands=gear.herc_hands_DT,ring1="Defending Ring",ring2="Ifrit Ring +1",
 				  back=gear.wsd_jse_back,waist="Fotia Belt",legs="Ayanmo Cosciales +2",feet=gear.herc_feet_TA}
 
 	sets.precast.WS.Fodder = {ammo="Focal Orb",
 				  head="Hashishin Kavuk +2",neck="Fotia Gorget",ear1="Cessance Earring",ear2="Brutal Earring",
-                  body="Adhemar Jacket",hands="Jhakri Cuffs +2",ring1="Epona's Ring",ring2="Apate Ring",
+                  body="Adhemar Jacket",hands="Jhakri Cuffs +2",ring1="Epona's Ring",ring2="Ifrit Ring +1",
 				  back=gear.wsd_jse_backk,waist="Fotia Belt",legs="Samnuha Tights",feet=gear.herc_feet_TA}
 
 	-- Specific weaponskill sets.  Uses the base set if an appropriate WSMod version isn't found.
@@ -164,7 +164,7 @@ function init_gear_sets()
 	sets.precast.WS['Chant du Cygne'].DT = set_combine(sets.precast.WS.DT, {back=gear.crit_jse_back})
 	sets.precast.WS['Chant du Cygne'].Fodder = set_combine(sets.precast.WS['Chant du Cygne'], {})
 
-	sets.precast.WS['Savage Blade'] = set_combine(sets.precast.WS, {head="Hashishin Kavuk +2",ear1="Moonshade Earring",ear2="Ishvara Earring",body="Gleti's Cuirass",hands="Jhakri Cuffs +2",ring1="Ifrit Ring",ring2="Rufescent Ring",back=gear.wsd_jse_back,waist="Grunfeld Rope",legs="Luhlaza Shalwar +3",feet="Gleti's Boots"})
+	sets.precast.WS['Savage Blade'] = set_combine(sets.precast.WS, {head="Hashishin Kavuk +2",ear1="Moonshade Earring",ear2="Ishvara Earring",body="Gleti's Cuirass",hands="Jhakri Cuffs +2",ring1="Ifrit Ring +1",ring2="Epaminondas's Ring",back=gear.wsd_jse_back,waist="Grunfeld Rope",legs="Luhlaza Shalwar +3",feet="Gleti's Boots"})
 	sets.precast.WS['Savage Blade'].Acc = set_combine(sets.precast.WS.Acc, {ear1="Moonshade Earring",hands="Jhakri Cuffs +2",back=gear.wsd_jse_back,waist="Grunfeld Rope",legs="Luhlaza Shalwar +3",feet=gear.herculean_wsd_feet})
 	sets.precast.WS['Savage Blade'].FullAcc = set_combine(sets.precast.WS.FullAcc, {})
 	sets.precast.WS['Savage Blade'].DT = set_combine(sets.precast.WS.DT, {back=gear.wsd_jse_back})
@@ -176,7 +176,7 @@ function init_gear_sets()
 	sets.precast.WS['Vorpal Blade'].DT = sets.precast.WS['Chant du Cygne'].DT
 	sets.precast.WS['Vorpal Blade'].Fodder = sets.precast.WS['Chant du Cygne'].Fodder
 
-	sets.precast.WS['Expiacion'] = set_combine(sets.precast.WS, {head="Hashishin Kavuk +2",ear1="Moonshade Earring",ear2="Ishvara Earring",body="Assim. Jubbah +2",hands="Jhakri Cuffs +2",ring1="Ifrit Ring",ring2="Rufescent Ring",back=gear.wsd_jse_back,waist="Grunfeld Rope",legs="Luhlaza Shalwar +3",feet=gear.herc_feet_TA})
+	sets.precast.WS['Expiacion'] = set_combine(sets.precast.WS, {head="Hashishin Kavuk +2",ear1="Moonshade Earring",ear2="Ishvara Earring",body="Assim. Jubbah +2",hands="Jhakri Cuffs +2",ring1="Ifrit Ring +1",ring2="Epaminondas's Ring",back=gear.wsd_jse_back,waist="Grunfeld Rope",legs="Luhlaza Shalwar +3",feet=gear.herc_feet_TA})
 	sets.precast.WS['Expiacion'].Acc = set_combine(sets.precast.WS.Acc, {neck="Mirage Stole +1",ear1="Moonshade Earring",body="Assim. Jubbah +2",hands="Jhakri Cuffs +2",back=gear.wsd_jse_back,legs="Luhlaza Shalwar +3",feet=gear.herc_feet_TA})
 	sets.precast.WS['Expiacion'].FullAcc = set_combine(sets.precast.WS.FullAcc, {body="Assim. Jubbah +2",hands="Jhakri Cuffs +2"})
 	sets.precast.WS['Expiacion'].DT = set_combine(sets.precast.WS.DT, {back=gear.wsd_jse_back})
@@ -191,7 +191,7 @@ function init_gear_sets()
 
 	sets.precast.WS['Flash Nova'] = {ammo="Pemphredo Tathlum",
 		head="Hashishin Kavuk +2",neck="Baetyl Pendant",ear1="Crematio Earring",ear2="Friomisi Earring",
-		body="Hashishin Mintan +2",hands="Jhakri Cuffs +2",ring1="Acumen Ring",ring2="Shiva Ring",
+		body="Hashishin Mintan +2",hands="Jhakri Cuffs +2",ring1="Acumen Ring",ring2="Shiva Ring +1",
 		back=gear.nuke_jse_back,waist="Eschan Stone",legs="Luhlaza Shalwar +3",feet="Hashi. Basmak +2"}
 					 
 	sets.precast.WS['Sanguine Blade'].DT = set_combine(sets.precast.WS.DT, {back=gear.nuke_jse_back})
@@ -270,7 +270,7 @@ function init_gear_sets()
 	sets.midcast['Blue Magic'].Magical = {main="Bunzi's Rod",sub="Maxentius",ammo="Ghastly Tathlum +1",
 		head="Hashishin Kavuk +2",neck="Baetyl Pendant",ear1="Crematio Earring",ear2="Friomisi Earring",
 		body="Hashishin Mintan +2",hands="Hashi. Bazu. +2",ring1="Metamorph Ring +1",ring2="Shiva Ring +1",
-		back=gear.nuke_jse_back,waist=gear.ElementalObi,legs="Luhlaza Shalwar +3",feet="Hashi. Basmak +2"}
+		back=gear.nuke_jse_back,waist="Skrymir Cord",legs="Luhlaza Shalwar +3",feet="Hashi. Basmak +2"}
 		 
 	sets.midcast['Blue Magic'].Magical.SIRD = {main="Bunzi's Rod",sub="Sakpata's Sword",ammo="Staunch Tathlum",
 		 head="Hashishin Kavuk +2",neck="Loricate Torque +1",ear1="Regal Earring",ear2="Friomisi Earring",
@@ -280,7 +280,7 @@ function init_gear_sets()
 	sets.midcast['Blue Magic'].Subduction = {main="Bunzi's Rod",sub="Maxentius",ammo="Ghastly Tathlum +1",
 		 head="Hashishin Kavuk +2",neck="Baetyl Pendant",ear1="Crematio Earring",ear2="Friomisi Earring",
 		 body="Hashishin Mintan +2",hands="Hashi Bazu. +2",ring1="Metamporh Ring +1",ring2="Shiva Ring +1",
-		 back=gear.nuke_jse_back,waist=gear.ElementalObi,legs="Luhlaza Shalwar +3",feet="Hashi. Basmak +2"}
+		 back=gear.nuke_jse_back,waist="Skrymir Cord",legs="Luhlaza Shalwar +3",feet="Hashi. Basmak +2"}
 					 
 	sets.midcast['Blue Magic'].Magical.Proc = {ammo="Sapience Orb",
 		head="Carmine Mask",ear1="Etiolation Earring",ear2="Loquac. Earring",

@@ -12,7 +12,7 @@ function user_job_setup()
 	state.Passive = M{['description'] = 'Passive Mode','None','MP','Twilight'}
 	state.DrainSwapWeaponMode = M{'Always','Never','300','1000'}
 
-	gear.da_jse_back ={ name="Ankou's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','"Dbl.Atk."+10',}}
+	gear.da_jse_back ={ name="Ankou's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','Accuracy+10','"Dbl.Atk."+10','Phys. dmg. taken-10%',}}
 	gear.wsd_jse_back ={ name="Ankou's Mantle", augments={'STR+20','Accuracy+20 Attack+20','Weapon Skill Damage +10%',}}
 	gear.wsdv_jse_back ={ name="Ankou's Mantle", augments={'VIT+20','Accuracy+20 Attack+20','Weapon Skill Damage +10%',}}
 
@@ -69,7 +69,7 @@ function init_gear_sets()
  
 	sets.midcast['Dark Magic'] = {ammo="Pemphredo Tathlum",
 		head="Heath. Burgeon. +2",neck="Erra Pendant",ear1="Digni. Earring",ear2="Malignance Earring",
-		body="Ig. Cuirass +4",hands="Fall. Fin. Gaunt. +3",ring1="Stikini Ring",ring2="Stikini Ring",
+		body="Carmine Scale Mail",hands="Fall. Fin. Gaunt. +3",ring1="Stikini Ring",ring2="Stikini Ring",
 		back="Niht Mantle",waist="Eschan Stone",legs="Heathen's Flanchard +2",feet="Ratri Sollerets"}
            
 	sets.midcast['Enfeebling Magic'] = {ammo="Pemphredo Tathlum",
@@ -122,13 +122,13 @@ function init_gear_sets()
 		back=gear.wsd_jse_back,waist="Fotia Belt",legs="Sulev. Cuisses +2",feet="Sakpata's Leggings"})
 
     -- Specific weaponskill sets.  Uses the base set if an appropriate WSMod version isn't found.
-	sets.precast.WS['Torcleaver'] = set_combine(sets.precast.WS, {ear1="Thrud Earring",body="Ignominy Cuirass +4",waist="Sailfi Belt +1",legs="Fall. Flanchard +4", feet="Heath. Sollerets +2",back=gear.wsdv_jse_back})
+	sets.precast.WS['Torcleaver'] = set_combine(sets.precast.WS, {ear1="Thrud Earring",body="Ignominy Cuirass +4",ring1="Epaminondas's Ring",waist="Sailfi Belt +1",legs="Fall. Flanchard +4", feet="Heath. Sollerets +2",back=gear.wsdv_jse_back})
     sets.precast.WS['Torcleaver'].SomeAcc = set_combine(sets.precast.WS.SomeAcc, {})
     sets.precast.WS['Torcleaver'].Acc = set_combine(sets.precast.WS.Acc, {})
     sets.precast.WS['Torcleaver'].FullAcc = set_combine(sets.precast.WS.FullAcc, {})
     sets.precast.WS['Torcleaver'].Fodder = set_combine(sets.precast.WS.Fodder, {})
 	
-    sets.precast.WS['Catastrophe'] = set_combine(sets.precast.WS, {head="Heath. Burgeon. +2",ear2="Thrud Earring",body="Ignominy Cuirass +4",hand="Ratri Gadlings", waist="Sailfi Belt +1",legs="Fall. Flanchard +4", feet="Heath. Sollerets +2"})
+    sets.precast.WS['Catastrophe'] = set_combine(sets.precast.WS, {head="Heath. Burgeon. +2",ear2="Thrud Earring",body="Ignominy Cuirass +4",hand="Ratri Gadlings",ring1="Epaminondas's Ring",waist="Sailfi Belt +1",legs="Fall. Flanchard +4", feet="Heath. Sollerets +2"})
     sets.precast.WS['Catastrophe'].SomeAcc = set_combine(sets.precast.WS.SomeAcc, {})
     sets.precast.WS['Catastrophe'].Acc = set_combine(sets.precast.WS.Acc, {})
     sets.precast.WS['Catastrophe'].FullAcc = set_combine(sets.precast.WS.FullAcc, {})
@@ -158,13 +158,13 @@ function init_gear_sets()
     sets.precast.WS['Entropy'].FullAcc = set_combine(sets.precast.WS.FullAcc, {})
     sets.precast.WS['Entropy'].Fodder = set_combine(sets.precast.WS.Fodder, {})
      
-    sets.precast.WS['Resolution'] = set_combine(sets.precast.WS, {ear2="Thrud Earring",head="Heath. Burgeon. +2", Legs="Sakpata's Cuisses", back=gear.da_jse_back})
+    sets.precast.WS['Resolution'] = set_combine(sets.precast.WS, {ear2="Thrud Earring",head="Heath. Burgeon. +2", Legs="Ig. Flanchard +3", back=gear.da_jse_back})
     sets.precast.WS['Resolution'].SomeAcc = set_combine(sets.precast.WS.SomeAcc, {})
     sets.precast.WS['Resolution'].Acc = set_combine(sets.precast.WS.Acc, {})
     sets.precast.WS['Resolution'].FullAcc = set_combine(sets.precast.WS.FullAcc, {})
     sets.precast.WS['Resolution'].Fodder = set_combine(sets.precast.WS.Fodder, {})
 
-	sets.precast.WS['Upheaval'] = set_combine(sets.precast.WS, {ear2="Thrud Earring",head="Heath. Burgeon. +2", Legs="Sakpata's Cuisses", back=gear.wsdv_jse_back})
+	sets.precast.WS['Upheaval'] = set_combine(sets.precast.WS, {ear2="Thrud Earring",head="Heath. Burgeon. +2", Legs="Ig. Flanchard +3", back=gear.wsdv_jse_back})
     sets.precast.WS['Upheaval'].SomeAcc = set_combine(sets.precast.WS.SomeAcc, {})
     sets.precast.WS['Upheaval'].Acc = set_combine(sets.precast.WS.Acc, {})
     sets.precast.WS['Upheaval'].FullAcc = set_combine(sets.precast.WS.FullAcc, {})
@@ -246,12 +246,12 @@ function init_gear_sets()
 	sets.engaged = {ammo="Aurgelmir Orb",
 		head="Flam. Zucchetto +2",neck="Abyssal Beads +1",ear1="Dedition Earring",ear2="Cessance Earring",
 		body="Sakpata's Plate",hands="Sakpata's Gauntlets",ring1="Moonlight Ring",ring2="Niqmaddu Ring",
-		back=gear.da_jse_back,waist="Ioskeha Belt +1",legs="Flamma Dirs +2",feet="Flam. Gambieras +2"}
+		back=gear.da_jse_back,waist="Ioskeha Belt +1",legs="Ig. Flanchard +3",feet="Flam. Gambieras +2"}
 	
 	sets.engaged.Hybrid = {ammo="Aurgelmir Orb",
 		head="Hjarrandi Helm",neck="Abyssal Beads +1",ear1="Odnowa Earring +1",ear2="Telos Earring",
 		body="Hjarrandi Breast.",hands="Sakpata's Gauntlets",ring1="Moonlight Ring",ring2="Chirich Ring",
-		back=gear.da_jse_back,waist="Ioskeha Belt +1",legs="Sakpata's Cuisses",feet="Sakpata's Leggings"}
+		back=gear.da_jse_back,waist="Ioskeha Belt +1",legs="Ig. Flanchard +3",feet="Sakpata's Leggings"}
 
 	sets.engaged.HybridTP = {ammo="Aurgelmir Orb",
 		head="Hjarrandi Helm",neck="Abyssal Beads +1",ear1="Cessance Earring",ear2="Telos Earring",
@@ -266,7 +266,7 @@ function init_gear_sets()
     sets.engaged.Fodder = {ammo="Aurgelmir Orb",
 		head="Hjarrandi Helm",neck="Abyssal Beads +1",ear1="Telos Earring",ear2="Cessance Earring",
 		body="Sakpata's Plate",hands="Sakpata's Gauntlets",ring1="Chirich Ring",ring2="Niqmaddu Ring",
-		back=gear.da_jse_back,waist="Sailfi Belt +1",legs="Sakpata's Cuisses",feet="Flam. Gambieras +2"}
+		back=gear.da_jse_back,waist="Sailfi Belt +1",legs="Ig. Flanchard +3",feet="Flam. Gambieras +2"}
 
 	sets.engaged.Tank = {ammo="Staunch Tathlum",
 		head="Hjarrandi Helm",neck="Warder's Charm +1",ear1="Odnowa Earring +1",ear2="Tuisto Earring",

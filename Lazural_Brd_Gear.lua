@@ -8,7 +8,8 @@ function user_job_setup()
 	-- Whether to use Carn (or song daggers in general) under a certain threshhold even when weapons are locked.
 	state.CarnMode = M{'Never','Always','300','1000'}
 
-	gear.melee_jse_back = {name="Intarabus's Cape",augments={'Accuracy+20 Attack+20'}}
+	gear.wsd_jse_back = {name="Intarabus's Cape", augments={'STR+20','Accuracy+20 Attack+20','Weapon skill damage +10%',}}
+	gear.melee_jse_back = {name="Intarabus's Cape", augments={'DEX+20','Accuracy+20 Attack+20','"Dbl.Atk."+10',}}
 	gear.magic_jse_back = {name="Intarabus's Cape",augments={'CHR+20','Mag. Acc+20 /Mag. Dmg.+20','"Fast Cast"+10',}}
 
 	-- Adjust this if using the Terpander (new +song instrument)
@@ -53,7 +54,7 @@ function init_gear_sets()
 	-- Weapons sets
 	sets.weapons.Aeneas = {main="Aeneas",sub="Genmei Shield"}
 	sets.weapons.Gleti = {main="Gleti's Knife",sub="Culminus"}
-	sets.weapons.DualWeapons = {main="Gleti's Knife",sub="Blurred Knife +1"}
+	sets.weapons.DualWeapons = {main="Gleti's Knife",sub="Fusetto +2"}
 	sets.weapons.DualNaegling = {main="Naegling",sub="Blurred Knife +1"}
 	sets.weapons.Naegling = {main="Naegling",sub="Culminus"}
 	sets.weapons.DualTauret = {main="Tauret",sub="Blurred Knife +1"}
@@ -114,19 +115,19 @@ function init_gear_sets()
 	-- Weaponskill sets
 	-- Default set for any weaponskill that isn't any more specifically defined
 	sets.precast.WS = {ammo="Aurgelmir Orb",
-		head="Aya. Zucchetto +2",neck="Bard's Charm +1",ear1="Moonshade Earring",ear2="Mache Earring",
-		body="Bihu Justacorps +3",hands="Bunzi's Gloves",ring1="Ramuh Ring",ring2="Petrov Ring",
-		back="Bleating Mantle",waist="Grunfeld Rope",legs="Aya. Cosciales +2",feet="Aya. Gambieras +2"}
+		head="Nyame Helm",neck="Bard's Charm +1",ear1="Moonshade Earring",ear2="Ishvara Earring",
+		body="Bihu Justacorps +3",hands="Bunzi's Gloves",ring1="Ramuh Ring +1",ring2="Epaminondas's Ring",
+		back=gear.melee_jse_back,waist="Grunfeld Rope",legs="Nyame Flanchard",feet="Nayme Sollerets"}
 		
 	sets.precast.WS.Acc = {ammo="Aurgelmir Orb",
-		head="Aya. Zucchetto +2",neck="Bard's Charm +1",ear1="Moonshade Earring",ear2="Mache Earring +1",
+		head="Aya. Zucchetto +2",neck="Bard's Charm +1",ear1="Moonshade Earring",ear2="Mache Earring",
 		body="Bihu Justacorps +3",hands="Bunzi's Gloves",ring1="Ramuh Ring +1",ring2="Ilabrat Ring",
 		back=gear.melee_jse_back,waist="Olseni Belt",legs="Aya. Cosciales +2",feet="Aya. Gambieras +2"}
 		
 	sets.precast.WS['Savage Blade'] = {ammo="Aurgelmir Orb",
-		head="Aya. Zucchetto +2",neck="Bard's Charm +1",ear1="Moonshade Earring",ear2="Ishvara Earring",
-		body="Bihu Justacorps +3",hands="Bunzi's Gloves",ring1="Sroda Ring",ring2="Ifrit Ring",
-		back=gear.melee_jse_back,waist="Sailfi Belt +1",legs="Aya. Cosciales +2",feet="Aya. Gambieras +2"}
+		head="Nyame Helm",neck="Bard's Charm +1",ear1="Moonshade Earring",ear2="Ishvara Earring",
+		body="Bihu Justacorps +3",hands="Bunzi's Gloves",ring1="Epaminondas's Ring",ring2="Ifrit Ring +1",
+		back=gear.wsd_jse_back,waist="Sailfi Belt +1",legs="Nyame Flanchard",feet="Nayme Sollerets"}
 		
 	sets.precast.WS['Aeolian Edge'] = {ammo="Aurgelmir Orb",
 		head="Cath Palug Crown",neck="Baetyl Pendant",ear1="Moonshade Earring",ear2="Friomisi Earring",
@@ -284,7 +285,7 @@ function init_gear_sets()
 	sets.engaged = {main="Aeneas",sub="Genmei Shield",ammo="Aurgelmir Orb",
 		head="Aya. Zucchetto +2",neck="Bard's Charm +1",ear1="Cessance Earring",ear2="Brutal Earring",
 		body="Ayanmo Corazza +2",hands="Bunzi's Gloves",ring1="Petrov Ring",ring2="Chirich Ring",
-		back="Grounded Mantle",waist="Sailfi Belt +1",legs="Aya. Cosciales +2",feet="Battlecast Gaiters"}
+		back=gear.melee_jse_back,waist="Sailfi Belt +1",legs="Telchine Braconi",feet="Battlecast Gaiters"}
 	sets.engaged.DT = {main="Aeneas",sub="Genmei Shield",ammo="Aurgelmir Orb +1",
 		head="Nyame Helm",neck="Loricate Torque +1",ear1="Cessance Earring",ear2="Brutal Earring",
 		body="Nyame Mail",hands="Nyame Gauntlets",ring1="Petrov Ring",ring2="Ilabrat Ring",
@@ -292,11 +293,11 @@ function init_gear_sets()
 	sets.engaged.Acc = {main="Aeneas",sub="Genmei Shield",ammo="Aurgelmir Orb",
 		head="Aya. Zucchetto +2",neck="Bard's Charm +1",ear1="Digni. Earring",ear2="Telos Earring",
 		body="Ayanmo Corazza +2",hands="Bunzi's Gloves",ring1="Chirich Ring",ring2="Chirich Ring",
-		back="Grounded Mantle",waist="Olseni Belt",legs="Aya. Cosciales +2",feet="Aya. Gambieras +2"}
+		back=gear.melee_jse_back,waist="Olseni Belt",legs="Aya. Cosciales +2",feet="Aya. Gambieras +2"}
 	sets.engaged.DW = {main="Aeneas",sub="Blurred Knife +1",ammo="Aurgelmir Orb +1",
 		head="Aya. Zucchetto +2",neck="Bard's Charm +1",ear1="Suppanomimi",ear2="Brutal Earring",
 		body="Ayanmo Corazza +2",hands="Bunzi's Gloves",ring1="Petrov Ring",ring2="Hetairoi Ring",
-		back="Grounded Mantle",waist="Sailfi Belt +1",legs="Aya. Cosciales +2",feet="Battlecast Gaiters"}
+		back=gear.melee_jse_back,waist="Sailfi Belt +1",legs="Aya. Cosciales +2",feet="Battlecast Gaiters"}
 	sets.engaged.DW.DT = {main="Aeneas",sub="Blurred Knife +1",ammo="Aurgelmir Orb +1",
 		head="Nyame Helm",neck="Loricate Torque +1",ear1="Suppanomimi",ear2="Brutal Earring",
 		body="Nyame Mail",hands="Nyame Gauntlets",ring1="Petrov Ring",ring2="Ilabrat Ring",
