@@ -190,8 +190,8 @@ function init_gear_sets()
 
     sets.idle = {ammo="Staunch Tathlum",
         head="Gleti's Mask",neck="Loricate Torque +1",ear1="Etiolation Earring",ear2="Alabaster Earring",
-        body="Gleti's Cuirass",hands="Gleti's Gauntlets",ring1="Defending Ring",ring2="Murky Ring",
-        back="Moonbeam Cape",waist="Flume Belt",legs="Gleti's Breeches",feet="Glet's Boots"}
+        body="Gleti's Cuirass",hands="Gleti's Gauntlets",ring1="Shneddick Ring",ring2="Murky Ring",
+        back="Moonbeam Cape",waist="Flume Belt",legs="Gleti's Breeches",feet="Gleti's Boots"}
 		
     sets.idle.Sphere = set_combine(sets.idle, {body="Mekosu. Harness"})
     
@@ -212,7 +212,7 @@ function init_gear_sets()
 		body="Adhemar Jacket +1",hands="Leyline Gloves",ring1="Vengeful Ring",ring2="Purity Ring",
 		back="Mujin Mantle",waist="Engraved Belt",legs="Meg. Chausses +2",feet="Ahosi Leggings"}
 
-    sets.Kiting = {feet="Tandava Crackows"}
+    sets.Kiting = {ring1="Shneddick Ring"}
 
     -- Engaged sets
 

@@ -341,11 +341,11 @@ function init_gear_sets()
 
     sets.engaged = {main="Lionheart",sub="Utu Grip",ammo="Aurgelmir Orb",
             head="Dampening Tam",neck="Anu Torque",ear1="Sherida Earring",ear2="Cessance Earring",
-            body="Adhemar Jacket",hands="Adhemar Wristbands",ring1="Niqmaddu Ring",ring2="Petrov Ring",
+            body="Adhemar Jacket",hands="Adhemar Wristbands +1",ring1="Niqmaddu Ring",ring2="Petrov Ring",
             back=gear.stp_jse_back,waist="Ioskeha Belt +1",legs="Samnuha Tights",feet=gear.herc_feet_TA}
 	sets.engaged.Acc = {main="Lionheart",sub="Utu Grip",ammo="Yamarang",
             head="Dampening Tam",neck="Combatant's Torque",ear1="Sherida Earring",ear2="Digni. Earring",
-            body="Ayanmo Corazza +2",hands="Adhemar Wristbands",ring1="Niqmaddu Ring",ring2="Epona's Ring",
+            body="Ayanmo Corazza +2",hands="Adhemar Wristbands +1",ring1="Niqmaddu Ring",ring2="Epona's Ring",
             back=gear.stp_jse_back,waist="Grunfeld Rope",legs="Meg. Chausses +2",feet=gear.herc_feet_TA}
 	sets.engaged.FullAcc = {main="Lionheart",sub="Utu Grip",ammo="C. Palug Stone",
             head="Carmine Mask +1",neck="Combatant's Torque",ear1="Telos Earring",ear2="Mache Earring +1",
@@ -353,7 +353,7 @@ function init_gear_sets()
             back=gear.stp_jse_back,waist="Olseni Belt",legs="Carmine Cuisses +1",feet=gear.herculean_acc_feet}
 	sets.engaged.AM = {main="Epeolatry",sub="Utu Grip",ammo="Aurgelmir Orb",
             head="Turms Cap +1",neck="Anu Torque",ear1="Sherida Earring",ear2="Dedition Earring",
-            body="Turms Harness",hands="Adhemar Wristbands",ring1="Niqmaddu Ring",ring2="Petrov Ring",
+            body="Turms Harness",hands="Adhemar Wristbands +1",ring1="Niqmaddu Ring",ring2="Petrov Ring",
             back=gear.stp_jse_back,waist="Ioskeha Belt +1",legs="Samnuha Tights",feet=gear.herc_feet_TA}
 
     sets.engaged.DTLite = {main="Lionheart",sub="Utu Grip",ammo="Aurgelmir Orb",

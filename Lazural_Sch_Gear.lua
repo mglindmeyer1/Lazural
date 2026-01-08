@@ -296,39 +296,39 @@ function init_gear_sets()
 
     sets.idle = {main="Mpaca's Staff",sub="Oneiros Grip",ammo="Homiliary",
         head="Befouled Crown",neck="Loricate Torque +1",ear1="Etiolation Earring",ear2="Alabaster Earring",
-        body="Arbatel Gown +2",hands=gear.chiron_hands_REF,ring1="Defending Ring",ring2="Murky Ring",
-        back="Moonbeam Cape",waist="Carrier's Sash",legs="Assid. Pants +1",feet="Herald's Gaiters"}
+        body="Arbatel Gown +2",hands=gear.chiron_hands_REF,ring1="Shneddick Ring",ring2="Murky Ring",
+        back="Moonbeam Cape",waist="Carrier's Sash",legs="Assid. Pants +1",feet="Arbatel Loafers +2"}
 
     sets.idle.PDT = {main="Malignance Pole",sub="Mensch Strap",ammo="Staunch Tathlum",
         head="Befouled Crown",neck="Loricate Torque +1",ear1="Etiolation Earring",ear2="Alabaster Earring",
         body="Arbatel Gown +2",hands=gear.chiron_hands_REF,ring1="Defending Ring",ring2="Murky Ring",
-        back="Moonbeam Cape",waist="Carrier's Sash",legs="Assid. Pants +1",feet="Herald's Gaiters"}
+        back="Moonbeam Cape",waist="Carrier's Sash",legs="Assid. Pants +1",feet="Arbatel Loafers +2"}
 		
 	
 
     sets.idle.Weak = {main="Malignance Pole",sub="Mensch Strap",ammo="Homiliary",
         head="Befouled Crown",neck="Loricate Torque +1",ear1="Etiolation Earring",ear2="Alabaster Earring",
         body="Witching Robe",hands=gear.chiron_hands_REF,ring1="Defending Ring",ring2="Murky Ring",
-        back="Moonbeam Cape",waist="Carrier's Sash",legs="Assid. Pants +1",feet="Herald's Gaiters"}
+        back="Moonbeam Cape",waist="Carrier's Sash",legs="Assid. Pants +1",feet="Arbatel Loafers +2"}
 		
     -- Defense sets
 
     sets.defense.PDT = {main="Malignance Pole",sub="Mensch Strap",ammo="Staunch Tathlum",
         head="Befouled Crown",neck="Loricate Torque +1",ear1="Etiolation Earring",ear2="Alabaster Earring",
         body="Arbatel Gown +2",hands=gear.chiron_hands_REF,ring1="Defending Ring",ring2="Murky Ring",
-        back="Moonbeam Cape",waist="Carrier's Sash",legs="Assid. Pants +1",feet="Herald's Gaiters"}
+        back="Moonbeam Cape",waist="Carrier's Sash",legs="Assid. Pants +1",feet="Arbael Loafers +2"}
 
     sets.defense.MDT = {main="Malignance Pole",sub="Irenic Strap +1",ammo="Staunch Tathlum",
         head="Befouled Crown",neck="Loricate Torque +1",ear1="Etiolation Earring",ear2="Alabaster Earring",
         body="Arbatel Gown +2",hands=gear.chiron_hands_REF,ring1="Defending Ring",ring2="Murky Ring",
-        back="Moonbeam Cape",waist="Carrier's Sash",legs="Assid. Pants +1",feet="Herald's Gaiters"}
+        back="Moonbeam Cape",waist="Carrier's Sash",legs="Assid. Pants +1",feet="Arbatel Loafers +2"}
 		
     sets.defense.MEVA = {main="Daybreak",sub="Genmei Shield",ammo="Staunch Tathlum",
         head=gear.merlinic_nuke_head,neck="Warder's Charm +1",ear1="Etiolation Earring",ear2="Sanare Earring",
         body=gear.merlinic_nuke_body,hands="Gende. Gages +1",ring1="Vengeful Ring",ring2="Purity Ring",
         back=gear.nuke_jse_back,waist="Acuity Belt +1",legs="Merlinic Shalwar",feet="Amalric Nails"}
 		
-    sets.Kiting = {feet="Herald's Gaiters"}
+    sets.Kiting = {ring1="Shneddick Ring"}
     sets.latent_refresh = {waist="Fucho-no-obi"}
 	sets.TPEat = {neck="Chrys. Torque"}
 	sets.DayIdle = {}
