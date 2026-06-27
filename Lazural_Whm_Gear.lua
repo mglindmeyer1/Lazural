@@ -116,7 +116,7 @@ function init_gear_sets()
 
     -- Midcast Sets
 
-    sets.Kiting = {feet="Herald's Gaiters"}
+    sets.Kiting = {ring1="Shneddick Ring"}
     sets.latent_refresh = {waist="Fucho-no-obi"}
 	sets.latent_refresh_grip = {sub="Oneiros Grip"}
 	sets.TPEat = {neck="Chrys. Torque"}
@@ -366,7 +366,7 @@ function init_gear_sets()
     -- Idle sets (default idle set not needed since the other three are defined, but leaving for testing purposes)
 	sets.idle = {main="Mpaca's Staff",sub="Oneiros Grip",ammo="Homiliary",
 		head="Befouled Crown",neck="Loricate Torque +1",ear1="Etiolation Earring",ear2="Ethereal Earring",
-		body="Ebers Bliaut +2",hands=gear.chiron_hands_REF,ring1="Defending Ring",ring2="Murky Ring",
+		body="Ebers Bliaut +2",hands=gear.chiron_hands_REF,ring1="Shneddick Ring",ring2="Murky Ring",
 		back="Moonbeam Cape",waist="Carrier's Sash",legs="Assid. Pants +1",feet="Bunzi's Sabots"}
 
 	sets.idle.PDT = {main="Malignance Pole",sub="Umbra Strap",ammo="Homiliary",

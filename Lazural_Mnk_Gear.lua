@@ -2,7 +2,7 @@ function user_job_setup()
 	-- Options: Override default values
     state.OffenseMode:options('Normal','Acc','FullAcc')
     state.WeaponskillMode:options('Match','Normal','Acc','FullAcc')
-    state.HybridMode:options('Normal', 'PDT')
+    state.HybridMode:options('Normal', 'PDT','SB')
     state.PhysicalDefenseMode:options('PDT')
 	state.MagicalDefenseMode:options('MDT')
 	state.ResistDefenseMode:options('MEVA')
@@ -34,7 +34,7 @@ function init_gear_sets()
 	-- Precast sets to enhance JAs on use
 	sets.precast.JA['Hundred Fists'] = {legs="Hesychast's Hose +1"}
 	sets.precast.JA['Boost'] = {} --hands="Anchorite's Gloves +1"
-	sets.precast.JA['Boost'].OutOfCombat = {} --hands="Anchorite's Gloves +1", Remove Haste and Add Slow Gear.
+	sets.precast.JA['Boost'].OutOfCombat = {waist="Ask Sash"} --hands="Anchorite's Gloves +1", Remove Haste and Add Slow Gear.
 	sets.precast.JA['Dodge'] = {feet="Anch. Gaiters +2"}
 	sets.precast.JA['Focus'] = {head="Anchorite's Crown +1"}
 	sets.precast.JA['Counterstance'] = {} --feet="Hesychast's Gaiters +1"
@@ -46,7 +46,7 @@ function init_gear_sets()
 	
 	sets.precast.JA['Chakra'] = {
 		head="Mpaca's Cap",
-		body="Anch. Cyclas +1",hands="Hesychast's Gloves",
+		body="Anch. Cyclas +2",hands="Hesychast's Gloves",
 		legs="Bhikku Hose +2",feet="Anch. Gaiters +2"}
 
 	-- Waltz set (chr and vit)
@@ -79,9 +79,9 @@ function init_gear_sets()
 	-- Weaponskill sets
 	-- Default set for any weaponskill that isn't any more specifically defined
 	sets.precast.WS = {ammo="Aurgelmir Orb",
-		head="Mpaca's Cap",neck="Caro Necklace",ear1="Sherida Earring",ear2="Shere Earring",
-		body="Mpaca's Doublet",hands="Adhemar Wrist. +1",ring1="Sroda Ring",ring2="Niqmaddu Ring",
-		back=gear.jsecape_WS,waist="Fotia Belt",legs="Hiza. Hizayoroi +2",feet=gear.herc_feet_TA}
+		head="Adhemaer Bonnet +1",neck="Caro Necklace",ear1="Sherida Earring",ear2="Shere Earring",
+		body="Adhemar Jacket +1",hands="Adhemar Wrist. +1",ring1="Sroda Ring",ring2="Niqmaddu Ring",
+		back=gear.jsecape_WS,waist="Moonbow Belt",legs="Mpaca's Hose",feet=gear.herc_feet_TA}
 	sets.precast.WSAcc = {ammo="Falcon Eye",head="Dampening Tam",neck="Combatant's Torque",ear1="Cessance Earring",ring2="Ramuh Ring +1",body="Malignance Tabard",waist="Olseni Belt",legs="Hiza. Hizayoroi +2",feet="Malignance Boots"}
 	sets.precast.WSFullAcc = {ammo="Falcon Eye",head="Mummu Bonnet +2",neck="Moonbeam Nodowa",ear1="Mache Earring +1",ear2="Telos Earring",body="Malignance Tabard",hands="Malignance Gloves",ring1="Ramuh Ring +1",ring2="Ramuh Ring +1",waist="Olseni Belt",legs="Hiza. Hizayoroi +2",feet="Malignance Boots"}
 	sets.precast.WS.Acc = set_combine(sets.precast.WS, sets.precast.WSAcc)
@@ -93,10 +93,10 @@ function init_gear_sets()
 	sets.precast.WS['Howling Fist']    = set_combine(sets.precast.WS, {head="Lilitu Headpiece",body=gear.herculean_wsd_body})
 	sets.precast.WS['Asuran Fists']    = set_combine(sets.precast.WS, {waist="Grunfeld Rope"})
 	sets.precast.WS["Ascetic's Fury"]  = set_combine(sets.precast.WS, {neck="Caro Necklace",body="Abnoba Kaftan",hands="Ryuo Tekko",ring2="Begrudging Ring",waist="Grunfeld Rope"})
-	sets.precast.WS["Victory Smite"]   = set_combine(sets.precast.WS, {ear1="Odr Earring",ear2="Moonshade Earring",body="Abnoba Kaftan",hands="Ryuo Tekko",ring1="Begrudging Ring",legs="Mpaca's Hose",feet="Mpaca's Boots"})
-	sets.precast.WS['Shijin Spiral']   = set_combine(sets.precast.WS, {head="Dampening Tam", back=gear.jsecape_TP})
+	sets.precast.WS["Victory Smite"]   = set_combine(sets.precast.WS, {ammo="Knobkierre",ear1="Sherida Earring",ear2="Odr Earring",neck="Light Gorget",body="Ken. Samue +1",hands="Ryuo Tekko"})
+	sets.precast.WS['Shijin Spiral']   = set_combine(sets.precast.WS, {head="Malignance Chapeau",ear2="Mache Earring",back=gear.jsecape_TP})
 	sets.precast.WS['Dragon Kick']     = set_combine(sets.precast.WS, {waist="Grunfeld Rope"})
-	sets.precast.WS['Tornado Kick']    = set_combine(sets.precast.WS, {})
+	sets.precast.WS['Tornado Kick']    = set_combine(sets.precast.WS, {ear2="Moonshade Earring",})
 	sets.precast.WS['Spinning Attack'] = set_combine(sets.precast.WS, {waist="Grunfeld Rope"})
 
 	sets.precast.WS["Raging Fists"].Acc = set_combine(sets.precast.WS["Raging Fists"], sets.precast.WSAcc)
@@ -174,12 +174,12 @@ function init_gear_sets()
 
 	-- Normal melee sets
 	sets.engaged = {ammo="Coiste Bodhar",
-		head="Mpaca's Cap",neck="Mnk. Nodowa +1",ear1="Sherida Earring",ear2="Bhikku Earring +1",
-		body="Mpaca's Doublet",hands="Adhemar Wrist. +1",ring1="Petrov Ring",ring2="Niqmaddu Ring",
+		head="Adhemar Bonnet +1",neck="Mnk. Nodowa +1",ear1="Sherida Earring",ear2="Bhikku Earring +1",
+		body="Ken. Samue +1",hands="Adhemar Wrist. +1",ring1="Petrov Ring",ring2="Niqmaddu Ring",
 		back=gear.jsecape_TP,waist="Moonbow Belt",legs="Bhikku Hose +2",feet="Anch. Gaiters +2"}
 	sets.engaged.Acc = {ammo="Aurgelmir Orb",
 		head="Dampening Tam",neck="Mnk. Nodowa +1",ear1="Cessance Earring",ear2="Sherida Earring",
-		body="Ken. Samue",hands="Adhemar Wrist. +1",ring1="Gere Ring",ring2="Niqmaddu Ring",
+		body="Ken. Samue +1",hands="Adhemar Wrist. +1",ring1="Gere Ring",ring2="Niqmaddu Ring",
 		back=gear.jsecape_TP,waist="Olseni Belt",legs="Malignance Tights",feet="Malignance Boots"}
 	sets.engaged.FullAcc = {ammo="Falcon Eye",
 		head="Malignance Chapeau",neck="Moonbeam Nodowa",ear1="Mache Earring +1",ear2="Telos Earring",
@@ -188,9 +188,9 @@ function init_gear_sets()
 
 	-- Defensive melee hybrid sets
 	sets.engaged.PDT = {ammo="Aurgelmir Orb",
-		head="Malignance Chapeau",neck="Loricate Torque +1",ear1="Brutal Earring",ear2="Sherida Earring",
-		body="Malignance Tabard",hands="Malignance Gloves",ring1="Defending Ring",ring2="Niqmaddu Ring",
-		back="Moonbeam Cape",waist="Windbuffet Belt +1",legs="Malignance Tights",feet="Malignance Boots"}
+		head="Malignance Chapeau",neck="Mnk. Nodowa +1",ear1="Sherida Earring",ear2="Schere Earring",
+		body="Mpaca's Doublet",hands="Adhemar Wrist. +1",ring1="Murky Ring",ring2="Niqmaddu Ring",
+		back=gear.jsecape_TP,waist="Moonbow Belt",legs="Bhikku Hose +2",feet="Mpaca's Boots"}
 	sets.engaged.Acc.PDT = {ammo="Falcon Eye",
 		head="Malignance Chapeau",neck="Loricate Torque +1",ear1="Cessance Earring",ear2="Sherida Earring",
 		body="Malignance Tabard",hands="Malignance Gloves",ring1="Defending Ring",ring2="Niqmaddu Ring",
@@ -199,6 +199,11 @@ function init_gear_sets()
 		head="Malignance Chapeau",neck="Loricate Torque +1",ear1="Mache Earring +1",ear2="Odr Earring",
 		body="Malignance Tabard",hands="Malignance Gloves",ring1="Defending Ring",ring2="Ramuh Ring +1",
 		back="Moonbeam Cape",waist="Olseni Belt",legs="Malignance Tights",feet="Malignance Boots"}
+
+	sets.engaged.SB = {ammo="Coiste Bodhar",
+		head="Bhikku Crown +2",neck="Mnk. Nodowa +1",ear1="Sherida Earring",ear2="Bhikku  Earring +1",
+		body="Ken. Samue +1",hands="Adhemar Wrist. +1",ring1="Petrov Ring",ring2="Niqmaddu Ring",
+		back=gear.jsecape_TP,waist="Moonbow Belt",legs="Bhikku Hose +2",feet="Anch. Gaiters +2"}	
 
 	-- Hundred Fists/Impetus melee set mods
 	
@@ -224,8 +229,8 @@ function init_gear_sets()
 	sets.weapons.Karambit = {main="Karambit"}
 	sets.weapons.Barehanded = {main=empty}
 	sets.weapons.Staff = {main="Malignance Pole",sub="Bloodrain Strap"}
-	sets.weapons.ProcStaff = {main="Terra's Staff"}
-	sets.weapons.ProcClub = {main="Mafic Cudgel"}
+	sets.weapons.ProcStaff = {main="Cobra Staff"}
+	sets.weapons.ProcClub = {main="Kitty Rod"}
 	sets.weapons.ProcSword = {main="Ark Sword",sub=empty}
 	sets.weapons.ProcGreatSword = {main="Lament",sub=empty}
 	sets.weapons.ProcScythe = {main="Ark Scythe",sub=empty}

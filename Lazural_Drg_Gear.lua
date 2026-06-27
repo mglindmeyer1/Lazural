@@ -94,9 +94,9 @@ function init_gear_sets()
 	-- Default set for any weaponskill that isn't any more specifically defined
 	
 	sets.precast.WS = {ammo="Knobkierrie",
-		head="Flam. Zucchetto +2",neck="Fotia Gorget",ear1="Moonshade Earring",ear2="Sherida Earring",
-		body=gear.valorous_wsd_body,hands="Sulev. Gauntlets +2",ring1="Regal Ring",ring2="Niqmaddu Ring",
-		back="Brigantia's Mantle",waist="Fotia Belt",legs="Sulev. Cuisses +2",feet="Flam. Gambieras +2"}
+		head="Gleti's Mask",neck="Caro Necklace",ear1="Moonshade Earring",ear2="Sherida Earring",
+		body="Gleti's Cuirass",hands="Sulev. Gauntlets +2",ring1="Epaminondas's Ring",ring2="Niqmaddu Ring",
+		back="Updraft Mantle",waist="Fotia Belt",legs="Sulev. Cuisses +2",feet="Sulev. Leggings +2"}
 		
 	sets.precast.WS.SomeAcc = set_combine(sets.precast.WS, {})
 	sets.precast.WS.Acc = set_combine(sets.precast.WS, {neck="Shulmanu Collar"})
@@ -122,10 +122,10 @@ function init_gear_sets()
 	sets.resting = {}
 
 	-- Idle sets
-	sets.idle = {ammo="Staunch Tathlum +1",
-		head="Loess Barbuta +1",neck="Loricate Torque +1",ear1="Genmei Earring",ear2="Ethereal Earring",
-		body="Tartarus Platemail",hands="Sulev. Gauntlets +2",ring1="Defending Ring",ring2="Dark Ring",
-		back="Shadow Mantle",waist="Flume Belt +1",legs="Carmine Cuisses +1",feet="Amm Greaves"}
+	sets.idle = {ammo="Staunch Tathlum",
+		head="Gleti's Mask",neck="Loricate Torque +1",ear1="Alabaster Earring",ear2="Ethereal Earring",
+		body="Gleti's Cuirass",hands="Gleti's Gauntlets",ring1="Murky Ring",ring2="Moonlight Ring",
+		back="Moonbeam Cape",waist="Flume Belt +1",legs="Carmine Cuisses +1",feet="Gleti's Boots"}
 		
 	sets.idle.Refresh = {ammo="Staunch Tathlum +1",
 		head="Jumalik Helm",neck="Loricate Torque +1",ear1="Genmei Earring",ear2="Ethereal Earring",
@@ -167,7 +167,7 @@ function init_gear_sets()
 	sets.TreasureHunter = set_combine(sets.TreasureHunter, {})
 	
 	-- Weapons sets
-	sets.weapons.Trishula = {main="Trishula",sub="Utu Grip"}
+	sets.weapons.Trishula = {main="Shining One",sub="Utu Grip"}
 
 	-- Swap to these on Moonshade using WS if at 3000 TP
 	sets.MaxTP = {ear1="Lugra Earring +1",ear2="Sherida Earring",}
@@ -186,10 +186,10 @@ function init_gear_sets()
 	
 	-- Normal melee group
 
-	sets.engaged = {ammo="Aurgelmir Orb +1",
-		head="Flam. Zucchetto +2",neck="Shulmanu Collar",ear1="Brutal Earring",ear2="Sherida Earring",
-		body=gear.valorous_wsd_body,hands=gear.valorous_acc_hands,ring1="Petrov Ring",ring2="Niqmaddu Ring",
-		back="Brigantia's Mantle",waist="Ioskeha Belt",legs="Sulev. Cuisses +2",feet="Flam. Gambieras +2"}
+	sets.engaged = {ammo="Coiste Bodhar",
+		head="Flam. Zucchetto +2",neck="Anu Torque",ear1="Sroda Earring",ear2="Sherida Earring",
+		body="Valorous Mail",hands="Flamma Manopolas +2",ring1="Moonlight Ring",ring2="Niqmaddu Ring",
+		back="Updraft Mantle",waist="Ioskeha Belt +1",legs="Flamma Dirs +2",feet="Flam. Gambieras +2"}
     sets.engaged.SomeAcc = {ammo="Aurgelmir Orb +1",
 		head="Flam. Zucchetto +2",neck="Shulmanu Collar",ear1="Brutal Earring",ear2="Sherida Earring",
 		body=gear.valorous_wsd_body,hands=gear.valorous_acc_hands,ring1="Regal Ring",ring2="Niqmaddu Ring",

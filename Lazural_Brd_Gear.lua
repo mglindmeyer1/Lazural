@@ -246,7 +246,7 @@ function init_gear_sets()
 	sets.idle = {main="Mpaca's Staff",sub="Oneiros Grip",ammo="Staunch Tathlum",
 		head="Inyanga Tiara +2",neck="Loricate Torque +1",ear1="Etiolation Earring",ear2="Ethereal Earring",
 		body="Inyanga Jubbah +2",hands=gear.chiron_hands_REF,ring1="Defending Ring",ring2="Inyanga Ring",
-		back="Moonbeam Cape",waist="Flume Belt",legs="Assid. Pants +1",feet="Fili Cothurnes +2"}
+		back="Moonbeam Cape",waist="Flume Belt +1",legs="Assid. Pants +1",feet="Fili Cothurnes +2"}
 		
 	sets.idle.NoRefresh = {main="Daybreak",sub="Genmei Shield",ammo="Inyanga Dastanas",
 		head="Nyame Helm",neck="Loricate Torque +1",ear1="Etiolation Earring",ear2="Sanare Earring",

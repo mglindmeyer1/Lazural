@@ -76,7 +76,7 @@ function init_gear_sets()
     sets.precast.CorsairRoll = {main="Lanun Knife",range="Compensator",
         head="Lanun Tricorne +2",neck="Loricate Torque +1",ear1="Etiolation Earring",ear2="Eabani Earring",
         body="Lanun Frac +2",hands="Chasseur's Gants +2",ring1="Defending Ring",ring2="Barataria Ring",
-        back=gear.snapshot_jse_back,waist="Flume Belt",legs="Mummu Kecks +1",feet="Malignance Boots"}
+        back=gear.snapshot_jse_back,waist="Flume Belt +1",legs="Mummu Kecks +1",feet="Malignance Boots"}
 
     sets.precast.LuzafRing = {ring2="Luzaf's Ring"}
     
@@ -124,7 +124,7 @@ function init_gear_sets()
     sets.precast.FC = {
         head="Carmine Mask",neck="Baetyl Pendant",ear1="Enchntr. Earring +1",ear2="Loquac. Earring",
         body="Samnuha Coat",hands="Leyline Gloves",ring1="Weatherspoon Ring",ring2="Lebeche Ring",
-        back="Moonbeam Cape",waist="Flume Belt",legs="Rawhide Trousers",feet="Carmine Greaves"}
+        back="Moonbeam Cape",waist="Flume Belt +1",legs="Rawhide Trousers",feet="Carmine Greaves"}
 
     sets.precast.FC.Utsusemi = set_combine(sets.precast.FC, {neck="Magoraga Beads",body="Passion Jacket"})
 	
@@ -161,7 +161,7 @@ function init_gear_sets()
     sets.precast.WS['Requiescat'] = set_combine(sets.precast.WS, {head="Carmine Mask",ring2="Rufescent Ring",legs="Carmine Cuisses +1",feet="Carmine Greaves"})
 
 	sets.precast.WS['Evisceration'] = {ammo=gear.WSbullet,
-        head="Adhemar Bonnet",neck="Caro Necklace",ear1="Odr Earring",ear2="Moonshade Earring",
+        head="Adhemar Bonnet +1",neck="Caro Necklace",ear1="Odr Earring",ear2="Moonshade Earring",
         body="Sayadio's Kaftan",hands=gear.herc_hands_AA,ring1="Hetairoi Ring",ring2="Begrudging Ring",
         back=gear.tp_jse_back,waist="Fotia Belt",legs="Mummu Kecks +1",feet=gear.herc_feet_TA}
 		
@@ -243,7 +243,7 @@ function init_gear_sets()
     sets.midcast.FastRecast = {
         head="Carmine Mask",neck="Baetyl Pendant",ear1="Enchntr. Earring +1",ear2="Loquac. Earring",
         body="Dread Jupon",hands="Leyline Gloves",ring1="Kishar Ring",ring2="Lebeche Ring",
-        back="Moonbeam Cape",waist="Flume Belt",legs="Rawhide Trousers",feet="Carmine Greaves"}
+        back="Moonbeam Cape",waist="Flume Belt +1",legs="Rawhide Trousers",feet="Carmine Greaves"}
         
     -- Specific spells
 
@@ -284,9 +284,9 @@ function init_gear_sets()
 
     -- Idle sets
     sets.idle = {ammo=gear.RAbullet,
-        head="Lanun Tricorne +2",neck="Loricate Torque +1",ear1="Etiolation Earring",ear2="Ethereal Earring",
-        body="Lanun frac +3",hands="Nyame Gauntlets",ring1="Defending Ring",ring2="Shadow Ring",
-        back="Moonbeam Cape",waist="Carrier's Sash",legs="Carmine Cuisses +1",feet="Lanun bottes +3"}
+        head="Nyame Helm",neck="Loricate Torque +1",ear1="Etiolation Earring",ear2="Alabaster Earring",
+        body="Nyame Mail",hands="Nyame Gauntlets",ring1="Murky Ring",ring2="Shadow Ring",
+        back="Moonbeam Cape",waist="Flume Belt +1",legs="Nyame Flanchard",feet="Nyame Sollerets"}
 		
     sets.idle.PDT = {ammo=gear.RAbullet,
         head="Nyame Helm",neck="Loricate Torque +1",ear1="Etiolation Earring",ear2="Sanare Earring",
@@ -296,7 +296,7 @@ function init_gear_sets()
     sets.idle.Refresh = {ammo=gear.RAbullet,
         head=gear.herc_head_Ref,neck="Loricate Torque +1",ear1="Etiolation Earring",ear2="Ethereal Earring",
         body="Lanun frac +3",hands=gear.herc_hands_Ref,ring1="Defending Ring",ring2="Gelatinous Ring +1",
-        back="Moonbeam Cape",waist="Flume Belt",legs="Rawhide Trousers",feet=gear.herc_feet_Ref}
+        back="Moonbeam Cape",waist="Flume Belt +1",legs="Rawhide Trousers",feet=gear.herc_feet_Ref}
     
     -- Defense sets
     sets.defense.PDT = {ammo=gear.RAbullet,
@@ -314,7 +314,7 @@ function init_gear_sets()
         body="Nyame Mail",hands="Nyame Gauntlets",ring1="Defending Ring",ring2="Shadow Ring",
         back="Moonbeam Cape",waist="Carrier's Sash",legs="Nyame Flanchard",feet="Nyame Sollerets"}
 
-    sets.Kiting = {legs="Carmine Cuisses +1"}
+    sets.Kiting = {ring2="Shneddick Ring"}
 	sets.TreasureHunter = set_combine(sets.TreasureHunter, {})
 	sets.DWMax = {ear1="Dudgeon Earring",ear2="Heartseeker Earring",body="Adhemar Jacket +1",hands="Floral Gauntlets",waist="Reiki Yotai"}
 
@@ -341,8 +341,8 @@ function init_gear_sets()
     
     -- Normal melee group
     sets.engaged = {
-		head="Dampening Tam",neck="Asperity Necklace",ear1="Cessance Earring",ear2="Telos Earring",
-		body="Adhemar Jacket",hands="Adhemar Wristbands",ring1="Petrov Ring",ring2="Epona's Ring",
+		head="Dampening Tam",neck="Ainia Collar",ear1="Dedition Earring",ear2="Telos Earring",
+		body="Adhemar Jacket +1",hands="Adhemar Wristbands +1",ring1="Petrov Ring",ring2="Epona's Ring",
 		back=gear.tp_jse_back,waist="Windbuffet Belt",legs="Samnuha Tights",feet=gear.herc_feet_TA}
     
     sets.engaged.Acc = {
@@ -352,7 +352,7 @@ function init_gear_sets()
 		
     sets.engaged.DT = {
         head="Malignance Chapeau",neck="Loricate Torque +1",ear1="Cessance Earring",ear2="Brutal Earring",
-        body="Malignance Tabard",hands="Malignance Gloves",ring1="Defending Ring",ring2="Petrov Ring",
+        body="Malignance Tabard",hands="Malignance Gloves",ring1="Murky Ring",ring2="Petrov Ring",
         back=gear.tp_jse_back,waist="Windbuffet Belt",legs="Chas. Culottes +2",feet="Malignance Boots"}
     
     sets.engaged.Acc.DT = {
@@ -361,8 +361,8 @@ function init_gear_sets()
         back=gear.tp_jse_back,waist="Olseni Belt",legs="Chas. Culottes +2",feet="Malignance Boots"}
 
     sets.engaged.DW = {
-		head="Dampening Tam",neck="Asperity Necklace",ear1="Cessance Earring",ear2="Telos Earring",
-		body="Adhemar Jacket",hands="Adhemar Wristbands",ring1="Petrov Ring",ring2="Epona's Ring",
+		head="Dampening Tam",neck="Ainia Collar",ear1="Dedition Earring",ear2="Telos Earring",
+		body="Adhemar Jacket +1",hands="Adhemar Wristbands +1",ring1="Petrov Ring",ring2="Epona's Ring",
 		back=gear.tp_jse_back,waist="Reiki Yotai",legs="Samnuha Tights",feet=gear.herc_feet_TA}
     
     sets.engaged.DW.Acc = {

@@ -303,12 +303,12 @@ function init_gear_sets()
 	sets.idle = {main="Mpaca's Staff",sub="Mensch Strap",range=empty,ammo="Homiliary",
 		head="Viti. Chapeau +3",neck="Loricate Torque +1",ear1="Etiolation Earring",ear2="Ethereal Earring",
 		body="Lethargy Sayon +2",hands=gear.chiron_hands_REF,ring1="Defending Ring",ring2="Murky Ring",
-		back="Moonbeam Cape",waist="Flume Belt",legs="Carmine Cuisses +1",feet="Hippomenes Socks +1"}
+		back="Moonbeam Cape",waist="Flume Belt +1",legs="Carmine Cuisses +1",feet="Hippomenes Socks +1"}
 		
 	sets.idle.PDT = {main="Sakpata's Sword",sub="Culminus",range=empty,ammo="Staunch Tathlum",
 		head="Bunzi's Cap",neck="Loricate Torque +1",ear1="Etiolation Earring",ear2="Etheral Earring",
 		body="Lethargy Sayon +2",hands="Bunzi's Gloves",ring1="Defending Ring",ring2="Murky Ring",
-		back="Moonbeam Cape",waist="Flume Belt",legs="Bunzi's Pants",feet="Bunzi's Sabots"}
+		back="Moonbeam Cape",waist="Flume Belt +1",legs="Bunzi's Pants",feet="Bunzi's Sabots"}
 		
 	sets.idle.MDT = {main="Daybreak",sub="Sacro Bulwark",range=empty,ammo="Staunch Tathlum +1",
 		head="Malignance Chapeau",neck="Warder's Charm +1",ear1="Etiolation Earring",ear2="Sanare Earring",
@@ -318,7 +318,7 @@ function init_gear_sets()
 	sets.idle.Weak = {main="Mpaca's Staff",sub="Mensch Strap",range=empty,ammo="Homiliary",
 		head="Viti. Chapeau +3",neck="Loricate Torque +1",ear1="Etiolation Earring",ear2="Etheral Earring",
 		body="Lethargy Sayon +2",hands="Bunzi's Gloves",ring1="Defending Ring",ring2="Dark Ring",
-		back="Moonbeam Cape",waist="Flume Belt",legs="Bunzi's Pants",feet="Bunzi's Sabots"}
+		back="Moonbeam Cape",waist="Flume Belt +1",legs="Bunzi's Pants",feet="Bunzi's Sabots"}
 	
 	sets.idle.DTHippo = set_combine(sets.idle.PDT, {back="Umbra Cape",legs="Carmine Cuisses +1",feet="Hippo. Socks +1"})
 	
@@ -326,7 +326,7 @@ function init_gear_sets()
 	sets.defense.PDT = {main="Sakpata's Sword",sub="Culminus",range=empty,ammo="Staunch Tathlum",
 		head="Bunzi's Cap",neck="Loricate Torque +1",ear1="Etiolation Earring",ear2="Etheral Earring",
 		body="Lethargy Sayon +2",hands="Bunzi's Gloves",ring1="Defending Ring",ring2="Dark Ring",
-		back="Moonbeam Cape",waist="Flume Belt",legs="Bunzi's Pants",feet="Bunzi's Sabots"}
+		back="Moonbeam Cape",waist="Flume Belt +1",legs="Bunzi's Pants",feet="Bunzi's Sabots"}
 
 	sets.defense.NukeLock = sets.midcast['Elemental Magic']
 		

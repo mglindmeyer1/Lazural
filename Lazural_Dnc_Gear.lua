@@ -118,7 +118,7 @@ function init_gear_sets()
     -- Default set for any weaponskill that isn't any more specifically defined
     sets.precast.WS = {ammo="Aurgelmir Orb",
         head="Dampening Tam",neck="Asperity Necklace",ear1="Brutal Earring",ear2="Sherida Earring",
-        body="Adhemar Jacket",hands="Meg. Gloves +2",ring1="Epaminondas's Ring",ring2="Petrov Ring",
+        body="Adhemar Jacket +1",hands="Meg. Gloves +2",ring1="Epaminondas's Ring",ring2="Petrov Ring",
         back="Senuna's Mantle",waist="Grunfeld Rope",legs="Samnuha Tights",feet=gear.herc_feet_TA}
 
 	sets.precast.WS.SomeAcc = set_combine(sets.precast.WS, {neck="Combatant's Torque"})
@@ -191,7 +191,7 @@ function init_gear_sets()
     sets.idle = {ammo="Staunch Tathlum",
         head="Gleti's Mask",neck="Loricate Torque +1",ear1="Etiolation Earring",ear2="Alabaster Earring",
         body="Gleti's Cuirass",hands="Gleti's Gauntlets",ring1="Shneddick Ring",ring2="Murky Ring",
-        back="Moonbeam Cape",waist="Flume Belt",legs="Gleti's Breeches",feet="Gleti's Boots"}
+        back="Moonbeam Cape",waist="Flume Belt +1",legs="Gleti's Breeches",feet="Gleti's Boots"}
 		
     sets.idle.Sphere = set_combine(sets.idle, {body="Mekosu. Harness"})
     

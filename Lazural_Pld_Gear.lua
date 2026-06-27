@@ -291,17 +291,17 @@ function init_gear_sets()
     sets.idle = {main="Malignance Sword",sub="Ochain",ammo="Staunch Tathlum",
 		head="Sakpata's Helm",neck="Coatl Gorget +1",ear1="Etiolation Earring",ear2="Ethereal Earring",
 		body="Sakpata's Plate",hands="Sakpata's Gauntlets",ring1="Gelatinous Ring +1",ring2="Moonlight Ring",
-		back="Moonbeam Cape",waist="Flume Belt",legs="Carmine Cuisses +1",feet="Hippomenes Socks +1"}
+		back="Moonbeam Cape",waist="Flume Belt +1",legs="Carmine Cuisses +1",feet="Hippomenes Socks +1"}
 		
     sets.idle.PDT = {main="Sakpata's Sword",sub="Priwen",ammo="Staunch Tathlum",
 		head="Sakpata's Helm",neck="Unmoving Collar +1",ear1="Odnowa Earring +1",ear2="Tuisto Earring",
 		body="Sakpata's Plate",hands="Sakpata's Gauntlets",ring1="Gelatinous Ring +1",ring2="Warden's Ring",
-		back="Moonbeam Cape",waist="Flume Belt",legs="Sakpata's Cuisses",feet="Sakpata's Leggings"}
+		back="Moonbeam Cape",waist="Flume Belt +1",legs="Sakpata's Cuisses",feet="Sakpata's Leggings"}
 		
     sets.idle.Block = {main="Deacon Sword",sub="Ochain",ammo="Staunch Tathlum",
 		head="Chev. Armet +2",neck="Diemer Gorget",ear1="Thureous Earring",ear2="Chev. Earring",
 		body="Sakpata's Plate",hands="Souv. Handsch. +1",ring1="Gelatinous Ring +1",ring2="Moonlight Ring",
-		back="Rudianos's Mantle",waist="Flume Belt",legs="Sakpata's Cuisses",feet="Rev. Leggings +2"}
+		back="Rudianos's Mantle",waist="Flume Belt +1",legs="Sakpata's Cuisses",feet="Rev. Leggings +2"}
 		
     sets.idle.MDT = {main="Sakpata's Sword",sub="Aegis",ammo="Staunch Tathlum",
 		head="Nyame Helm",neck="Warder's Charm +1",ear1="Etiolation Earring",ear2="Sanare Earring",
@@ -311,12 +311,12 @@ function init_gear_sets()
 	sets.idle.Tank = {main="Sakpata's Sword",sub="Ochain",ammo="Staunch Tathlum",
 		head="Sakpata's Helm",neck="Warder's Charm +1",ear1="Thureous Earring",ear2="Chev. Earring",
 		body="Sakpata's Breastplate",hands="Souv. Handsch. +1",ring1="Gelatinous Ring +1",ring2="Shadow Ring",
-		back="Shadow Mantle",waist="Flume Belt",legs="Sakpata's Cuisses",feet="Souveran schuhs +1"}
+		back="Shadow Mantle",waist="Flume Belt +1",legs="Sakpata's Cuisses",feet="Souveran schuhs +1"}
 		
 	sets.idle.Kiting = {main="Sakpata's Sword",sub="Sacro Bulwark",ammo="Staunch Tathlum",
 		head="Sakpata's Helm",neck="Unmoving Collar +1",ear1="Odnowa Earring +1",ear2="Tuisto Earring",
 		body="Sakpata's Breastplate",hands="Sakpata's Gauntlets",ring1="Gelatinous Ring +1",ring2="Warden's Ring",
-		back="Moonbeam Cape",waist="Flume Belt",legs="Carmine Cuisses +1",feet="Hippomenes Socks +1"}
+		back="Moonbeam Cape",waist="Flume Belt +1",legs="Carmine Cuisses +1",feet="Hippomenes Socks +1"}
 
 	sets.Kiting = {legs="Carmine Cuisses +1"}
 
@@ -332,8 +332,8 @@ function init_gear_sets()
     
     -- Extra defense sets.  Apply these on top of melee or defense sets.
 	sets.Knockback = {}
-    sets.MP = {head="Chev. Armet +2",neck="Coatl Gorget +1",ear2="Ethereal Earring",waist="Flume Belt",feet="Rev. Leggings +2"}
-	sets.passive.AbsorbMP = {head="Chev. Armet +2",ear2="Ethereal Earring",waist="Flume Belt",feet="Rev. Leggings +2",back="Rudianos's Mantle"}
+    sets.MP = {head="Chev. Armet +2",neck="Coatl Gorget +1",ear2="Ethereal Earring",waist="Flume Belt +1",feet="Rev. Leggings +2"}
+	sets.passive.AbsorbMP = {head="Chev. Armet +2",ear2="Ethereal Earring",waist="Flume Belt +1",feet="Rev. Leggings +2",back="Rudianos's Mantle"}
     sets.passive.MP = {head="Jumalik Helm",neck="Coatl Gorget +1",body="Jumalik Mail",ammo="Homiliary"}
 	sets.passive.Twilight = {head="Twilight Helm", body="Twilight Mail"}
 	sets.MP_Knockback = {}
@@ -353,12 +353,12 @@ function init_gear_sets()
     sets.defense.Block = {main="Sakpata's Sword",sub="Ochain",ammo="Staunch Tathlum",
 		head="Chev. Armet +2",neck="Diemer Gorget",ear1="Thureous Earring",ear2="Chev. Earring",
 		body="Sakpata's Breastplate",hands="Souv. Handsch. +1",ring1="Defending Ring",ring2="Warden's Ring",
-		back="Shadow Mantle",waist="Flume Belt",legs="Sakpata's Cuisses",feet="Souveran Schuhs +1"}
+		back="Shadow Mantle",waist="Flume Belt +1",legs="Sakpata's Cuisses",feet="Souveran Schuhs +1"}
 		
 	sets.defense.PDT = {main="Sakpata's Sword",sub="Ochain",ammo="Staunch Tathlum",
 		head="Sakpata's Helm",neck="Unmoving Collar +1",ear1="Odnowa Earring +1",ear2="Tuisto Earring",
 		body="Sakpata's Breastplate",hands="Sakpata's Gauntlets",ring1="Gelatinous Ring +1",ring2="Warden's Ring",
-		back="Shadow Mantle",waist="Flume Belt",legs="Sakpata's Cuisses",feet="Sakpata's Leggings"}
+		back="Shadow Mantle",waist="Flume Belt +1",legs="Sakpata's Cuisses",feet="Sakpata's Leggings"}
 		
     sets.defense.PDT_HP = {main="Sakpata's Sword",sub="Ochain",ammo="Staunch Tathlum",
         head="Souv. Schaller +1",neck="Loricate Torque +1",ear1="Odnowa Earring +1",ear2="Tuisto Earring",
@@ -414,7 +414,7 @@ function init_gear_sets()
 	sets.engaged.Tank = {main="Sakpata's Sword",sub="Ochain",ammo="Staunch Tathlum",
 		head="Sakpata's Helm",neck="Loricate Torque +1",ear1="Creed Earring",ear2="Thureous Earring",
 		body="Sakpata's Plate",hands="Souv. Handsch. +1",ring1="Shadow Ring",ring2="Moonlight Ring",
-		back="Shadow Mantle",waist="Flume Belt",legs="Sulev. Cuisses +2",feet="Souveran schuhs +1"}
+		back="Shadow Mantle",waist="Flume Belt +1",legs="Sulev. Cuisses +2",feet="Souveran schuhs +1"}
 		
 	sets.engaged.DDTank = {ammo="Hasty Pinion +1",
 		head="Hjarrandi Helm",neck="Loricate Torque +1",ear1="Brutal Earring",ear2="Cessance Earring",
@@ -429,7 +429,7 @@ function init_gear_sets()
 	sets.engaged.NoShellTank = {main="Sakpata's Sword",sub="Ochain",ammo="Staunch Tathlum",
         head="Jumalik Helm",neck="Loricate Torque +1",ear1="Thureous Earring",ear2="Etiolation Earring",
         body="Rev. Surcoat +3",hands="Sakpata's Gauntlets",ring1="Defending Ring",ring2="Moonlight Ring",
-        back="Moonbeam Cape",waist="Flume Belt",legs=gear.odyssean_fc_legs,feet="Cab. Leggings +1"}
+        back="Moonbeam Cape",waist="Flume Belt +1",legs=gear.odyssean_fc_legs,feet="Cab. Leggings +1"}
 		
     sets.engaged.Reraise = set_combine(sets.engaged.Tank, sets.Reraise)
     sets.engaged.Acc.Reraise = set_combine(sets.engaged.Acc.Tank, sets.Reraise)

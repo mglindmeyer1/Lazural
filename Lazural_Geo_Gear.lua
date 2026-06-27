@@ -264,8 +264,8 @@ function init_gear_sets()
 
 	sets.idle = {main="Mpaca's Staff",sub="Oneiros Grip",ammo="Staunch Tathlum",
 		head="Befouled Crown",neck="Loricate Torque +1",ear1="Etiolation Earring",ear2="Ethereal Earring",
-		body="Azimuth Coat +2",hands="Bagua Mitaines",ring1="Defending Ring",ring2="Mephitas's Ring",
-		back="Shadow Mantle",waist="Carrier's Sash",legs="Assid. Pants +1",feet="Geomancy Sandals +1"}
+		body="Azimuth Coat +2",hands="Bagua Mitaines",ring1="Shneddick Ring",ring2="Mephitas's Ring",
+		back="Shadow Mantle",waist="Carrier's Sash",legs="Assid. Pants +1",feet="Amalric Nails"}
 		
 	sets.idle.PDT = {main="Malignance Pole",sub="Umbra Strap",ammo="Staunch Tathlum",
 		head="Nyame Helm",neck="Loricate Torque +1",ear1="Etiolation Earring",ear2="Ethereal Earring",

@@ -55,7 +55,7 @@ function init_gear_sets()
 	sets.precast.FC = {ammo="Sapience Orb",
 		head="Carmine Mask",neck="Voltsurge Torque",ear1="Loquac. Earring",ear2="Malignance Earring",
 		body="Odyss. Chestplate",hands="Leyline Gloves",ring1="Weatherspoon Ring",ring2="Kishar Ring",
-		back="Moonlight Cape",waist="Flume Belt",legs="Eschite Cuisses",feet="Carmine Greaves"}
+		back="Moonlight Cape",waist="Flume Belt +1",legs="Eschite Cuisses",feet="Carmine Greaves"}
 
 	sets.precast.FC.Impact = set_combine(sets.precast.FC, {head=empty,body="Twilight Cloak"})
 		
@@ -200,12 +200,12 @@ function init_gear_sets()
     sets.idle = {ammo="Staunch Tathlum",
 		head="Hjarrandi Helm",neck="Loricate Torque +1",ear1="Etiolation Earring",ear2="Ethereal Earring",
 		body="Hjarrandi Breast.",hands="Nyame Gauntlets",ring1="Moonlight Ring",ring2="Gelatinous Ring +1",
-		back="Moonbeam Cape",waist="Flume Belt",legs="Carmine Cuisses +1",feet="Nyame Sollerets"}
+		back="Moonbeam Cape",waist="Flume Belt +1",legs="Carmine Cuisses +1",feet="Nyame Sollerets"}
 		
     sets.idle.PDT = {ammo="Staunch Tathlum",
 	head="Nyame Helm",neck="Loricate Torque +1",ear1="Etiolation Earring",ear2="Ethereal Earring",
 	body="Sakpata's Plate",hands="Nyame Gauntlets",ring1="Moonlight Ring",ring2="Gelatinous Ring +1",
-	back="Moonbeam Cape",waist="Flume Belt",legs="Carmine Cuisses +1",feet="Nyame Sollerets"}
+	back="Moonbeam Cape",waist="Flume Belt +1",legs="Carmine Cuisses +1",feet="Nyame Sollerets"}
 
 	sets.idle.Weak = set_combine(sets.idle, {head="Twilight Helm",body="Twilight Mail"})
 		
@@ -217,7 +217,7 @@ function init_gear_sets()
 	sets.defense.PDT = {ammo="Staunch Tathlum",
 		head="Nyame Helm",neck="Loricate Torque +1",ear1="Etiolation Earring",ear2="Ethereal Earring",
 		body="Sakpata's Plate",hands="Nyame Gauntlets",ring1="Moonlight Ring",ring2="Gelatinous Ring +1",
-		back="Shadow Mantle",waist="Flume Belt",legs="Carmine Cuisses +1",feet="Nyame Sollerets"}
+		back="Shadow Mantle",waist="Flume Belt +1",legs="Carmine Cuisses +1",feet="Nyame Sollerets"}
 		
 	sets.defense.PDTReraise = set_combine(sets.defense.PDT, {head="Twilight Helm",body="Twilight Mail"})
 
